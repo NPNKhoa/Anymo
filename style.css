@@ -29,10 +29,13 @@
   color: #36da64;
 }
 
+/* Start Header Section */
+
 header {
   background-color: var(--second-white-color);
   padding: 0;
   position: fixed;
+  top: 0;
   min-height: 80px;
 }
 
@@ -109,11 +112,9 @@ header .header-end .cart-button a {
   text-decoration: none;
   color: #000;
 }
+/* End Header Section */
 
-main {
-  height: 500px;
-}
-
+/* Start Footer Section */
 footer {
   background-color: var(--second-white-color);
   padding: 0;
@@ -206,9 +207,42 @@ footer .footer-get-promotion .submit-email-button:hover {
   cursor: pointer;
 }
 
-.copyright-reserved {
-  border-top: 1px solid #303030;
+footer .back-to-top-icon {
+  position: absolute;
+  right: 50%;
+  padding: 10px 16px;
+  border-radius: 50%;
+  background-color: var(--secondary-color);
+  z-index: 100;
+}
+
+footer .back-to-top-icon a {
+  color: #000;
+  text-decoration: none;
+}
+
+footer .back-to-top-icon:hover {
+  cursor: pointer;
+  background-color: #49df75;
+}
+
+footer .footer-copyright-reserved {
+  border-top: 1px solid #333;
   padding: 15px 0;
-  margin-top: 20px;
+  margin-top: 23px;
   text-align: center;
+}
+/* End Footer Section */
+
+/* Start Home Page Main Section */
+main {
+  margin-top: 80px;
+}
+
+main .img1 img {
+  width: 100%;
+}
+
+.carousel-caption {
+  bottom: 55% !important;
 }

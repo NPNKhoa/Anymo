@@ -37,6 +37,7 @@ header {
   position: fixed;
   top: 0;
   min-height: 80px;
+  z-index: 1000;
 }
 
 header .header-container {
@@ -237,6 +238,7 @@ footer .footer-copyright-reserved {
 /* Start Home Page Main Section */
 main {
   margin-top: 80px;
+  height: 1000px;
 }
 
 main .img1 img {

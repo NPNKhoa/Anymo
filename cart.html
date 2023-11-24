@@ -77,7 +77,7 @@
         </div>
       </div>
       <!--No cart: cart-list-no-cart -->
-      <div class="cart-list cart-list-no-cart">
+      <div class="cart-list ">
         <img src="image/no_cart.png" alt="" class="cart-list-no-cart-img">
         <span class="cart-list-no-cart-msg">
           <p>Chưa có sản phẩm được chọn</p>
@@ -106,13 +106,84 @@
             </div>
           </li>
 
+          <li class="cart-item">
+            <img src="image/iphone-13-128gb-650x650.webp" class="cart-img">
+            <div class="cart-item-info">
+              <div class="cart-item-head">
+                <h5 class="cart-item-head-name">Iphone 13 128GB VN/A - Hồng</h5>
+                <span class="cart-item-head-remove">Xóa</span>
+              </div>
+              <div class="cart-item-body">
+                <span class="cart-item-body-price">16.990.000đ</span>
+                <div class="cart-item-wrap">
+                  <button class="cart-item-body-minus">-</button>
+                  <span class="cart-item-body-qnt">1</span>
+                  <button class="cart-item-body-plus">+</button>
+                </div>
+              </div>
+            </div>
+          </li>
+
         </ul>
+
+        <div class="cart-list-infor">
+          <h4 class="cart-infor">Thông tin khách hàng:</h4>
+          <form action="" class="cart-infor-customer">
+            <div class="cart-infor-sex">
+              <span>
+                <i class="cart-infor-choose"></i>
+                Anh
+              </span>
+              <span>
+                <i class="cart-infor-choose"></i>
+                Chị
+              </span>
+            </div>
+            <div class="cart-infor-namephone">
+              <div class="cart-infor-name">
+                <label for="cusName" class="cart-infor-name-label">Họ và Tên:</label>
+                <input type="text" required="required" delaytime="200" maxlength="50" name="cusName">
+              </div>
+              <div class="cart-infor-phone">
+                <label for="cusPhone" class="cart-infor-name-label">Số điện thoại:</label>
+                <input type="tel" required="required" delaytime="200" maxlength="10" name="cusName">
+              </div>
+            </div>
+
+          </form>
+        </div>
+
+        <div class="cart-list-address">
+          <h4 class="cart-address">Địa chỉ nhận hàng:</h4>
+          <form action="" class="cart-address-information">
+            <div class="cart-address--">
+              <div class="cart-address--street">
+                <label for="cusStreet" class="cart-infor-name-label">Số nhà, tên đường:</label>
+                <input type="text" required="required" delaytime="200" maxlength="50" name="cusStreet">
+              </div>
+              <div class="cart-address--ward">
+                <label for="cusWards" class="cart-infor-name-label">Phường, Xã</label>
+                <input type="text" required="required" delaytime="200" maxlength="50" name="cusWards">
+              </div>
+              <div class="cart-address--district">
+                <label for="cusDistrict" class="cart-infor-name-label">Quận, Huyện:</label>
+                <input type="text" required="required" delaytime="200" maxlength="50" name="cusDistrict">
+              </div>
+              <div class="cart-address--province">
+                <label for="cusProvince" class="cart-infor-name-label">Tỉnh, Thành phố:</label>
+                <input type="text" required="required" delaytime="200" maxlength="50" name="cusProvince">
+              </div>
+            </div>
+
+          </form>
+        </div>
+
         <div class="cart-list-summary">
           <div>
             <p class="cart-summary-total">Tổng cộng:</p>
             <span class="cart-summary-sum">16.990.000đ</span>
           </div>
-          <button class="cart-summary-pay">Thanh toán</button>
+          <button class="cart-summary-pay" onclick=" ">Thanh toán</button>
         </div>
       </div> 
     </main>

@@ -220,11 +220,25 @@ header .header-end .cart-button a {
   justify-content: space-between;
   margin-right: 14px;
 }
+#cart-item-head{
+  display: flex;
+}
 .cart-item-head-name{
   font-size: 1rem;
   font-weight: 500;
   color: var(--text-color);
 }
+.cart-item-head-capacity{
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-color);
+}
+.cart-item-head-color{
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
 .cart-item-head-remove{
   font-size: 1rem;
   font-weight: 300;

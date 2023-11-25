@@ -3,7 +3,7 @@ $(document).ready(function () {
   $(".search-button").click(function () {
     $(".search-input").toggle("slide");
     $(".nav.login-menu").toggleClass("shift-left");
-  });
+  })
 });
 
 // changeImageforproduct
@@ -51,5 +51,4 @@ function addToLocalStorage() {
   } else {
       alert("Trình duyệt của bạn không hỗ trợ.");
   }
-}
-});
+};

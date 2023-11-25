@@ -5,5 +5,3 @@ $(document).ready(function () {
     $(".nav.login-menu").toggleClass("shift-left");
   });
 });
-
-main

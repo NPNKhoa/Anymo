@@ -29,19 +29,19 @@ $(() => {
 function addToLocalStorage() {
   // Lấy tên sản phẩm từ thẻ HTML
   var productName = document.getElementById("productName").innerText;
+  var quantity = parseInt(document.getElementById("quantity").value);
 
   // Kiểm tra xem Local Storage có sẵn không
   if (typeof(Storage) !== "undefined") {
       // Lấy giá trị hiện tại từ Local Storage
       var currentValue = localStorage.getItem(productName);
-
       // Kiểm tra xem sản phẩm đã tồn tại trong Local Storage chưa
       if (currentValue) {
           // Nếu sản phẩm đã tồn tại, tăng giá trị lên 1
-          currentValue = parseInt(currentValue) + 1;
+          currentValue = parseInt(currentValue) + quantity;
       } else {
           // Nếu sản phẩm chưa tồn tại, đặt giá trị là 1
-          currentValue = 1;
+          currentValue = quantity;
       }
 
       // Lưu giá trị mới vào Local Storage, với key là productName
@@ -52,3 +52,5 @@ function addToLocalStorage() {
       alert("Trình duyệt của bạn không hỗ trợ.");
   }
 }
+
+

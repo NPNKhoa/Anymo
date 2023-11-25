@@ -616,6 +616,9 @@ ul,ol {
   box-shadow: inset 0 3px 4px rgba(0,0,0,.25);
   background: #123e61;
 }
+.number-order-product {
+  margin-bottom: 16px;
+}
 
 .btn-order-full{
   float: left;
@@ -637,7 +640,12 @@ ul,ol {
 }
 
 
-
+.number-order input {
+  border-radius: 8px;
+}
+.number-order input:focus {
+  outline: none;
+}
 
 /* ChangeIMG */
 img .small-img {

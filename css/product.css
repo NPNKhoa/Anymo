@@ -1,0 +1,23 @@
+.col-lg-0{
+    display: none;
+}   
+.col-md-0{
+    display: none;
+}
+.col-sm-0{
+    display: none;
+}
+    
+    /* TABLET AND MOBILE */
+    @media (max-width: 992px) {
+        
+    }
+    /* TABLET */
+    @media (min-width: 768px) and (max-width: 991px) {
+        
+    }
+
+    /* MMOBILE */
+    @media (min-width: 576px) and (max-width: 767px) {
+    
+    }

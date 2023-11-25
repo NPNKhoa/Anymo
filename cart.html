@@ -6,7 +6,7 @@
     <title>Giỏ Hàng</title>
     <link rel="icon" type="image/png" href="/image/Anymo_icon.png" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <script
       src="https://kit.fontawesome.com/31f3088ab5.js"
       crossorigin="anonymous"></script>
@@ -67,90 +67,58 @@
     </header>
     <!-- End Header Section -->
 
-    <main class="container-fluid"></main>
-
-    <!-- Begin Footer Section -->
-    <footer class="container-fluid">
-      <div
-        class="footer-container container d-flex flex-wrap align-content-center justify-content-arround">
-        <div class="col-lg-3 footer-first-col">
-          <div class="footer-logo">
-            <img src="image/Anymo logo 150x150 (NB).png" alt="Anymo Logo" />
-          </div>
-
-          <div class="footer-social-media-link">
-            <a href="https://facebook.com">
-              <i class="fa-brands fa-facebook-f"></i>
-            </a>
-            <a href="https://instagram.com">
-              <i class="fa-brands fa-instagram"></i>
-            </a>
-            <a href="https://linkedin.com">
-              <i class="fa-brands fa-linkedin"></i>
-            </a>
-            <a href="https://github.com">
-              <i class="fa-brands fa-github"></i>
-            </a>
-          </div>
-        </div>
-
-        <div class="col-lg-4 footer-second-col">
-          <div class="footer-address">
-            <h4>Thông Tin Liên Hệ</h4>
-            <p>Địa Chỉ: 3/2, Xuân Khánh, Ninh Kiều, Cần Thơ.</p>
-            <p>Số Điện Thoại: 0123456789.</p>
-            <p>Email: anymo@gmail.com.</p>
-          </div>
-        </div>
-
-        <div class="col-lg-2 footer-third-col">
-          <div class="footer-info">
-            <h4>Về Anymo</h4>
-            <ul>
-              <li><a href="#">Giới Thiệu</a></li>
-              <li><a href="#">Chính Sách</a></li>
-              <li><a href="contact.html">Liên Hệ</a></li>
-              <li><a href="news.html">Tin Tức</a></li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="col-lg-3 footer-last-col">
-          <div class="footer-get-promotion">
-            <h4>Nhận Thông Tin Khuyến Mãi</h4>
-            <p>Đăng ký ngay để nhận thông tin khuyến mãi sớm nhất!</p>
-            <input
-              type="email"
-              name="email"
-              placeholder="Nhập Email của bạn..."
-              class="promotion-input" />
-            <button class="btn btn-primary submit-email-button">Gửi</button>
-          </div>
+    <main class="container-fluid">
+      <div class="cart-header">
+        <div class="cart-back">
+          <a class="cart-button-back" href="product.html">
+            <img src="image/go_back.svg" class="cart-back-go-back"> 
+          </a>
+          <span class="cart-header-msg"><b>Giỏ hàng của bạn</b></span>
         </div>
       </div>
+      <!--No cart: cart-list-no-cart -->
+      <div class="cart-list cart-list-no-cart">
+        <img src="image/no_cart.png" alt="" class="cart-list-no-cart-img">
+        <span class="cart-list-no-cart-msg">
+          <p>Chưa có sản phẩm được chọn</p>
+          <p>Hãy chọn thêm sản phẩm để mua sắm nhé</p>
+        </span>
 
-      <div class="back-to-top-icon">
-        <a href="#top"><i class="fa-solid fa-arrow-up"></i></a>
-      </div>
-
-      <div class="copyright-reserved">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="copyright-text">
-                &copy Copyright
-                <!--start getdate tody-->
-                <script>
-                  document.write(new Date().getFullYear());
-                </script>
-                All rights reserved | Made by Anymo Group
-                <!--end getdate tody -->
+        <h4 class="cart-list-heading">Sản phẩm đã chọn</h4>
+        <ul class="cart-list-item">
+          <!-- Cart-item -->
+          
+          <li class="cart-item">
+            <img src="image/iphone-13-128gb-650x650.webp" class="cart-img">
+            <div class="cart-item-info">
+              <div class="cart-item-head">
+                <h5 class="cart-item-head-name">Iphone 13 128GB VN/A - Hồng</h5>
+                <span class="cart-item-head-remove">Xóa</span>
+              </div>
+              <div class="cart-item-body">
+                <span class="cart-item-body-price">16.990.000đ</span>
+                <div class="cart-item-wrap">
+                  <button class="cart-item-body-minus">-</button>
+                  <span class="cart-item-body-qnt">1</span>
+                  <button class="cart-item-body-plus">+</button>
+                </div>
               </div>
             </div>
+          </li>
+
+        </ul>
+        <div class="cart-list-summary">
+          <div>
+            <p class="cart-summary-total">Tổng cộng:</p>
+            <span class="cart-summary-sum">16.990.000đ</span>
           </div>
+          <button class="cart-summary-pay">Thanh toán</button>
         </div>
-      </div>
-    </footer>
+      </div> 
+    </main>
+
+    <!-- Begin Footer Section -->
+    
     <!-- End Footer Section -->
 
     <script src="js/bootstrap.bundle.min.js"></script>

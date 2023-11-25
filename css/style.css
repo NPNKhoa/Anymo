@@ -267,6 +267,62 @@ header .header-end .cart-button a {
   cursor: pointer;
 }
 
+.cart-list-infor{
+  display: block;
+  height: 130px;
+  border-radius: 10px;
+  border: 1px solid #CCC;
+  padding: 10px;
+  margin: 0 20px;
+  box-shadow: 0 -4px 20px -1px rgba(111, 131, 156, 0.15);
+}
+
+.cart-infor{
+  line-height: 20px;
+  font-weight: 600;
+  color: var(--black);
+  text-transform: none;
+  font-size: 15px;
+}
+.cart-infor-customer{
+ 
+}
+.cart-infor-sex{
+
+}
+.cart-infor-choose{
+
+}
+
+.cart-infor-namephone{
+  font-weight: 400;
+}
+.cart-infor-name{
+  height: 30px;
+}
+
+.cart-infor-name input{
+  margin-left: 30px;
+  border-radius: 5px;
+  width: 300px;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.cart-infor-phone{
+  height: 30px;
+}
+
+.cart-infor-phone input{
+  margin-left: 10px;
+  border-radius: 5px;
+  width: 300px;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
 .cart-list-summary{
   background-color: #fff;
     border: 1px solid rgba(145,158,171,.239);

@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Trang chủ</title>
+    <title>iphone-11-64gb-650x650</title>
     <link rel="icon" type="image/png" href="/image/Anymo_icon.png" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/style.css">
     <script
       src="https://kit.fontawesome.com/31f3088ab5.js"
       crossorigin="anonymous"></script>
@@ -61,13 +61,98 @@
             <a href="cart.html">
               <i class="fa-solid fa-cart-shopping"></i>
             </a>
+            <span id="count-card"></span>
           </div>
         </div>
       </div>
     </header>
     <!-- End Header Section -->
 
-    <main class="container-fluid"></main>
+
+    <!-- Begin Main Section -->
+    <main class="container-fluid">
+<!-- ************************************************************* -->
+
+        <div class="product-container">
+          <div class="product-container-both">
+            <div class="product-left">
+              <div class="product-content-left">
+                <div class="product-content-big-img">
+                  <img src="image/iphone-11-64gb-650x650.webp" alt="" id="main-img">
+                </div>
+                <div class="product-content-small-img">
+                  <div class="product-small-img">
+                    <p>
+                      <img class="small-img" src="image/iphone-12-128gb-650x650.webp" alt="">
+                      <img class="small-img" src="image/iphone-13-128gb-650x650.webp" alt="">
+                      <img class="small-img" src="image/iphone-14-128gb-650x650.webp" alt="">
+                      <img class="small-img" src="image/iphone-15-plus-256gb-650x650.webp" alt="">
+                      <img class="small-img" src="image/iphone-15-plus-256gb-650x650.webp" alt="">
+                    </p>
+    
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <div class="product-right">
+              <div class="produc-content-right ">
+                <div class="product-content">
+                  <div class="produc-content-text">
+                    <h1 id="productName">Iphone 11</h1>
+                  </div>
+                </div>
+                  <div class="produc-location">
+                    <div class="product-location-text">
+                      <span>Gia ban tai: Can Tho</span>
+                    </div>
+                  </div>
+                  <div class="produc-capacity">
+                    <div class="product-capacity-text">
+                      <span>Dung lượng</span>
+                      <ul class="capacity-btn-container">
+                        <li class="capacity-btn">
+                          <a href="">64GB</a>
+                        </li>
+                        <li class="capacity-btn">
+                          <a href="">128GB</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="color-sp">
+                    <div class="color-sp-text">
+                      <span>Màu: Trắng</span>
+                  
+                      <div class="color-sp-list">
+                        <ul>
+                          <li class="type-color-one">
+                            <a href="#"></a>
+                          </li>
+                          <li class="type-color-two">
+                            <a href="#"></a>
+                          </li>
+                          <li class="type-color-three">
+                            <a href="#"></a>
+                          </li>
+                          <li class="type-color-four">
+                            <a href="#"></a>
+                          </li>
+                        </ul>
+                      </div>
+                      <!-- BTN Đặt hàng -->
+                      <div class="btn-oder-product">
+                        <a href="#" class="btn-order-full" onclick="addToLocalStorage()">Thêm</a>
+                    </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </main>
+    <!-- End Main Section -->
+
 
     <!-- Begin Footer Section -->
     <footer class="container-fluid">
@@ -154,6 +239,6 @@
     <!-- End Footer Section -->
 
     <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>

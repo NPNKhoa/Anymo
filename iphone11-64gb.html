@@ -76,23 +76,33 @@
         <div class="product-container">
           <div class="product-container-both">
             <div class="product-left">
-              <div class="product-content-left">
                 <div class="product-content-big-img">
                   <img src="image/iphone-11-64gb-650x650.webp" alt="" id="main-img">
+                  <!-- <a href="" class="prev">
+                    <i><i class="fa-solid fa-chevron-left"></i></i>
+                  </a>
+                  <a href="" class="next">
+                    <i><i class="fa-solid fa-chevron-right"></i></i>
+                  </a> -->
+
+                  <div class="next-prev-buttons">
+                    <button onclick="navigateImages(-1)">
+                      <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                    <button onclick="navigateImages(1)">
+                      <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                  </div>
                 </div>
                 <div class="product-content-small-img">
                   <div class="product-small-img">
                     <p>
-                      <img class="small-img" src="image/iphone-12-128gb-650x650.webp" alt="">
-                      <img class="small-img" src="image/iphone-13-128gb-650x650.webp" alt="">
-                      <img class="small-img" src="image/iphone-14-128gb-650x650.webp" alt="">
-                      <img class="small-img" src="image/iphone-15-plus-256gb-650x650.webp" alt="">
-                      <img class="small-img" src="image/iphone-15-plus-256gb-650x650.webp" alt="">
-                    </p>
-    
+                      <img class="small-img" src="image/iphone-11-64gb-650x650.webp" alt="" onclick="changeImages(this.src)">
+                      <img class="small-img" src="image/iphone-13-128gb-650x650.webp" alt="" onclick="changeImages(this.src)">
+                      <img class="small-img" src="image/iphone-14-128gb-650x650.webp" alt="" onclick="changeImages(this.src)">
+                      <img class="small-img" src="image/iphone-15-plus-256gb-650x650.webp" alt="" onclick="changeImages(this.src)">
                   </div>
                 </div>
-              </div>
             </div>
   
             <div class="product-right">
@@ -104,7 +114,7 @@
                   </div>
                   <div class="produc-location">
                       <div class="product-location-text">
-                          <span>Gia ban tai: Can Tho</span>
+                          <span>Giá bán tại: Cần Thơ</span>
                       </div>
                   </div>
                   <div class="produc-capacity">
@@ -112,7 +122,7 @@
                       <span>Dung lượng</span>
                       <ul class="capacity-btn-container">
                         <li class="capacity-btn">
-                          <a href="#">64GB</a>
+                          <a href="#" onclick="clickbtn()">64GB</a>
                         </li>
                         <li class="capacity-btn">
                           <a href="#">128GB</a>
@@ -127,16 +137,16 @@
                           <div class="color-sp-list">
                               <ul>
                                   <li class="type-color-one">
-                                      <a href="#"></a>
+                                      <a href="#" style="background-color: aliceblue;"></a>
                                   </li>
                                   <li class="type-color-two">
-                                      <a href="#"></a>
+                                      <a href="#" style="background-color: aqua;"></a>
                                   </li>
                                   <li class="type-color-three">
-                                      <a href="#"></a>
+                                      <a href="#" style="background-color: black;"></a>
                                   </li>
                                   <li class="type-color-four">
-                                      <a href="#"></a>
+                                      <a href="#" style="background-color: green;"></a>
                                   </li>
                               </ul>
                           </div>
@@ -153,43 +163,43 @@
                       </div>
                   </div>
               </div>
-              <div class="container-detail-product">
-                <div class="detail-product">
-                  <ul>
-                    <li>
-                      <span>
-                        <i class="fa-solid fa-mobile-screen"></i>
-                      </span>
-                      <p>
-                        6.7 inch, OLED, Super Retina XDR, 2796 x 1290 Pixels
-                      </p>
-                    </li>
-                    <li>
-                      <span>
-                        <i class="fa-solid fa-camera"></i>
-                      </span>
-                      <p>
-                        48.0 MP + 12.0 MP + 12.0 MP
-                      </p>
-                    </li>
-                    <li>
-                      <span>
-                        <i class="fa-solid fa-camera-rotate"></i>
-                      </span>
-                      <p>
-                        12.0 MP
-                      </p>
-                    </li>
-                    <li>
-                      <span>
-                        <i class="fa-solid fa-sd-card"></i>
-                      </span>
-                      <p>
-                        256 GB
-                      </p>
-                    </li>
-                  </ul>
-                </div>
+              <div class="product-bottom">
+                  <div class="detail-product">
+                    <ul>
+                      <li>
+                        <span>
+                          <i class="fa-solid fa-mobile-screen"></i>
+                        </span>
+                        <p>
+                          6.7 inch, OLED, Super Retina XDR, 2796 x 1290 Pixels
+                        </p>
+                      </li>
+                      <li>
+                        <span>
+                          <i class="fa-solid fa-camera"></i>
+                        </span>
+                        <p>
+                          48.0 MP + 12.0 MP + 12.0 MP
+                        </p>
+                      </li>
+                      <li>
+                        <span>
+                          <i class="fa-solid fa-camera-rotate"></i>
+                        </span>
+                        <p>
+                          12.0 MP
+                        </p>
+                      </li>
+                      <li>
+                        <span>
+                          <i class="fa-solid fa-sd-card"></i>
+                        </span>
+                        <p>
+                          256 GB
+                        </p>
+                      </li>
+                    </ul>
+                  </div>
               </div>
             </div>
           </div>

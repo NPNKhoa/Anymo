@@ -26,29 +26,37 @@ $(() => {
 //   })
 // };
 
-function addToLocalStorage() {
-  // Lấy tên sản phẩm từ thẻ HTML
-  var productName = document.getElementById("productName").innerText;
-  var quantity = parseInt(document.getElementById("quantity").value);
+function changeImages(imageUrl) {
+  // Change main image
+  document.getElementById('main-img').src = imageUrl;
 
-  // Kiểm tra xem Local Storage có sẵn không
-  if (typeof(Storage) !== "undefined") {
-      // Lấy giá trị hiện tại từ Local Storage
-      var currentValue = localStorage.getItem(productName);
-      // Kiểm tra xem sản phẩm đã tồn tại trong Local Storage chưa
-      if (currentValue) {
-          // Nếu sản phẩm đã tồn tại, tăng giá trị lên 1
-          currentValue = parseInt(currentValue) + quantity;
-      } else {
-          // Nếu sản phẩm chưa tồn tại, đặt giá trị là 1
-          currentValue = quantity;
-      }
+  // Change small images
+  const smallImages = document.querySelectorAll('.small-img');
+  smallImages.forEach(img => img.classList.remove('active'));
+  const selectedSmallImage = Array.from(smallImages).find(img => img.src === imageUrl);
+  selectedSmallImage.classList.add('active');
+}
 
-      // Lưu giá trị mới vào Local Storage, với key là productName
-      localStorage.setItem(productName, currentValue);
+// Function to handle next and previous buttons
+function navigateImages(direction) {
+  const smallImages = document.querySelectorAll('.small-img');
+  const mainImage = document.getElementById('main-img');
 
-      alert("Đã thêm vào giỏ hàng");
-  } else {
-      alert("Trình duyệt của bạn không hỗ trợ.");
+  // Find the index of the current main image
+  const currentIndex = Array.from(smallImages).findIndex(
+    (img) => img.src === mainImage.src
+  );
+
+  // Calculate the new index based on the direction
+  let newIndex = currentIndex + direction;
+
+  // Check if newIndex is within bounds
+  if (newIndex < 0) {
+    newIndex = smallImages.length - 1;
+  } else if (newIndex >= smallImages.length) {
+    newIndex = 0;
   }
-};
+
+  // Change both main and small images
+  changeImages(smallImages[newIndex].src);
+}

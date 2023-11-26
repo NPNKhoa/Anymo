@@ -79,5 +79,3 @@ function ShowMycart() {
   }
   document.getElementById("mycart").innerHTML = ttgh;
 }
-
-

@@ -220,11 +220,25 @@ header .header-end .cart-button a {
   justify-content: space-between;
   margin-right: 14px;
 }
+#cart-item-head{
+  display: flex;
+}
 .cart-item-head-name{
   font-size: 1rem;
   font-weight: 500;
   color: var(--text-color);
 }
+.cart-item-head-capacity{
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-color);
+}
+.cart-item-head-color{
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
 .cart-item-head-remove{
   font-size: 1rem;
   font-weight: 300;
@@ -259,7 +273,7 @@ header .header-end .cart-button a {
   cursor: pointer;
 }
 .cart-item-body-qnt{
-
+  color: var(--text-color);
 }
 .cart-item-body-plus{
   width: 25px;
@@ -302,7 +316,7 @@ header .header-end .cart-button a {
 }
 
 .cart-infor-name input{
-  margin-left: 30px;
+  margin-left: 88px;
   border-radius: 5px;
   width: 300px;
   font-family: inherit;
@@ -315,13 +329,67 @@ header .header-end .cart-button a {
 }
 
 .cart-infor-phone input{
-  margin-left: 10px;
+  margin-left: 68px;
   border-radius: 5px;
   width: 300px;
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
 }
+
+.cart-list-address{
+  display: block;
+  height: 160px;
+  border-radius: 10px;
+  border: 1px solid #CCC;
+  padding: 10px;
+  margin: 0 20px;
+  box-shadow: 0 -4px 20px -1px rgba(111, 131, 156, 0.15);
+}
+.cart-address{
+  line-height: 20px;
+  font-weight: 600;
+  color: var(--black);
+  text-transform: none;
+  font-size: 15px
+}
+.cart-address--street input{
+  margin-bottom: 2px;
+  margin-left: 30px;
+  border-radius: 5px;
+  width: 300px;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+.cart-address--ward input{
+  margin-bottom: 2px;
+  margin-left: 77px;
+  border-radius: 5px;
+  width: 300px;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+.cart-address--district input{
+  margin-bottom: 2px;
+  margin-left: 69px;
+  border-radius: 5px;
+  width: 300px;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+.cart-address--province input{
+  margin-bottom: 5px;
+  margin-left: 47px;
+  border-radius: 5px;
+  width: 300px;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
 
 .cart-list-summary{
   background-color: #fff;

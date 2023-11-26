@@ -108,7 +108,7 @@
             <div class="product-right">
               <div class="produc-content-right ">
                   <div class="product-content">
-                      <div class="produc-content-text">
+                      <div class="produc-content-text boxname">
                           <h1 id="productName">Iphone 11</h1>
                       </div>
                   </div>
@@ -125,14 +125,14 @@
                           <a href="#" onclick="clickbtn()">64GB</a>
                         </li>
                         <li class="capacity-btn">
-                          <a href="#">128GB</a>
+                          <a href="#" >128GB</a>
                         </li>
                       </ul>
                     </div>
                   </div>
                   <div class="color-sp">
-                      <div class="color-sp-text">
-                          <span>Màu: Trắng</span>
+                      <div class="color-sp-text boxcolor">
+                          <span id="color-sp">Màu: Trắng</span>
                       
                           <div class="color-sp-list">
                               <ul>
@@ -154,11 +154,11 @@
                           <div class="btn-oder-product">
                               <div class="number-order-product">
                                   <label class="number-title-order" for="quantity">Số lượng:</label>
-                                  <div class="number-order">
+                                  <div class="number-order boxqnt">
                                       <input type="number" id="quantity" value="1" min="1">
                                   </div>
                               </div>
-                                  <a href="#" class="btn-order-full" onclick="addToLocalStorage()">Thêm</a>
+                                  <a href="#" class="btn-order-full" onclick="addToLocalStorage(this)">Thêm</a>
                           </div>
                       </div>
                   </div>

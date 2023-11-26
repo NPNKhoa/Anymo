@@ -77,7 +77,7 @@
           <div class="product-container-both">
             <div class="product-left">
               <div class="product-content-left">
-                <div class="product-content-big-img">
+                <div class="product-content-big-img boximg">
                   <img src="image/iphone-11-64gb-650x650.webp" alt="" id="main-img">
                 </div>
                 <div class="product-content-small-img">
@@ -98,31 +98,32 @@
             <div class="product-right">
               <div class="produc-content-right ">
                   <div class="product-content">
-                      <div class="produc-content-text">
+                      <div class="produc-content-text boxname">
                           <h1 id="productName">Iphone 11</h1>
                       </div>
                   </div>
                   <div class="produc-location">
-                      <div class="product-location-text">
+                      <div class="product-location-text boxprice">
                           <span>Gia ban tai: Can Tho</span>
+                          <span id="price">10.990.000đ</span>
                       </div>
                   </div>
                   <div class="produc-capacity">
                     <div class="product-capacity-text">
                       <span>Dung lượng</span>
                       <ul class="capacity-btn-container">
-                        <li class="capacity-btn">
-                          <a href="#">64GB</a>
+                        <li class="capacity-btn boxcap">
+                          <a href="#" id="capacity">64GB</a>
                         </li>
                         <li class="capacity-btn">
-                          <a href="#">128GB</a>
+                          <a href="#" >128GB</a>
                         </li>
                       </ul>
                     </div>
                   </div>
                   <div class="color-sp">
-                      <div class="color-sp-text">
-                          <span>Màu: Trắng</span>
+                      <div class="color-sp-text boxcolor">
+                          <span id="color-sp">Màu: Trắng</span>
                       
                           <div class="color-sp-list">
                               <ul>
@@ -144,11 +145,11 @@
                           <div class="btn-oder-product">
                               <div class="number-order-product">
                                   <label class="number-title-order" for="quantity">Số lượng:</label>
-                                  <div class="number-order">
+                                  <div class="number-order boxqnt">
                                       <input type="number" id="quantity" value="1" min="1">
                                   </div>
                               </div>
-                                  <a href="#" class="btn-order-full" onclick="addToLocalStorage()">Thêm</a>
+                                  <a href="#" class="btn-order-full" onclick="addToLocalStorage(this)">Thêm</a>
                           </div>
                       </div>
                   </div>
@@ -185,7 +186,7 @@
                         <i class="fa-solid fa-sd-card"></i>
                       </span>
                       <p>
-                        256 GB
+                        64 GB
                       </p>
                     </li>
                   </ul>

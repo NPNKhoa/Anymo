@@ -79,3 +79,41 @@ function ShowMycart() {
   }
   document.getElementById("mycart").innerHTML = ttgh;
 }
+
+// change button img
+
+
+function changeImages(imageUrl) {
+  // Change main image
+  document.getElementById('main-img').src = imageUrl;
+
+  // Change small images
+  const smallImages = document.querySelectorAll('.small-img');
+  smallImages.forEach(img => img.classList.remove('active'));
+  const selectedSmallImage = Array.from(smallImages).find(img => img.src === imageUrl);
+  selectedSmallImage.classList.add('active');
+}
+
+// Function to handle next and previous buttons
+function navigateImages(direction) {
+  const smallImages = document.querySelectorAll('.small-img');
+  const mainImage = document.getElementById('main-img');
+
+  // Find the index of the current main image
+  const currentIndex = Array.from(smallImages).findIndex(
+    (img) => img.src === mainImage.src
+  );
+
+  // Calculate the new index based on the direction
+  let newIndex = currentIndex + direction;
+
+  // Check if newIndex is within bounds
+  if (newIndex < 0) {
+    newIndex = smallImages.length - 1;
+  } else if (newIndex >= smallImages.length) {
+    newIndex = 0;
+  }
+
+  // Change both main and small images
+  changeImages(smallImages[newIndex].src);
+}

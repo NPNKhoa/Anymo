@@ -87,30 +87,6 @@
         <h4 class="cart-list-heading">Sản phẩm đã chọn</h4>
         <ul class="cart-list-item">
           <!-- Cart-item -->
-          
-          <li class="cart-item">
-            <img src="image/iphone-13-128gb-650x650.webp" class="cart-img">
-            <div class="cart-item-info">
-              <div class="cart-item-head">
-                <div id="cart-item-head">
-                  <span class="cart-item-head-name">Iphone 13</span>
-                  <span> - </span>
-                  <span class="cart-item-head-capacity">128GB</span>
-                  <span> - </span>
-                  <span class="cart-item-head-color">Hồng</span>
-                </div>     
-                <span class="cart-item-head-remove">Xóa</span>
-              </div>
-              <div class="cart-item-body">
-                <span class="cart-item-body-price">16.990.000đ</span>
-                <div class="cart-item-wrap">
-                  <button class="cart-item-body-minus">-</button>
-                  <span class="cart-item-body-qnt">1</span>
-                  <button class="cart-item-body-plus">+</button>
-                </div>
-              </div>
-            </div>
-          </li>
 
           <tbody id="mycart">
 
@@ -154,7 +130,7 @@
                 <input type="text" required="required" delaytime="200" maxlength="50" name="cusStreet">
               </div>
               <div class="cart-address--ward">
-                <label for="cusWards" class="cart-infor-name-label">Phường, Xã</label>
+                <label for="cusWards" class="cart-infor-name-label">Phường, Xã:</label>
                 <input type="text" required="required" delaytime="200" maxlength="50" name="cusWards">
               </div>
               <div class="cart-address--district">
@@ -186,5 +162,8 @@
 
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
+    <script>
+      ShowMycart();
+    </script>
   </body>
 </html>

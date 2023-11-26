@@ -39,39 +39,14 @@ function addToLocalStorage() {
 
   cart.push(product);
 
-
-
-
-  // Kiểm tra xem Local Storage có sẵn không
-  if (typeof(Storage) !== "undefined") {
-      // Lấy giá trị hiện tại từ Local Storage
-      var currentValue = localStorage.getItem(productName);
-      // Kiểm tra xem sản phẩm đã tồn tại trong Local Storage chưa
-      if (currentValue) {
-          // Nếu sản phẩm đã tồn tại, tăng giá trị lên 1
-          currentValue = parseInt(currentValue) + quantity;
-      } else {
-          // Nếu sản phẩm chưa tồn tại, đặt giá trị là 1
-          currentValue = quantity;
-      }
-
-      // Lưu giá trị mới vào Local Storage, với key là productName
-      sessionStorage.setItem("cart", JSON.stringify(cart));
-
-      alert("Đã thêm vào giỏ hàng");
-  } else {
-      alert("Trình duyệt của bạn không hỗ trợ.");
-  }
+  sessionStorage.setItem("cart", JSON.stringify(cart));
 };
 
 function ShowMycart() {
   var gh = sessionStorage.getItem("cart");
   var cart = JSON.parse(gh);
   var ttgh = "";
-  var tong = 0;
   for (let i = 0; i< cart.length; i++) {
-    var tt = cart[i][5] * cart[i][4];
-    tong += tt;
     ttgh += '<li class="cart-item">' +
             '<img src="'+cart[i][0]+'" class="cart-img">' +
             '<div class="cart-item-info">' +
@@ -96,14 +71,7 @@ function ShowMycart() {
             '</div>' +
           '</li>';       
   }
-  ttgh = '<div class="cart-list-summary">' +
-        '<div>' +
-          '<p class="cart-summary-total">Tổng cộng:</p>' +
-          '<span class="cart-summary-sum">'+ tong +'</span>' +
-        '</div>' +
-        '<button class="cart-summary-pay" onclick=" ">Đặt hàng</button>' +
-      '<div>';
   document.getElementById("mycart").innerHTML = ttgh;
 }
 
-ShowMycart();
+

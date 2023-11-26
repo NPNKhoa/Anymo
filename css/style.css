@@ -155,9 +155,6 @@ header .header-end .cart-button a {
   display: block;
 }
 
-.cart-list-no-cart{
-}
-
 .cart-list-no-cart .cart-list-no-cart-img,
 .cart-list-no-cart .cart-list-no-cart-msg{
   display: block;
@@ -180,7 +177,9 @@ header .header-end .cart-button a {
 
 .cart-list-no-cart .cart-list-heading,
 .cart-list-no-cart .cart-list-item,
-.cart-list-no-cart .cart-list-summary{
+.cart-list-no-cart .cart-list-summary,
+.cart-list-no-cart .cart-list-infor,
+.cart-list-no-cart .cart-list-address{
   display: none;
 }
 
@@ -267,22 +266,11 @@ header .header-end .cart-button a {
   justify-content: space-between;
 }
 
-.cart-item-body-minus{
-  width: 25px;
-  height: 25px;
-  cursor: pointer;
-}
 .cart-item-body-qnt{
   color: var(--text-color);
 }
-.cart-item-body-plus{
-  width: 25px;
-  height: 25px;
-  cursor: pointer;
-}
 
 .cart-list-infor{
-  display: block;
   height: 130px;
   border-radius: 10px;
   border: 1px solid #CCC;
@@ -338,7 +326,6 @@ header .header-end .cart-button a {
 }
 
 .cart-list-address{
-  display: block;
   height: 160px;
   border-radius: 10px;
   border: 1px solid #CCC;
@@ -389,7 +376,6 @@ header .header-end .cart-button a {
   font-size: inherit;
   line-height: inherit;
 }
-
 
 .cart-list-summary{
   background-color: #fff;

@@ -28,22 +28,29 @@ $(() => {
 var cart = new Array();
 
 function addToLocalStorage(x) {
-  var boximg = x.parentElement.children;
-  var boxname = x.parentElement.children;
-  var boxqnt = x.parentElement.children;
-  var boxcap = x.parentElement.children;
-  var boxcolor = x.parentElement.children;
-  var boxprice = x.parentElement.children;
   // Lấy tên sản phẩm từ thẻ HTML
-  var productName = boxname[0].innerText;
-  var quantity = boxqnt[0].value;
-  var img = boximg[0].children[0].src;
-  var capacity = boxcap[0].innerText;
-  var color = boxcolor[0].innerText;
-  var price = boxprice[1].innerText;
+  var productName = document.getElementById("productName").innerText;
+  var quantity = parseInt(document.getElementById("quantity").value);
+  var img = document.getElementById("main-img").src;
+  var capacity = document.getElementById("capacity").innerText;
+  var color = document.getElementById("color-sp").innerText;
+  var price = document.getElementById("price").innerText;
   var product = new Array(img, productName, capacity, color, price, quantity);
-
-  cart.push(product);
+  
+  //kiem tra gio hang
+  var kiemtra = 0;
+  for (let i = 0; i < cart.length; i++) {
+    if (cart[i][2] == productName) {
+      kiemtra = 1;
+      quantity += parseInt(cart[i][5]);
+      cart[i][5] = quantity;
+      break;
+    }
+  }
+  if (kiemtra == 0) {
+    //them vao gio hang
+    cart.push(product);
+  }
 
   sessionStorage.setItem("cart", JSON.stringify(cart));
 };
@@ -69,9 +76,8 @@ function ShowMycart() {
               '<div class="cart-item-body">' +
                 '<span class="cart-item-body-price">'+cart[i][4]+'</span>' +
                 '<div class="cart-item-wrap">' +
-                  '<button class="cart-item-body-minus">-</button>' +
+                  '<span class="cart-item-wrap-name">Số lượng:</span>' +
                   '<span class="cart-item-body-qnt">'+cart[i][5]+'</span>' +
-                  '<button class="cart-item-body-plus">+</button>' +
                 '</div>' + 
               '</div>' +
             '</div>' +
@@ -79,6 +85,35 @@ function ShowMycart() {
   }
   document.getElementById("mycart").innerHTML = ttgh;
 }
+
+function dathang() {
+  var hoten = document.getElementById("name").value;
+  var sdt = document.getElementById("phone").value;
+  var duong = document.getElementById("street").value;
+  var phuong = document.getElementById("wards").value;
+  var quan = document.getElementById("district").value;
+  var tinh = document.getElementById("province").value;
+  var ttdh = new Array(hoten, sdt, duong, phuong, quan, tinh);
+
+  sessionStorage.setItem("ttdh", JSON.stringify(ttdh));
+
+  console.log(ttdh);
+}
+
+function thanhtien() {
+  var gh = sessionStorage.getItem("cart");
+  var cart = JSON.parse(gh);
+  var tong = 0;
+  for (let i = 0; i < cart.length; i++) {
+    var tt = parseInt(cart[i][5]) * parseFloat(cart[i][4]);
+    tong += tt;
+  }
+
+  var thanhtien = '<p class="cart-summary-total">Tổng cộng:</p>'+
+                  '<span class="cart-summary-sum">'+ tong +'</span>';
+  document.getElementById("thanhtien").innerHTML = thanhtien;
+}
+
 
 // change button img
 

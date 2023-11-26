@@ -27,14 +27,20 @@ $(() => {
 // };
 var cart = new Array();
 
-function addToLocalStorage() {
+function addToLocalStorage(x) {
+  var boximg = x.parentElement.children;
+  var boxname = x.parentElement.children;
+  var boxqnt = x.parentElement.children;
+  var boxcap = x.parentElement.children;
+  var boxcolor = x.parentElement.children;
+  var boxprice = x.parentElement.children;
   // Lấy tên sản phẩm từ thẻ HTML
-  var productName = document.getElementById("productName").innerText;
-  var quantity = parseInt(document.getElementById("quantity").value);
-  var img = document.getElementById("main-img").src;
-  var capacity = document.getElementById("capacity").innerText;
-  var color = document.getElementById("color-sp").innerText;
-  var price = parseInt(document.getElementById("price").value);
+  var productName = boxname[0].innerText;
+  var quantity = boxqnt[0].value;
+  var img = boximg[0].children[0].src;
+  var capacity = boxcap[0].innerText;
+  var color = boxcolor[0].innerText;
+  var price = boxprice[1].innerText;
   var product = new Array(img, productName, capacity, color, price, quantity);
 
   cart.push(product);

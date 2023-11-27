@@ -114,7 +114,13 @@ header .header-end .cart-button a {
   color: #000;
 }
 /* End Header Section */
-
+#cart-count{
+  position: absolute;
+  padding: 4px 0px;
+  color: #000;
+  font-size: 17px;
+  line-height: 0;
+}
 .cart-header{
   border-bottom: 1px solid #e5e5e5;
   color: #323232;
@@ -152,7 +158,6 @@ header .header-end .cart-button a {
 .cart-list{
   margin: 0 400px;
   border-radius: 3px;
-  display: block;
 }
 
 .cart-list-no-cart .cart-list-no-cart-img,
@@ -162,7 +167,7 @@ header .header-end .cart-button a {
 
 .cart-list-no-cart-img{
   display: none;
-  margin-left: auto;
+  margin-left: 150px;
   margin-right: auto;
   width: 400px;
 }
@@ -201,7 +206,7 @@ header .header-end .cart-button a {
   border-radius: 10px;
   border: 1px solid #CCC;
   padding: 10px;
-  margin: 10px;
+  margin: 0 10px;
   box-shadow: 0 -4px 20px -1px rgba(111, 131, 156, 0.15);
 }
 
@@ -281,7 +286,7 @@ header .header-end .cart-button a {
   border-radius: 10px;
   border: 1px solid #CCC;
   padding: 10px;
-  margin: 0 20px;
+  margin: 5px 20px;
   box-shadow: 0 -4px 20px -1px rgba(111, 131, 156, 0.15);
 }
 

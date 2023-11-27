@@ -87,7 +87,6 @@
         <h4 class="cart-list-heading">Sản phẩm đã chọn</h4>
         <ul class="cart-list-item">
           <!-- Cart-item -->
-
           <div id="mycart">
 
           </div>
@@ -110,14 +109,13 @@
             <div class="cart-infor-namephone">
               <div class="cart-infor-name">
                 <label for="cusName" class="cart-infor-name-label">Họ và Tên:</label>
-                <input type="text" required="required" delaytime="200" maxlength="50" name="cusName">
+                <input type="text" required="required" delaytime="200" maxlength="50" name="cusName" id="name">
               </div>
               <div class="cart-infor-phone">
                 <label for="cusPhone" class="cart-infor-name-label">Số điện thoại:</label>
-                <input type="tel" required="required" delaytime="200" maxlength="10" name="cusName">
+                <input type="tel" required="required" delaytime="200" maxlength="10" name="cusPhone" id="phone">
               </div>
             </div>
-
           </form>
         </div>
 
@@ -127,19 +125,19 @@
             <div class="cart-address--">
               <div class="cart-address--street">
                 <label for="cusStreet" class="cart-infor-name-label">Số nhà, tên đường:</label>
-                <input type="text" required="required" delaytime="200" maxlength="50" name="cusStreet">
+                <input type="text" required="required" delaytime="200" maxlength="50" name="cusStreet" id="street">
               </div>
               <div class="cart-address--ward">
                 <label for="cusWards" class="cart-infor-name-label">Phường, Xã:</label>
-                <input type="text" required="required" delaytime="200" maxlength="50" name="cusWards">
+                <input type="text" required="required" delaytime="200" maxlength="50" name="cusWards" id="wards">
               </div>
               <div class="cart-address--district">
                 <label for="cusDistrict" class="cart-infor-name-label">Quận, Huyện:</label>
-                <input type="text" required="required" delaytime="200" maxlength="50" name="cusDistrict">
+                <input type="text" required="required" delaytime="200" maxlength="50" name="cusDistrict" id="district">
               </div>
               <div class="cart-address--province">
                 <label for="cusProvince" class="cart-infor-name-label">Tỉnh, Thành phố:</label>
-                <input type="text" required="required" delaytime="200" maxlength="50" name="cusProvince">
+                <input type="text" required="required" delaytime="200" maxlength="50" name="cusProvince" id="province">
               </div>
             </div>
 
@@ -147,11 +145,10 @@
         </div>
 
         <div class="cart-list-summary">
-          <div>
-            <p class="cart-summary-total">Tổng cộng:</p>
-            <span class="cart-summary-sum">16.990.000đ</span>
+          <div id="thanhtien">
+            
           </div>
-          <button class="cart-summary-pay" onclick=" ">Đặt hàng</button>
+          <button class="cart-summary-pay" onclick="dathang()">Đặt hàng</button>
         </div>
       </div> 
     </main>
@@ -161,9 +158,10 @@
     <!-- End Footer Section -->
 
     <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
     <script>
       ShowMycart();
+      thanhtien();
     </script>
   </body>
 </html>

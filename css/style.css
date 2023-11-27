@@ -270,6 +270,12 @@ header .header-end .cart-button a {
   color: var(--text-color);
 }
 
+.cart-item-body-plus{
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+
 .cart-list-infor{
   height: 130px;
   border-radius: 10px;
@@ -326,6 +332,7 @@ header .header-end .cart-button a {
 }
 
 .cart-list-address{
+  display: block;
   height: 160px;
   border-radius: 10px;
   border: 1px solid #CCC;
@@ -664,7 +671,6 @@ main .img5 img {
   transition: all 0.25s ease 0s;
 }
 
-
 /* Css ip11 */
 main .container-fluid{
   height: 1000px;
@@ -888,7 +894,6 @@ h1 {
   font-weight: 750; 
 }
 
-
 .number-order input {
   border-radius: 8px;
   text-align: center;
@@ -905,7 +910,6 @@ p img.small-img:hover {
   border: 1px solid red;
   cursor: pointer;
 }
-
 
 /*Detail product*/
 .product-bottom {
@@ -963,5 +967,3 @@ p img.small-img:hover {
   line-height: 50px;
   border-radius: 90px;
 }
-
-

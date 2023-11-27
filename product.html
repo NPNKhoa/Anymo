@@ -19,7 +19,7 @@
     <link rel="icon" type="image/png" href="/image/Anymo_icon.png" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="product.css" />
+    <link rel="stylesheet" href="css/product.css" />
     <script
       src="https://kit.fontawesome.com/31f3088ab5.js"
       crossorigin="anonymous"
@@ -90,60 +90,102 @@
       </div>
     </header>
     <!-- End Header Section -->
-
-    <main class="container-fluid">
-      <div class="container">
+    <!-- Body -->
+    <main class="container">
+      <div class="content">
         <div class="row">
-          <div class="col col-lg-2 col-md-0 col-sm-0">
+          <div class="col col-lg-3 col-md-0 col-sm-0">
             <!-- Category -->
-            <nav class="category"></nav>
+            <nav class="category">
+              <div class="category__title">Danh mục sản phẩm</div>
+              <ul class="category__list">
+                <li class="catgory__item catgory__item--active">
+                  <a href="" class="category__item-link">iPhone 15 Series</a>
+                </li>
+                <li class="catgory__item">
+                  <a href="" class="category__item-link">iPhone 14 Series</a>
+                </li>
+                <li class="catgory__item">
+                  <a href="" class="category__item-link">iPhone 13 Series</a>
+                </li>
+                <li class="catgory__item">
+                  <a href="" class="category__item-link">iPhone 12 Series</a>
+                </li>
+                <li class="catgory__item">
+                  <a href="" class="category__item-link">iPhone 11 Series</a>
+                </li>
+              </ul>
+            </nav>
           </div>
 
-          <div class="col col-lg-10 col-md-12 col-sm-12">
-            <!-- Filter -->
-            <div class="filter"></div>
+          <div class="col col-lg-9 col-md-12 col-sm-12">
+            <!-- Heading -->
+            <div class="head">
+              <h4 class="head-tilte">iPhone 15 Series</h4>
+              <div class="arrange">
+                <h5 class="arrange__title">Sắp xếp :</h5>
+                <label class="arrange__btn"
+                  >Giá cả
+                  <i class="arrange__btn-icon fa-solid fa-chevron-down"></i>
+                </label>
+              </div>
+            </div>
             <!-- Product -->
             <div class="product">
-              <div class="row row-cols-lg-5 row-cols-md-3 row-cols-sm-2">
+              <div class="row row-cols-lg-4 row-cols-md-3 row-cols-sm-2">
                 <!-- Infor product -->
                 <div class="col">
-                  <a href="" class="product-itemm">
+                  <a href="iphone15-promax-512gb.html" class="product-itemm">
                     <div
                       class="product-item__img"
-                      style="background-image: url()"
+                      style="
+                        background-image: url(image/iphone-15-pro-max-512gb-650x650.webp);
+                      "
                     ></div>
-                    <h4 class="product-item__name"></h4>
-                    <div class="product-item__price">
-                      <a href="" class="product-item__price-old"></a>
-                      <a href="" class="product-item__price-curent"></a>
+                    <h4 class="product-item__name">iphone15 promax 512gb</h4>
+                    <div
+                      class="product-item__price product-item__price--sale-off"
+                    >
+                      <span class="product-item__price-curent"
+                        >39.990.000đ</span
+                      >
+                      <span class="product-item__price-old">49.990.000đ</span>
                     </div>
-                    <div class="product-item__rating"></div>
-                    <div class="product-item__sold"></div>
-                    <div class="product-item__favourite"></div>
-                    <div class="product-item__sale-off"></div>
+                    <div class="product-item__action">
+                      <div class="product-item__rating">
+                        <i
+                          class="product-item__start--gold fa-solid fa-star"
+                        ></i>
+                        <i
+                          class="product-item__start--gold fa-solid fa-star"
+                        ></i>
+                        <i
+                          class="product-item__start--gold fa-solid fa-star"
+                        ></i>
+                        <i
+                          class="product-item__start--gold fa-solid fa-star"
+                        ></i>
+                        <i class="product-item__start fa-solid fa-star"></i>
+                      </div>
+                      <span class="product-item__sold">12 Đã bán</span>
+                    </div>
+                    <div class="product-item__favourite">
+                      <i class="fa-solid fa-check"></i>
+                      <span>Yêu thích</span>
+                    </div>
+                    <div class="product-item__sale-off">
+                      <span class="product-item__sale-off-percent">20%</span>
+                      <div class="product-item__sale-off-lable">GIẢM</div>
+                    </div>
                   </a>
                 </div>
               </div>
             </div>
-            <!-- Pagination -->
-            <ul class="pagination">
-              <li class="pagination-item">
-                <a href="" class="pagination-iten__link">
-                  <i class="pa ination-item icon fas fa-angle-left"></i>
-                </a>
-              </li>
-
-              <li class="pagination-item">
-                <a href="" class="pagination-iten__link">
-                  <i class="pa ination-item icon fas fa-angle-right"></i>
-                </a>
-              </li>
-            </ul>
           </div>
         </div>
       </div>
     </main>
-
+    <!-- End Body -->
     <!-- Begin Footer Section -->
     <footer class="container-fluid">
       <div

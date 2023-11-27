@@ -108,13 +108,14 @@
             <div class="product-right">
               <div class="produc-content-right ">
                   <div class="product-content">
-                      <div class="produc-content-text boxname">
+                      <div class="produc-content-text ">
                           <h1 id="productName">Iphone 11</h1>
                       </div>
                   </div>
                   <div class="produc-location">
                       <div class="product-location-text">
                           <span>Giá bán tại: Cần Thơ</span>
+                          <span id="price">10.990.000</span>
                       </div>
                   </div>
                   <div class="produc-capacity">
@@ -122,7 +123,7 @@
                       <span>Dung lượng</span>
                       <ul class="capacity-btn-container">
                         <li class="capacity-btn">
-                          <a href="#" onclick="clickbtn()">64GB</a>
+                          <a href="#" id="capacity" onclick="clickbtn()">64GB</a>
                         </li>
                         <li class="capacity-btn">
                           <a href="#" >128GB</a>
@@ -158,7 +159,7 @@
                                       <input type="number" id="quantity" value="1" min="1">
                                   </div>
                               </div>
-                                  <a href="#" class="btn-order-full" onclick="addToLocalStorage(this)">Thêm</a>
+                                  <a href="#" class="btn-order-full" onclick="addToLocalStorage()">Thêm</a>
                           </div>
                       </div>
                   </div>

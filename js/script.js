@@ -14,17 +14,9 @@ $(() => {
   })
 });
 
-// ThemvaoLocaStore
-// var btn = document.getElementsByTagName(".btn-oder-full");
-
-// for(let i = 0;i <= btn.length;i++){
-//   btn[i].addEventListener("click",function(){
-//     var hinh = btn[i].parentElement.childNodes[i].sr
-//     var ten = btn[i].parentElement.childNodes[3].text;
-//     var gia = btn[i].parentElement.childNodes[7].value;
-//     alert("gia");
-//   })
-// };
+// Cai Dat Gio Hang
+// document.getElementById("cart-list").style.display = "block";
+// document.getElementById("no-cart").style.display = "none";
 
 var cart = new Array();
 
@@ -53,8 +45,14 @@ function addToLocalStorage(x) {
     cart.push(product);
   }
   console.log(cart);
+  ShowCount();
+
   sessionStorage.setItem("cart", JSON.stringify(cart));
 };
+
+function ShowCount() {
+  document.getElementById("cart-count").innerHTML = cart.length;
+}
 
 function ShowMycart() {
   var gh = sessionStorage.getItem("cart");
@@ -162,11 +160,10 @@ function XoaSP() {
       cart.splice(i, 1);
     }
   }
-  
+ 
 }
 
-ShowMycart();
-thanhtien();
+
 
 
 // change button img

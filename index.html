@@ -45,9 +45,8 @@
             <li class="nav-item">
               <a href="login.html" class="nav-link">Đăng Nhập</a>
             </li>
-            <li class="nav-item">
-              <a href="register.html" class="nav-link">Đăng Ký</a>
-            </li>
+
+            <li class="nav-item"></li>
           </ul>
 
           <input
@@ -67,9 +66,10 @@
     </header>
     <!-- End Header Section -->
 
+    <!-- Begin Main Section -->
     <main class="container-fluid">
+      <!-- Carousel -->
       <div class="main-carousel">
-        <!-- Carousel -->
         <div id="demo" class="carousel slide" data-bs-ride="carousel">
           <!-- Indicators/dots -->
           <div class="carousel-indicators">
@@ -88,7 +88,7 @@
               data-bs-slide-to="2"></button>
           </div>
 
-          <!-- The slideshow/carousel -->
+          <!-- The slideshow -->
           <div class="carousel-inner">
             <div class="carousel-item active">
               <img
@@ -132,7 +132,7 @@
             </div>
           </div>
 
-          <!-- Left and right controls/icons -->
+          <!-- Left and right icons -->
           <button
             class="carousel-control-prev"
             type="button"
@@ -149,7 +149,81 @@
           </button>
         </div>
       </div>
+
+      <!-- Flash Sale -->
+      <div class="main-flash-sale">
+        <div class="flash-sale-container">
+          <div class="flash-sale-header d-flex justify-content-between">
+            <img
+              src="image/flash-sale.png"
+              alt="Flash Sale"
+              id="flash-sale-img" />
+
+            <div class="time-counter">
+              <h4 class="time-counter-label">KẾT THÚC TRONG</h4>
+              <div id="hours" class="time-counter-element me-3">00</div>
+              <div id="minutes" class="time-counter-element me-3">00</div>
+              <div id="seconds" class="time-counter-element me-3">00</div>
+            </div>
+          </div>
+
+          <div class="flash-sale-body row">
+            <div class="flash-sale-item col-4">
+              <div class="card">
+                <img
+                  src="image/iphone-11-64gb-650x650.webp"
+                  alt="iPhone 11 64GB"
+                  class="card-img-top" />
+                <div class="card-body">
+                  <h4 class="card-title">iPhone 11 64GB</h4>
+                  <p class="card-text">11.000.000đ</p>
+                </div>
+              </div>
+            </div>
+            <div class="flash-sale-item col-4">
+              <div class="card">
+                <img
+                  src="image/iphone-11-64gb-650x650.webp"
+                  alt="iPhone 11 64GB"
+                  class="card-img-top" />
+                <div class="card-body">
+                  <h4 class="card-title">iPhone 11 64GB</h4>
+                  <p class="card-text">11.000.000đ</p>
+                </div>
+              </div>
+            </div>
+            <div class="flash-sale-item col-4">
+              <div class="card">
+                <img
+                  src="image/iphone-11-64gb-650x650.webp"
+                  alt="iPhone 11 64GB"
+                  class="card-img-top" />
+                <div class="card-body">
+                  <h4 class="card-title">iPhone 11 64GB</h4>
+                  <p class="card-text">11.000.000đ</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Catagories -->
+      <div class="main-catagories"></div>
+
+      <!-- New Products -->
+      <div class="main-new-products"></div>
+
+      <!-- iPhone 15 -->
+      <div class="main-iphone15"></div>
+
+      <!-- News catagories -->
+      <div class="main-news-catagories"></div>
+
+      <!-- Festures -->
+      <div class="main-features"></div>
     </main>
+    <!-- End Main Section -->
 
     <!-- Begin Footer Section -->
     <footer class="container-fluid">
@@ -236,6 +310,6 @@
     <!-- End Footer Section -->
 
     <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>

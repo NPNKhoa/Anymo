@@ -67,7 +67,35 @@
     </header>
     <!-- End Header Section -->
 
-    <main class="container-fluid"></main>
+    <main class="container-fluid">
+      <div class="order">
+        <div class="order-information">
+          <a class="order-back" href="index.html">
+            <img src="image/go_back.svg" class="order-back-go-back"> 
+          </a>
+          <span class="order-msg"><b>Thông tin đơn hàng của bạn</b></span>
+        </div>
+
+        <div class="order-customer">
+          <div id="order-customer">
+            
+          </div>
+
+          <ul class="order-list-item">
+            <!-- Cart-item -->
+            <div id="mycart">
+
+            </div>
+          </ul>
+
+          <div  class="order-sum-price">
+            <div id="thanhtien">
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
 
     <!-- Begin Footer Section -->
     <footer class="container-fluid">
@@ -154,6 +182,11 @@
     <!-- End Footer Section -->
 
     <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+      ShowOrder();
+      ShowMycart();
+      thanhtien();
+    </script>
   </body>
 </html>

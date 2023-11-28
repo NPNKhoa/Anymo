@@ -61,99 +61,111 @@
             <a href="cart.html">
               <i class="fa-solid fa-cart-shopping"></i>
             </a>
+            <span id="cart-count">0</span>
           </div>
         </div>
       </div>
     </header>
     <!-- End Header Section -->
 
-    <main class="container-fluid"></main>
+    <main class="container-fluid">
+      <div class="cart-header">
+        <div class="cart-back">
+          <a class="cart-button-back" href="product.html">
+            <img src="image/go_back.svg" class="cart-back-go-back"> 
+          </a>
+          <span class="cart-header-msg"><b>Giỏ hàng của bạn</b></span>
+        </div>
+      </div>
+      <!--No cart: cart-list-no-cart -->
+      <div class="cart-list">
+        <div id="no-cart">
+          <img src="image/no_cart.png" alt="" class="cart-list-no-cart-img">
+          <span class="cart-list-no-cart-msg">
+            <p>Chưa có sản phẩm được chọn</p>
+            <p>Hãy chọn thêm sản phẩm để mua sắm nhé</p>
+          </span>
+        </div>
+        <div id="cart-list">
+          <h4 class="cart-list-heading">Sản phẩm đã chọn</h4>
+          <ul class="cart-list-item">
+            <!-- Cart-item -->
+            <div id="mycart">
+  
+            </div>
+            
+          </ul>
+  
+          <div class="cart-list-infor">
+            <h4 class="cart-infor">Thông tin khách hàng:</h4>
+            <form action="" class="cart-infor-customer">
+              <div class="cart-infor-sex">
+                <span>
+                  <i class="cart-infor-choose"></i>
+                  Anh
+                </span>
+                <span>
+                  <i class="cart-infor-choose"></i>
+                  Chị
+                </span>
+              </div>
+              <div class="cart-infor-namephone">
+                <div class="cart-infor-name">
+                  <label for="cusName" class="cart-infor-name-label">Họ và Tên:</label>
+                  <input type="text" required="required" delaytime="200" maxlength="50" name="cusName" id="name">
+                </div>
+                <div class="cart-infor-phone">
+                  <label for="cusPhone" class="cart-infor-name-label">Số điện thoại:</label>
+                  <input type="tel" required="required" delaytime="200" maxlength="10" name="cusPhone" id="phone">
+                </div>
+              </div>
+            </form>
+          </div>
+  
+          <div class="cart-list-address">
+            <h4 class="cart-address">Địa chỉ nhận hàng:</h4>
+            <form action="" class="cart-address-information">
+              <div class="cart-address--">
+                <div class="cart-address--street">
+                  <label for="cusStreet" class="cart-infor-name-label">Số nhà, tên đường:</label>
+                  <input type="text" required="required" delaytime="200" maxlength="50" name="cusStreet" id="street">
+                </div>
+                <div class="cart-address--ward">
+                  <label for="cusWards" class="cart-infor-name-label">Phường, Xã:</label>
+                  <input type="text" required="required" delaytime="200" maxlength="50" name="cusWards" id="wards">
+                </div>
+                <div class="cart-address--district">
+                  <label for="cusDistrict" class="cart-infor-name-label">Quận, Huyện:</label>
+                  <input type="text" required="required" delaytime="200" maxlength="50" name="cusDistrict" id="district">
+                </div>
+                <div class="cart-address--province">
+                  <label for="cusProvince" class="cart-infor-name-label">Tỉnh, Thành phố:</label>
+                  <input type="text" required="required" delaytime="200" maxlength="50" name="cusProvince" id="province">
+                </div>
+              </div>
+  
+            </form>
+          </div>
+  
+          <div class="cart-list-summary">
+            <div id="thanhtien">
+              
+            </div>
+            <button class="cart-summary-pay" onclick="dathang()"><a href="order.html">Đặt hàng</a></button>
+          </div>
+        </div>
+      </div> 
+    </main>
 
     <!-- Begin Footer Section -->
-    <footer class="container-fluid">
-      <div
-        class="footer-container container d-flex flex-wrap align-content-center justify-content-arround">
-        <div class="col-lg-3 footer-first-col">
-          <div class="footer-logo">
-            <img src="image/Anymo logo 150x150 (NB).png" alt="Anymo Logo" />
-          </div>
-
-          <div class="footer-social-media-link">
-            <a href="https://facebook.com">
-              <i class="fa-brands fa-facebook-f"></i>
-            </a>
-            <a href="https://instagram.com">
-              <i class="fa-brands fa-instagram"></i>
-            </a>
-            <a href="https://linkedin.com">
-              <i class="fa-brands fa-linkedin"></i>
-            </a>
-            <a href="https://github.com">
-              <i class="fa-brands fa-github"></i>
-            </a>
-          </div>
-        </div>
-
-        <div class="col-lg-4 footer-second-col">
-          <div class="footer-address">
-            <h4>Thông Tin Liên Hệ</h4>
-            <p>Địa Chỉ: 3/2, Xuân Khánh, Ninh Kiều, Cần Thơ.</p>
-            <p>Số Điện Thoại: 0123456789.</p>
-            <p>Email: anymo@gmail.com.</p>
-          </div>
-        </div>
-
-        <div class="col-lg-2 footer-third-col">
-          <div class="footer-info">
-            <h4>Về Anymo</h4>
-            <ul>
-              <li><a href="#">Giới Thiệu</a></li>
-              <li><a href="#">Chính Sách</a></li>
-              <li><a href="contact.html">Liên Hệ</a></li>
-              <li><a href="news.html">Tin Tức</a></li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="col-lg-3 footer-last-col">
-          <div class="footer-get-promotion">
-            <h4>Nhận Thông Tin Khuyến Mãi</h4>
-            <p>Đăng ký ngay để nhận thông tin khuyến mãi sớm nhất!</p>
-            <input
-              type="email"
-              name="email"
-              placeholder="Nhập Email của bạn..."
-              class="promotion-input" />
-            <button class="btn btn-primary submit-email-button">Gửi</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="back-to-top-icon">
-        <a href="#top"><i class="fa-solid fa-arrow-up"></i></a>
-      </div>
-
-      <div class="copyright-reserved">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="copyright-text">
-                &copy Copyright
-                <!--start getdate tody-->
-                <script>
-                  document.write(new Date().getFullYear());
-                </script>
-                All rights reserved | Made by Anymo Group
-                <!--end getdate tody -->
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
+    
     <!-- End Footer Section -->
 
     <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+      ShowMycart();
+      thanhtien();
+    </script>
   </body>
 </html>

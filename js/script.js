@@ -14,17 +14,10 @@ $(() => {
   })
 });
 
-// ThemvaoLocaStore
-// var btn = document.getElementsByTagName(".btn-oder-full");
+// Cai Dat Gio Hang
+// document.getElementById("cart-list").style.display = "block";
+// document.getElementById("no-cart").style.display = "none";
 
-// for(let i = 0;i <= btn.length;i++){
-//   btn[i].addEventListener("click",function(){
-//     var hinh = btn[i].parentElement.childNodes[i].sr
-//     var ten = btn[i].parentElement.childNodes[3].text;
-//     var gia = btn[i].parentElement.childNodes[7].value;
-//     alert("gia");
-//   })
-// };
 var cart = new Array();
 
 function addToLocalStorage(x) {
@@ -40,7 +33,7 @@ function addToLocalStorage(x) {
   //kiem tra gio hang
   var kiemtra = 0;
   for (let i = 0; i < cart.length; i++) {
-    if (cart[i][2] == productName) {
+    if (cart[i][1] == productName) {
       kiemtra = 1;
       quantity += parseInt(cart[i][5]);
       cart[i][5] = quantity;
@@ -51,9 +44,15 @@ function addToLocalStorage(x) {
     //them vao gio hang
     cart.push(product);
   }
+  console.log(cart);
+  ShowCount();
 
   sessionStorage.setItem("cart", JSON.stringify(cart));
 };
+
+function ShowCount() {
+  document.getElementById("cart-count").innerHTML = cart.length;
+}
 
 function ShowMycart() {
   var gh = sessionStorage.getItem("cart");
@@ -65,13 +64,13 @@ function ShowMycart() {
             '<div class="cart-item-info">' +
               '<div class="cart-item-head">' +
                 '<div id="cart-item-head">' +
-                  '<span class="cart-item-head-name">'+cart[i][1]+'</span>' +
+                  '<span class="cart-item-head-name" id="cart-item-head-name">'+cart[i][1]+'</span>' +
                   '<span> - </span>' +
                   '<span class="cart-item-head-capacity">'+cart[i][2]+'</span>' +
                   '<span> - </span>' +
                   '<span class="cart-item-head-color">'+cart[i][3]+'</span>' +
                 '</div>' +     
-                '<span class="cart-item-head-remove">Xóa</span>' +
+                '<span class="cart-item-head-remove" onclick="XoaSP()">Xóa</span>' +
               '</div>' +
               '<div class="cart-item-body">' +
                 '<span class="cart-item-body-price">'+cart[i][4]+'</span>' +
@@ -98,6 +97,44 @@ function dathang() {
   sessionStorage.setItem("ttdh", JSON.stringify(ttdh));
 
   console.log(ttdh);
+  alert("Đặt hàng thành công");
+}
+
+function ShowOrder() {
+  var od = sessionStorage.getItem("ttdh");
+  var ttdh = JSON.parse(od);
+  var ttkh = '<form class="order-customer-detail">'+
+            '<div class="order-customer-namephone">'+
+              '<div class="order-customer-name">'+
+                '<label for="cusName" class="order-customer-name-label">Họ và Tên:</label>'+
+                '<span>'+ ttdh[0] +'</span>'+
+              '</div>'+
+              '<div class="order-customer-phone">'+
+                '<label for="cusPhone" class="order-customer-name-label">Số điện thoại:</label>'+
+                '<span>'+ ttdh[1] +'</span>'+
+              '</div>'+
+            '</div>'+
+            '<h5 class="order-address">Địa chỉ nhận hàng</h5>'+
+            '<div class="order-address--">'+
+              '<div class="order-address--street">'+
+                '<label for="cusStreet" class="order-customer-name-label">Số nhà, tên đường:</label>'+
+                '<span>'+ ttdh[2] +'</span>'+
+              '</div>'+
+              '<div class="order-address--ward">'+
+                '<label for="cusWards" class="order-customer-name-label">Phường, Xã:</label>'+
+                '<span>'+ ttdh[3] +'</span>'+
+              '</div>'+
+              '<div class="order-address--district">'+
+                '<label for="cusDistrict" class="order-customer-name-label">Quận, Huyện:</label>'+
+                '<span>'+ ttdh[4] +'</span>'+
+              '</div>'+
+              '<div class="order-address--province">'+
+                '<label for="cusProvince" class="order-customer-name-label">Tỉnh, Thành phố:</label>'+
+                '<span>'+ ttdh[5] +'</span>'+
+              '</div>'+
+            '</div>'+
+          '</form>';
+  document.getElementById("order-customer").innerHTML = ttkh;
 }
 
 function thanhtien() {
@@ -113,6 +150,20 @@ function thanhtien() {
                   '<span class="cart-summary-sum">'+ tong +'</span>';
   document.getElementById("thanhtien").innerHTML = thanhtien;
 }
+
+function XoaSP() {
+  var gh = sessionStorage.getItem("cart");
+  var cart = JSON.parse(gh);
+  var name = document.getElementById("cart-item-head-name").innerText;
+  for (let i = 0; i < cart.length; i++) {
+    if(cart[i][1] == name){
+      cart.splice(i, 1);
+    }
+  }
+ 
+}
+
+
 
 
 // change button img

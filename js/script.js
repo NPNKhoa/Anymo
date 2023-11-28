@@ -3,15 +3,15 @@ $(document).ready(function () {
   $(".search-button").click(function () {
     $(".search-input").toggle("slide");
     $(".nav.login-menu").toggleClass("shift-left");
-  })
+  });
 });
 
 // changeImageforproduct
 $(() => {
-  $(".small-img").click(function() {
+  $(".small-img").click(function () {
     let imgPath = $(this).attr("src");
-    $("#main-img").attr("src",imgPath);
-  })
+    $("#main-img").attr("src", imgPath);
+  });
 });
 
 // Cai Dat Gio Hang
@@ -29,7 +29,7 @@ function addToLocalStorage(x) {
   var color = document.getElementById("color-sp").innerText;
   var price = document.getElementById("price").innerText;
   var product = new Array(img, productName, capacity, color, price, quantity);
-  
+
   //kiem tra gio hang
   var kiemtra = 0;
   for (let i = 0; i < cart.length; i++) {
@@ -48,7 +48,7 @@ function addToLocalStorage(x) {
   ShowCount();
 
   sessionStorage.setItem("cart", JSON.stringify(cart));
-};
+}
 
 function ShowCount() {
   document.getElementById("cart-count").innerHTML = cart.length;
@@ -58,29 +58,42 @@ function ShowMycart() {
   var gh = sessionStorage.getItem("cart");
   var cart = JSON.parse(gh);
   var ttgh = "";
-  for (let i = 0; i< cart.length; i++) {
-    ttgh += '<li class="cart-item">' +
-            '<img src="'+cart[i][0]+'" class="cart-img">' +
-            '<div class="cart-item-info">' +
-              '<div class="cart-item-head">' +
-                '<div id="cart-item-head">' +
-                  '<span class="cart-item-head-name" id="cart-item-head-name">'+cart[i][1]+'</span>' +
-                  '<span> - </span>' +
-                  '<span class="cart-item-head-capacity">'+cart[i][2]+'</span>' +
-                  '<span> - </span>' +
-                  '<span class="cart-item-head-color">'+cart[i][3]+'</span>' +
-                '</div>' +     
-                '<span class="cart-item-head-remove" onclick="XoaSP()">Xóa</span>' +
-              '</div>' +
-              '<div class="cart-item-body">' +
-                '<span class="cart-item-body-price">'+cart[i][4]+'</span>' +
-                '<div class="cart-item-wrap">' +
-                  '<span class="cart-item-wrap-name">Số lượng:</span>' +
-                  '<span class="cart-item-body-qnt">'+cart[i][5]+'</span>' +
-                '</div>' + 
-              '</div>' +
-            '</div>' +
-          '</li>';       
+  for (let i = 0; i < cart.length; i++) {
+    ttgh +=
+      '<li class="cart-item">' +
+      '<img src="' +
+      cart[i][0] +
+      '" class="cart-img">' +
+      '<div class="cart-item-info">' +
+      '<div class="cart-item-head">' +
+      '<div id="cart-item-head">' +
+      '<span class="cart-item-head-name" id="cart-item-head-name">' +
+      cart[i][1] +
+      "</span>" +
+      "<span> - </span>" +
+      '<span class="cart-item-head-capacity">' +
+      cart[i][2] +
+      "</span>" +
+      "<span> - </span>" +
+      '<span class="cart-item-head-color">' +
+      cart[i][3] +
+      "</span>" +
+      "</div>" +
+      '<span class="cart-item-head-remove" onclick="XoaSP()">Xóa</span>' +
+      "</div>" +
+      '<div class="cart-item-body">' +
+      '<span class="cart-item-body-price">' +
+      cart[i][4] +
+      "</span>" +
+      '<div class="cart-item-wrap">' +
+      '<span class="cart-item-wrap-name">Số lượng:</span>' +
+      '<span class="cart-item-body-qnt">' +
+      cart[i][5] +
+      "</span>" +
+      "</div>" +
+      "</div>" +
+      "</div>" +
+      "</li>";
   }
   document.getElementById("mycart").innerHTML = ttgh;
 }
@@ -103,37 +116,50 @@ function dathang() {
 function ShowOrder() {
   var od = sessionStorage.getItem("ttdh");
   var ttdh = JSON.parse(od);
-  var ttkh = '<form class="order-customer-detail">'+
-            '<div class="order-customer-namephone">'+
-              '<div class="order-customer-name">'+
-                '<label for="cusName" class="order-customer-name-label">Họ và Tên:</label>'+
-                '<span>'+ ttdh[0] +'</span>'+
-              '</div>'+
-              '<div class="order-customer-phone">'+
-                '<label for="cusPhone" class="order-customer-name-label">Số điện thoại:</label>'+
-                '<span>'+ ttdh[1] +'</span>'+
-              '</div>'+
-            '</div>'+
-            '<h5 class="order-address">Địa chỉ nhận hàng</h5>'+
-            '<div class="order-address--">'+
-              '<div class="order-address--street">'+
-                '<label for="cusStreet" class="order-customer-name-label">Số nhà, tên đường:</label>'+
-                '<span>'+ ttdh[2] +'</span>'+
-              '</div>'+
-              '<div class="order-address--ward">'+
-                '<label for="cusWards" class="order-customer-name-label">Phường, Xã:</label>'+
-                '<span>'+ ttdh[3] +'</span>'+
-              '</div>'+
-              '<div class="order-address--district">'+
-                '<label for="cusDistrict" class="order-customer-name-label">Quận, Huyện:</label>'+
-                '<span>'+ ttdh[4] +'</span>'+
-              '</div>'+
-              '<div class="order-address--province">'+
-                '<label for="cusProvince" class="order-customer-name-label">Tỉnh, Thành phố:</label>'+
-                '<span>'+ ttdh[5] +'</span>'+
-              '</div>'+
-            '</div>'+
-          '</form>';
+  var ttkh =
+    '<form class="order-customer-detail">' +
+    '<div class="order-customer-namephone">' +
+    '<div class="order-customer-name">' +
+    '<label for="cusName" class="order-customer-name-label">Họ và Tên:</label>' +
+    "<span>" +
+    ttdh[0] +
+    "</span>" +
+    "</div>" +
+    '<div class="order-customer-phone">' +
+    '<label for="cusPhone" class="order-customer-name-label">Số điện thoại:</label>' +
+    "<span>" +
+    ttdh[1] +
+    "</span>" +
+    "</div>" +
+    "</div>" +
+    '<h5 class="order-address">Địa chỉ nhận hàng</h5>' +
+    '<div class="order-address--">' +
+    '<div class="order-address--street">' +
+    '<label for="cusStreet" class="order-customer-name-label">Số nhà, tên đường:</label>' +
+    "<span>" +
+    ttdh[2] +
+    "</span>" +
+    "</div>" +
+    '<div class="order-address--ward">' +
+    '<label for="cusWards" class="order-customer-name-label">Phường, Xã:</label>' +
+    "<span>" +
+    ttdh[3] +
+    "</span>" +
+    "</div>" +
+    '<div class="order-address--district">' +
+    '<label for="cusDistrict" class="order-customer-name-label">Quận, Huyện:</label>' +
+    "<span>" +
+    ttdh[4] +
+    "</span>" +
+    "</div>" +
+    '<div class="order-address--province">' +
+    '<label for="cusProvince" class="order-customer-name-label">Tỉnh, Thành phố:</label>' +
+    "<span>" +
+    ttdh[5] +
+    "</span>" +
+    "</div>" +
+    "</div>" +
+    "</form>";
   document.getElementById("order-customer").innerHTML = ttkh;
 }
 
@@ -146,8 +172,11 @@ function thanhtien() {
     tong += tt;
   }
 
-  var thanhtien = '<p class="cart-summary-total">Tổng cộng:</p>'+
-                  '<span class="cart-summary-sum">'+ tong +'</span>';
+  var thanhtien =
+    '<p class="cart-summary-total">Tổng cộng:</p>' +
+    '<span class="cart-summary-sum">' +
+    tong +
+    "</span>";
   document.getElementById("thanhtien").innerHTML = thanhtien;
 }
 
@@ -156,34 +185,31 @@ function XoaSP() {
   var cart = JSON.parse(gh);
   var name = document.getElementById("cart-item-head-name").innerText;
   for (let i = 0; i < cart.length; i++) {
-    if(cart[i][1] == name){
+    if (cart[i][1] == name) {
       cart.splice(i, 1);
     }
   }
- 
 }
-
-
-
 
 // change button img
 
-
 function changeImages(imageUrl) {
   // Change main image
-  document.getElementById('main-img').src = imageUrl;
+  document.getElementById("main-img").src = imageUrl;
 
   // Change small images
-  const smallImages = document.querySelectorAll('.small-img');
-  smallImages.forEach(img => img.classList.remove('active'));
-  const selectedSmallImage = Array.from(smallImages).find(img => img.src === imageUrl);
-  selectedSmallImage.classList.add('active');
+  const smallImages = document.querySelectorAll(".small-img");
+  smallImages.forEach((img) => img.classList.remove("active"));
+  const selectedSmallImage = Array.from(smallImages).find(
+    (img) => img.src === imageUrl
+  );
+  selectedSmallImage.classList.add("active");
 }
 
 // Function to handle next and previous buttons
 function navigateImages(direction) {
-  const smallImages = document.querySelectorAll('.small-img');
-  const mainImage = document.getElementById('main-img');
+  const smallImages = document.querySelectorAll(".small-img");
+  const mainImage = document.getElementById("main-img");
 
   // Find the index of the current main image
   const currentIndex = Array.from(smallImages).findIndex(
@@ -203,3 +229,35 @@ function navigateImages(direction) {
   // Change both main and small images
   changeImages(smallImages[newIndex].src);
 }
+
+// Calculate the time until the next midnight
+var now = new Date();
+var midnight = new Date(now);
+midnight.setHours(24, 0, 0, 0);
+var timeUntilMidnight = midnight - now;
+
+// Update the countdown every 1 second
+var x = setInterval(function () {
+  // Get the current date and time
+  var currentTime = new Date();
+
+  // Calculate the remaining time until the next midnight
+  var distance = midnight - currentTime;
+
+  // Ensure the distance is non-negative
+  if (distance < 0) {
+    clearInterval(x);
+    $("#countdown").html('<div class="display-4 text-danger">EXPIRED</div>');
+    return; // exit the function if the countdown is over
+  }
+
+  // Calculate hours, minutes, and seconds
+  var hours = Math.floor((distance / (1000 * 60 * 60)) % 24);
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the countdown
+  $("#hours").text(hours < 10 ? "0" + hours : hours);
+  $("#minutes").text(minutes < 10 ? "0" + minutes : minutes);
+  $("#seconds").text(seconds < 10 ? "0" + seconds : seconds);
+}, 1000);

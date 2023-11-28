@@ -961,3 +961,175 @@ p img.small-img:hover {
   line-height: 50px;
   border-radius: 90px;
 }
+
+/* Home Page | Flash Sale Section */
+main .main-flash-sale {
+  display: block;
+  max-width: 75%;
+  margin: 10px auto;
+  background-color: var(--secondary-color);
+  border-radius: 10px;
+}
+
+main .main-flash-sale .flash-sale-container {
+  padding: 18px 36px;
+}
+
+.flash-sale-container .flash-sale-header {
+  margin-bottom: 12px;
+}
+
+#flash-sale-img {
+  max-width: 270px;
+}
+
+.flash-sale-header .time-counter {
+  margin: auto 0;
+  margin-right: -16px;
+}
+
+.flash-sale-header .time-counter-label {
+  display: inline-block;
+  margin-right: 8px;
+}
+
+.flash-sale-header .time-counter #hours::after {
+  content: ":";
+  position: relative;
+  right: -19px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.flash-sale-header .time-counter #minutes::after {
+  content: ":";
+  position: relative;
+  right: -19px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.flash-sale-header .time-counter .time-counter-element {
+  display: inline-block;
+  font-size: 16px;
+  margin: 0;
+  padding: 6px;
+  background-color: var(--second-white-color);
+  border-radius: 10px;
+}
+
+main .main-flash-sale .flash-sale-body {
+}
+
+.flash-sale-body .flash-sale-item {
+  display: inline-block;
+}
+
+.flash-sale-body .flash-sale-item .card-body {
+  background-color: var(--second-white-color);
+}
+
+.flash-sale-body .flash-sale-item .card-img-top {
+  width: 100%;
+}
+
+main .main-catagories {
+}
+
+main .main-new-products {
+}
+
+main .main-iphone15 {
+}
+
+main .main-news-catagories {
+}
+
+main .main-features {
+}
+
+/* Home Page | Flash Sale Section */
+main .main-flash-sale {
+  display: block;
+  max-width: 75%;
+  margin: 10px auto;
+  background-color: var(--secondary-color);
+  border-radius: 10px;
+}
+
+main .main-flash-sale .flash-sale-container {
+  padding: 18px 36px;
+}
+
+.flash-sale-container .flash-sale-header {
+  margin-bottom: 12px;
+}
+
+#flash-sale-img {
+  max-width: 270px;
+}
+
+.flash-sale-header .time-counter {
+  margin: auto 0;
+  margin-right: -16px;
+}
+
+.flash-sale-header .time-counter-label {
+  display: inline-block;
+  margin-right: 8px;
+}
+
+.flash-sale-header .time-counter #hours::after {
+  content: ":";
+  position: relative;
+  right: -19px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.flash-sale-header .time-counter #minutes::after {
+  content: ":";
+  position: relative;
+  right: -19px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.flash-sale-header .time-counter .time-counter-element {
+  display: inline-block;
+  font-size: 16px;
+  margin: 0;
+  padding: 6px;
+  background-color: var(--second-white-color);
+  border-radius: 10px;
+}
+
+main .main-flash-sale .flash-sale-body {
+}
+
+.flash-sale-body .flash-sale-item {
+  display: inline-block;
+}
+
+.flash-sale-body .flash-sale-item .card-body {
+  background-color: var(--second-white-color);
+}
+
+.flash-sale-body .flash-sale-item .card-img-top {
+  width: 100%;
+}
+
+main .main-catagories {
+}
+
+main .main-new-products {
+}
+
+main .main-iphone15 {
+}
+
+main .main-news-catagories {
+}
+
+main .main-features {
+}

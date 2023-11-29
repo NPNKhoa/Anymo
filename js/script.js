@@ -70,7 +70,7 @@ function ShowMycart() {
                   '<span> - </span>' +
                   '<span class="cart-item-head-color">'+cart[i][3]+'</span>' +
                 '</div>' +     
-                '<span class="cart-item-head-remove" onclick="XoaSP()">Xóa</span>' +
+                '<span class="cart-item-head-remove" onclick="XoaSP(this)">Xóa</span>' +
               '</div>' +
               '<div class="cart-item-body">' +
                 '<span class="cart-item-body-price">'+cart[i][4]+'</span>' +
@@ -151,15 +151,17 @@ function thanhtien() {
   document.getElementById("thanhtien").innerHTML = thanhtien;
 }
 
-function XoaSP() {
-  var gh = sessionStorage.getItem("cart");
-  var cart = JSON.parse(gh);
-  var name = document.getElementById("cart-item-head-name").innerText;
-  for (let i = 0; i < cart.length; i++) {
-    if(cart[i][1] == name){
-      cart.splice(i, 1);
-    }
-  }
+function XoaSP(x) {
+  var li = x.parentElement;
+  li.remove();
+
+
+  // var name = document.getElementById("cart-item-head-name").innerText;
+  // for (let i = 0; i < cart.length; i++) {
+  //   if(cart[i][1] == name){
+  //     cart.splice(i, 1);
+  //   }
+  // }
  
 }
 

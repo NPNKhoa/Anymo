@@ -33,7 +33,7 @@ export const products = [
   },
   {
     type: 15,
-    like: false,
+    like: true,
     saleOff: 0,
     urlImg: "./image/iphone-15-pro-256gb-650x650.webp",
     name: "iphone15 pro 256gb",
@@ -43,13 +43,13 @@ export const products = [
   },
   {
     type: 15,
-    like: true,
-    saleOff: 0,
+    like: false,
+    saleOff: 10,
     urlImg: "./image/iphone-15-pro-128gb-650x650.webp",
     name: "iphone15 pro 128gb",
     price: 28990000,
-    star: 5,
-    saled: 30,
+    star: 4,
+    saled: 31,
   },
   {
     type: 15,
@@ -88,7 +88,7 @@ export const products = [
     urlImg: "./image/iphone-15-plus-128gb-650x650.webp",
     name: "iphone15 plus 512gb",
     price: 25990000,
-    star: 5,
+    star: 3,
     saled: 12,
   },
   // **************************************************S

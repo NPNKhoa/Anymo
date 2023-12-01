@@ -113,30 +113,20 @@ header .header-end .cart-button a {
   color: #000;
 }
 /* End Header Section */
-#cart-count {
-  position: absolute;
-  padding: 4px 0px;
-  color: #000;
-  font-size: 17px;
-  line-height: 0;
-}
 .cart-header {
   border-bottom: 1px solid #e5e5e5;
   color: #323232;
   margin: auto;
-  max-width: 700px;
+  max-width: 800px;
   min-height: 30px;
   padding: 10px;
   position: relative;
 }
 .cart-back {
-  width: 700px;
+  width: 800px;
   height: 20px;
   margin-left: auto;
   margin-right: auto;
-}
-
-.cart-button-back {
 }
 
 .cart-back-go-back {
@@ -150,11 +140,11 @@ header .header-end .cart-button a {
   font-size: 1.2rem;
   color: black;
   text-align: center;
-  margin-top: -30px;
+  margin-top: -25px;
 }
 
 .cart-list {
-  margin: 0 400px;
+  margin: 0 355px;
   border-radius: 3px;
 }
 
@@ -178,257 +168,63 @@ header .header-end .cart-button a {
   color: var(--text-color);
 }
 
-.cart-list-no-cart .cart-list-heading,
-.cart-list-no-cart .cart-list-item,
-.cart-list-no-cart .cart-list-summary,
-.cart-list-no-cart .cart-list-infor,
-.cart-list-no-cart .cart-list-address {
-  display: none;
-}
-
 .cart-list-heading {
+  font-weight: 400;
   text-align: center;
   font-size: 1.4rem;
-  margin: 10px 10px 0 10px;
+  margin: 10px;
+}
+/* start gio hang */
+.cart-list-product{
+  width: 800px;
+  border: 1px black solid;
 }
 
-.cart-list-item {
-  padding-left: 0;
-  list-style: none;
-  padding: 10px;
+.cart-list-product-head{
+  border: 1px black solid;
 }
 
-.cart-item {
-  display: flex;
-  align-items: center;
-  border-radius: 10px;
-  border: 1px solid #ccc;
-  padding: 10px;
-  margin: 0 10px;
-  box-shadow: 0 -4px 20px -1px rgba(111, 131, 156, 0.15);
+.cart-list-product-total{
+  border: 1px black solid;
+  text-align: left;
+}
+.cart-list-product th, 
+.cart-list-product td{
+  border: 1px black solid;
+  text-align: center;
 }
 
-.cart-img {
+.cart-list-product-img{
   width: 100px;
   height: 100px;
+  padding: 5px;
 }
 
-.cart-item-info {
-  width: 100%;
-}
-.cart-item-head {
-  display: flex;
-  justify-content: space-between;
-  margin-right: 14px;
-}
-#cart-item-head {
-  display: flex;
-}
-.cart-item-head-name {
-  font-size: 1rem;
+.cart-list-customer{
   font-weight: 500;
-  color: var(--text-color);
-}
-.cart-item-head-capacity {
-  font-size: 1rem;
-  font-weight: 500;
-  color: var(--text-color);
-}
-.cart-item-head-color {
-  font-size: 1rem;
-  font-weight: 500;
-  color: var(--text-color);
+  padding: 5px;
 }
 
-.cart-item-head-remove {
-  font-size: 1rem;
-  font-weight: 300;
-  color: #323232;
-  cursor: pointer;
+.cart-list-customer-info{
+  width: 800px;
 }
 
-.cart-item-head-remove:hover {
-  color: red;
-  cursor: pointer;
-}
-
-.cart-item-body {
-  display: flex;
-  justify-content: space-between;
-  margin-right: 14px;
-  margin-top: 30px;
-}
-.cart-item-body-price {
-  font-size: 1rem;
-  font-weight: 400;
-  color: red;
-}
-
-.cart-item-wrap {
-  justify-content: space-between;
-}
-
-.cart-item-body-qnt {
-  color: var(--text-color);
-}
-
-.cart-item-body-plus {
-  width: 25px;
-  height: 25px;
-  cursor: pointer;
-}
-
-.cart-list-infor {
-  height: 130px;
-  border-radius: 10px;
-  border: 1px solid #ccc;
+.cart-list-customer-info tr td{
+  text-align: left;
   padding: 10px;
-  margin: 5px 20px;
-  box-shadow: 0 -4px 20px -1px rgba(111, 131, 156, 0.15);
+  border: 1px #000 solid;
 }
 
-.cart-infor {
-  line-height: 20px;
-  font-weight: 600;
-  color: var(--black);
-  text-transform: none;
-  font-size: 15px;
-}
-.cart-infor-customer {
-}
-.cart-infor-sex {
-}
-.cart-infor-choose {
+.cart-list-customer-info input{
+  width: 680px;
 }
 
-.cart-infor-namephone {
-  font-weight: 400;
-}
-.cart-infor-name {
-  height: 30px;
+.cart-order{
+  margin-top: 10px ;
+  text-align: -internal-center;
 }
 
-.cart-infor-name input {
-  margin-left: 88px;
-  border-radius: 5px;
-  width: 300px;
-  font-family: inherit;
-  font-size: inherit;
-  line-height: inherit;
-}
-
-.cart-infor-phone {
-  height: 30px;
-}
-
-.cart-infor-phone input {
-  margin-left: 68px;
-  border-radius: 5px;
-  width: 300px;
-  font-family: inherit;
-  font-size: inherit;
-  line-height: inherit;
-}
-
-.cart-list-address {
-  display: block;
-  height: 160px;
-  border-radius: 10px;
-  border: 1px solid #ccc;
-  padding: 10px;
-  margin: 0 20px;
-  box-shadow: 0 -4px 20px -1px rgba(111, 131, 156, 0.15);
-}
-.cart-address {
-  line-height: 20px;
-  font-weight: 600;
-  color: var(--black);
-  text-transform: none;
-  font-size: 15px;
-}
-.cart-address--street input {
-  margin-bottom: 2px;
-  margin-left: 30px;
-  border-radius: 5px;
-  width: 300px;
-  font-family: inherit;
-  font-size: inherit;
-  line-height: inherit;
-}
-.cart-address--ward input {
-  margin-bottom: 2px;
-  margin-left: 77px;
-  border-radius: 5px;
-  width: 300px;
-  font-family: inherit;
-  font-size: inherit;
-  line-height: inherit;
-}
-.cart-address--district input {
-  margin-bottom: 2px;
-  margin-left: 69px;
-  border-radius: 5px;
-  width: 300px;
-  font-family: inherit;
-  font-size: inherit;
-  line-height: inherit;
-}
-.cart-address--province input {
-  margin-bottom: 5px;
-  margin-left: 47px;
-  border-radius: 5px;
-  width: 300px;
-  font-family: inherit;
-  font-size: inherit;
-  line-height: inherit;
-}
-
-.cart-list-summary {
-  background-color: #fff;
-  border: 1px solid rgba(145, 158, 171, 0.239);
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  bottom: 0;
-  box-shadow: 0 -4px 20px -1px rgba(40, 124, 234, 0.15);
-  display: flex;
-  justify-content: space-between;
-  left: 50%;
-  margin: auto;
-  max-width: 655px;
-  padding: 10px 10px 15px;
-  position: fixed;
-  transform: translateX(-50%);
-  width: 100%;
-  z-index: 11;
-}
-.cart-summary-total {
-  font-size: 1.2rem;
-  font-weight: 600;
-  margin-left: 10px;
-  margin-bottom: 0;
-}
-
-.cart-summary-sum {
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: red;
-  margin-left: 10px;
-}
-.cart-summary-pay {
-  width: 100px;
-  height: 50px;
-  border-radius: 5px;
-  background-color: var(--primary-color);
-}
-
-.cart-summary-pay a {
-  color: #fff;
-}
-
-.cart-summary-pay a:hover {
-  color: #49df75;
-  cursor: pointer;
-}
+/* end gio hang */
 
 /* star order */
 .order {

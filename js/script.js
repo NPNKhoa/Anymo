@@ -58,42 +58,29 @@ function ShowMycart() {
   var gh = sessionStorage.getItem("cart");
   var cart = JSON.parse(gh);
   var ttgh = "";
-  for (let i = 0; i < cart.length; i++) {
-    ttgh +=
-      '<li class="cart-item">' +
-      '<img src="' +
-      cart[i][0] +
-      '" class="cart-img">' +
-      '<div class="cart-item-info">' +
-      '<div class="cart-item-head">' +
-      '<div id="cart-item-head">' +
-      '<span class="cart-item-head-name" id="cart-item-head-name">' +
-      cart[i][1] +
-      "</span>" +
-      "<span> - </span>" +
-      '<span class="cart-item-head-capacity">' +
-      cart[i][2] +
-      "</span>" +
-      "<span> - </span>" +
-      '<span class="cart-item-head-color">' +
-      cart[i][3] +
-      "</span>" +
-      "</div>" +
-      '<span class="cart-item-head-remove" onclick="XoaSP()">Xóa</span>' +
-      "</div>" +
-      '<div class="cart-item-body">' +
-      '<span class="cart-item-body-price">' +
-      cart[i][4] +
-      "</span>" +
-      '<div class="cart-item-wrap">' +
-      '<span class="cart-item-wrap-name">Số lượng:</span>' +
-      '<span class="cart-item-body-qnt">' +
-      cart[i][5] +
-      "</span>" +
-      "</div>" +
-      "</div>" +
-      "</div>" +
-      "</li>";
+  for (let i = 0; i< cart.length; i++) {
+    ttgh += '<li class="cart-item">' +
+            '<img src="'+cart[i][0]+'" class="cart-img">' +
+            '<div class="cart-item-info">' +
+              '<div class="cart-item-head">' +
+                '<div id="cart-item-head">' +
+                  '<span class="cart-item-head-name" id="cart-item-head-name">'+cart[i][1]+'</span>' +
+                  '<span> - </span>' +
+                  '<span class="cart-item-head-capacity">'+cart[i][2]+'</span>' +
+                  '<span> - </span>' +
+                  '<span class="cart-item-head-color">'+cart[i][3]+'</span>' +
+                '</div>' +     
+                '<span class="cart-item-head-remove" onclick="XoaSP(this)">Xóa</span>' +
+              '</div>' +
+              '<div class="cart-item-body">' +
+                '<span class="cart-item-body-price">'+cart[i][4]+'</span>' +
+                '<div class="cart-item-wrap">' +
+                  '<span class="cart-item-wrap-name">Số lượng:</span>' +
+                  '<span class="cart-item-body-qnt">'+cart[i][5]+'</span>' +
+                '</div>' + 
+              '</div>' +
+            '</div>' +
+          '</li>';       
   }
   document.getElementById("mycart").innerHTML = ttgh;
 }
@@ -180,15 +167,17 @@ function thanhtien() {
   document.getElementById("thanhtien").innerHTML = thanhtien;
 }
 
-function XoaSP() {
-  var gh = sessionStorage.getItem("cart");
-  var cart = JSON.parse(gh);
-  var name = document.getElementById("cart-item-head-name").innerText;
-  for (let i = 0; i < cart.length; i++) {
-    if (cart[i][1] == name) {
-      cart.splice(i, 1);
-    }
-  }
+function XoaSP(x) {
+  var li = x.parentElement;
+  li.remove();
+
+
+  // var name = document.getElementById("cart-item-head-name").innerText;
+  // for (let i = 0; i < cart.length; i++) {
+  //   if(cart[i][1] == name){
+  //     cart.splice(i, 1);
+  //   }
+  // }
 }
 
 // change button img

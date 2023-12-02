@@ -1,0 +1,22 @@
+@import url("css/style.css");
+
+main .banner img {
+  width: 100%;
+}
+
+main .hot-news h4 {
+  margin: 40px 0 10px;
+}
+
+.hot-news .hot-news-item {
+  width: 80%;
+}
+
+.hot-news .hot-news-item:hover {
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+.hot-news .hot-news-item .hot-news-img {
+  border-radius: 8%;
+}

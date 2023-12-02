@@ -81,8 +81,8 @@
       <!--No cart: cart-list-no-cart -->
       <div class="cart--list">
         <div id="no-cart">
-          <img src="image/no_cart.png" alt="" class="cart-list-no-cart-img">
-          <span class="cart-list-no-cart-msg">
+          <img src="image/no_cart.png" alt="" class="cart-list-no-cart-img" id="cart-list-no-cart-img">
+          <span class="cart-list-no-cart-msg" id="cart-list-no-cart-msg">
             <p>Chưa có sản phẩm được chọn</p>
             <p>Hãy chọn thêm sản phẩm để mua sắm nhé</p>
           </span>
@@ -103,35 +103,13 @@
                 </tr>
               </thead>
   
-              <tbody>
+              <tbody></tbody>
+
+              <tfoot>
                 <tr>
-                  <td><img src="image/iphone-11-64gb-650x650.webp" alt="" class="cart-list-product-img"></td>
-                  <td>Iphone 11 - 64GB - Trắng</td>
-                  <td>1</td>
-                  <td>10.990.000</td>
-                  <td>
-                      <div>10.990.000</div>
-                  </td>
-                  <td></td>
-              </tr>
-              <tr>
-                <td><img src="image/iphone-11-64gb-650x650.webp" alt="" class="cart-list-product-img"></td>
-                <td>Iphone 11 - 64GB - Trắng</td>
-                <td>1</td>
-                <td>10.990.000</td>
-                <td>
-                    <div>10.990.000</div>
-                </td>
-                <td></td>
-            </tr>
-              <tr class="cart-list-product-total">
-                  <th colspan="5">Tổng đơn hàng</th>
-                  <th>
-                      <div>100</div>
-                  </th>
-  
-              </tr>
-              </tbody>
+                    <td colspan="6">Tổng đơn hàng: <span id="d_total">0 đ</span></td>
+                </tr>
+              </tfoot>
             </table>
           </div>
 
@@ -153,7 +131,7 @@
             </table>
           </div>
           <div class="cart-order">
-            <button class="btn btn-primary">ĐỒNG Ý ĐẶT HÀNG</button>
+            <button class="btn btn-primary" onclick="Order()">ĐỒNG Ý ĐẶT HÀNG</button>
         </div>
     </main>
 

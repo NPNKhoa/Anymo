@@ -1,10 +1,3 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-
 /* Begin Contact */
 
 .contact {
@@ -47,15 +40,16 @@
 }
 
 .contact-form .form-group {
-    display: grid;
-    grid-template-columns: 30% 70%;
-    grid-gap: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     margin-bottom: 20px;
 }
 
 .contact-form .form-group label {
     font-weight: bold;
     text-align: right;
+    margin-bottom: 5px;
 }
 
 .contact-form .form-group.required label::after {
@@ -86,15 +80,16 @@
 }
 
 .contact-form button {
-    display: inline-block;
-    padding: 8px 24px;
+    width: 100px;
+    text-align: center;
+    padding: 12px 24px;
     background-color: #269547;
     color: #fff;
     border: #BEDAA9 solid 2px;
     cursor: pointer;
     transition: 0.3s ease;
-    margin-left: 125px;
     border-radius: 5px;
+    margin-top: 5px;
 }
 
 .contact-form button:hover {
@@ -135,11 +130,7 @@
         max-width: 100%;
         padding: 20px;
     }
-    .container .contact-wrapper {
-        grid-template-columns: 1fr;
-    }
 }
-
 
 /* End Contact */
 

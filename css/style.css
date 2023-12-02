@@ -54,8 +54,7 @@ header .header-container .nav-item:hover a {
   opacity: 0.7;
 }
 
-header .header-start {
-}
+
 
 header .header-start .header-logo {
   text-decoration: none;
@@ -69,8 +68,7 @@ header .header-end {
   margin: auto 0;
 }
 
-.header-end .login-menu {
-}
+
 
 header .header-end .search-button,
 header .header-end .cart-button {
@@ -102,11 +100,9 @@ header .header-end .search-input:focus {
   outline: none;
 }
 
-header .header-end .search-button {
-}
 
-header .header-end .cart-button {
-}
+
+
 
 header .header-end .cart-button a {
   text-decoration: none;
@@ -134,8 +130,7 @@ footer .footer-logo {
   margin-left: 38px;
 }
 
-footer .footer-social-media-link {
-}
+
 
 footer .footer-social-media-link i {
   margin-left: 10px;
@@ -158,11 +153,9 @@ footer .footer-social-media-link a:hover {
   opacity: 0.8;
 }
 
-footer .footer-address {
-}
 
-footer .footer-info {
-}
+
+
 
 footer .footer-info ul {
   padding: 0;
@@ -182,8 +175,7 @@ footer .footer-info a {
   color: var(--primary-color);
 }
 
-footer .footer-get-promotion {
-}
+
 
 footer .footer-get-promotion .promotion-input {
   border: 1px solid #ddd;
@@ -326,8 +318,7 @@ main .main-flash-sale .flash-sale-container {
   border-radius: 10px;
 }
 
-main .main-flash-sale .flash-sale-body {
-}
+
 
 .flash-sale-body .flash-sale-item {
   display: inline-block;
@@ -341,17 +332,6 @@ main .main-flash-sale .flash-sale-body {
   width: 100%;
 }
 
-main .main-catagories {
-}
 
-main .main-new-products {
-}
 
-main .main-iphone15 {
-}
 
-main .main-news-catagories {
-}
-
-main .main-features {
-}

@@ -7,6 +7,10 @@
     <link rel="icon" type="image/png" href="/image/Anymo_icon.png" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+     integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <script
       src="https://kit.fontawesome.com/31f3088ab5.js"
       crossorigin="anonymous"></script>
@@ -44,10 +48,10 @@
           <ul class="nav login-menu shift-left">
             <li class="nav-item">
               <a href="login.html" class="nav-link">Đăng Nhập</a>
+              <a href="login.html" class="nav-link">Đăng Ký</a>
             </li>
-            <li class="nav-item">
-              <a href="register.html" class="nav-link">Đăng Ký</a>
-            </li>
+
+            <li class="nav-item"></li>
           </ul>
 
           <input
@@ -67,7 +71,53 @@
     </header>
     <!-- End Header Section -->
 
-    <main class="container-fluid"></main>
+    <section class="container-login forms">
+      <div action="" class="form-login login">
+          <div class="form-content">
+              <h3>Đăng Nhập</h3>
+              <div class="form-input">
+                  <form action="#">
+                      <div class="field input-field">
+                          <!-- <label for="">Số Điện Thoại</label> -->
+                          <input type="text" class="input-login" placeholder="Nhập số điện thoại">
+                      </div>
+
+                      <div class="field input-field">
+                          <!-- <label for="">Mật khẩu</label> -->
+                          <input type="password" class="password-login" placeholder="Nhập mật khẩu">
+                          <i class="fa-regular fa-eye-slash"></i>
+                      </div>
+
+                      <div class="form-link">
+                          <a href="" class="forgot-pass">Quên mật khẩu?</a>
+                      </div>
+
+                      <div class="field button-field">
+                          <button>Đăng Nhập</button>
+                      </div>
+                  </form>
+                  <div class="form-link">
+                      <span>Bạn chưa có tài khoản? <a href="register.html" class="singup-link">Đăng ký</a></span>
+                  </div>
+              </div>
+          </div>
+          <div class="line"></div>
+
+          <div class="media-options">
+              <a href="#" class="field facebook">
+                  <i class="fa-brands fa-facebook-f"></i>
+                  <span>Đăng nhập với Facebook</span>
+              </a>
+          </div>
+
+          <div class="media-options">
+              <a href="#" class="field google">
+                  <img src="https://cdn1.iconfinder.com/data/icons/google-s-logo/150/Google_Icons-09-512.png" alt="" class="google-img">
+                  <span>Đăng nhập với Google</span>
+              </a>
+          </div>
+      </div>
+  </section>
 
     <!-- Begin Footer Section -->
     <footer class="container-fluid">

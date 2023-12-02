@@ -15,22 +15,19 @@ $(() => {
 });
 
 // Cai Dat Gio Hang
-// document.getElementById("cart-list").style.display = "block";
-// document.getElementById("no-cart").style.display = "none";
 
 var cart = new Array();
 
-function addToLocalStorage(x) {
+function addToLocalStorage() {
   // Lấy tên sản phẩm từ thẻ HTML
   var productName = document.getElementById("productName").innerText;
-  var quantity = parseInt(document.getElementById("quantity").value);
   var img = document.getElementById("main-img").src;
   var capacity = document.getElementById("capacity").innerText;
   var color = document.getElementById("color-sp").innerText;
   var price = document.getElementById("price").innerText;
+  var quantity = parseInt(document.getElementById("quantity").value);
   var product = new Array(img, productName, capacity, color, price, quantity);
-
-  //kiem tra gio hang
+  
   var kiemtra = 0;
   for (let i = 0; i < cart.length; i++) {
     if (cart[i][1] == productName) {
@@ -50,15 +47,35 @@ function addToLocalStorage(x) {
   sessionStorage.setItem("cart", JSON.stringify(cart));
 }
 
-function ShowCount() {
-  document.getElementById("cart-count").innerHTML = cart.length;
-}
+function ShowCart() {
+  var gh = sessionStorage.getItem("cart");
+  var cart = JSON.parse(gh);
+  document
+    .getElementById("cart-list-product")
+    .getElementsByTagName("tbody")[0].innerHTML = "";
+  
+  let totalPrice = 0;
 
-// function ShowMycart() {
-//   var gh = sessionStorage.getItem("cart");
-//   var cart = JSON.parse(gh);
-//   document.getElementById("mycart").innerHTML = ttgh;
-// }
+  for (let i = 0; i < cart.length; i++) {
+    let tr = document.createElement("tr");
+    let td_img = document.createElement("td");
+    td_img.innerHTML =
+      "<img src='"+ cart[i][0] +"' class='cart-list-product-img'>";
+    tr.appendChild(td_img);
+
+    let td_name = document.createElement("td");
+    td_name.innerText = cart[i][1] + '-' + cart[i][2] + '-' + cart[i][3];
+    tr.appendChild(td_name);
+
+    let td_num = document.createElement("td");
+    td_num.value = cart[i][5];
+    tr.appendChild(td_num);
+
+    let td_price = document.createElement("td");
+    td_price.innerText = cart[i][4];
+    tr.appendChild(td_price);
+  }
+}
 
 function dathang() {
   var hoten = document.getElementById("customer-name").value;

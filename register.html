@@ -7,7 +7,7 @@
     <link rel="icon" type="image/png" href="/image/Anymo_icon.png" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/contact.css" />
     <script
       src="https://kit.fontawesome.com/31f3088ab5.js"
       crossorigin="anonymous"></script>
@@ -46,9 +46,8 @@
             <li class="nav-item">
               <a href="login.html" class="nav-link">Đăng Nhập</a>
             </li>
-            <li class="nav-item">
-              <a href="register.html" class="nav-link">Đăng Ký</a>
-            </li>
+
+            <li class="nav-item"></li>
           </ul>
 
           <input
@@ -70,17 +69,20 @@
     <div class="register">
       <main>
         <div class="register-container">
-            <h3 title="titlesingup">Đăng Ký Tài Khoản</h3>
-            <form action="" class="form-singup">
-                <div class="singup-box required">
-                    <label for="">Họ Tên</label>
-                    <input class="input-box" type="text" placeholder="Nhập họ tên" required>
-                </div>
-                <div class="singup-box">
-                    <label for="">Email</label>
-                    <input class="input-box" type="email" placeholder="Nhập email">
-                </div>
-
+          <h3 title="titlesingup">Đăng Ký Tài Khoản</h3>
+          <form action="" class="form-singup">
+            <div class="singup-box required">
+              <label for="">Họ Tên</label>
+              <input
+                class="input-box"
+                type="text"
+                placeholder="Nhập họ tên"
+                required />
+            </div>
+            <div class="singup-box">
+              <label for="">Email</label>
+              <input class="input-box" type="email" placeholder="Nhập email" />
+            </div>
                 <div class="singup-box required">
                   <label for="">Mật khẩu</label>
                   <input class="input-box" type="password" placeholder="Nhập mật khẩu" required>
@@ -101,25 +103,10 @@
                         <input class="input-box" type="date">
                     </div>
                 </div>
-  
-                <div class="gender-box">
-                    <h4>Gender</h4>
-                    <div class="gender-option">
-                        <div class="gender">
-                            <input type="radio" id="check-male" name="gender" checked>
-                            <label for="check-male">Nam</label>
-                        </div>
-                        <div class="gender">
-                            <input type="radio" id="check-female" name="gender">
-                            <label for="check-female">Nữ</label>
-                        </div>
-                        <div class="gender">
-                            <input type="radio" id="check-other" name="gender">
-                            <label for="check-other">Khác</label>
-                        </div>
-                    </div>
+                <div class="gender">
+                  <input type="radio" id="check-other" name="gender" />
+                  <label for="check-other">Khác</label>
                 </div>
-  
                 <div class="singup-box address required">
                     <label for="">Địa Chỉ</label>
                     <input class="input-box" type="text" placeholder="Nhập địa chỉ (xã/phường/thị trấn, quận/huyện/thị xã)" required>
@@ -148,11 +135,13 @@
                         </div>
                     </div>
                 </div>
-  
-                <button>Đăng ký</button>
-            </form>
+              </div>
+            </div>
+
+            <button>Đăng ký</button>
+          </form>
         </div>
-    </main>
+      </main>
     </div>
 
     <!-- Begin Footer Section -->
@@ -240,6 +229,6 @@
     <!-- End Footer Section -->
 
     <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>

@@ -9,85 +9,111 @@ function formatNumberToCurrency(number) {
 
 const productContainer = document.getElementById("product-container");
 
+function createProductElement(product) {
+  const itemProduct = document.createElement("div");
+  itemProduct.className = "col";
+
+  const link = document.createElement("a");
+  link.href = product.url;
+  link.className = "product-itemm";
+
+  const image = document.createElement("div");
+  image.className = "product-item__img";
+  image.style.backgroundImage = `url(${product.urlImg})`;
+  link.appendChild(image);
+
+  const name = document.createElement("h4");
+  name.className = "product-item__name";
+  name.textContent = product.name;
+  link.appendChild(name);
+
+  const priceContainer = document.createElement("div");
+  priceContainer.className = `product-item__price ${
+    product.saleOff > 0 ? "product-item__price--sale-off" : ""
+  }`;
+
+  const priceCurrent = document.createElement("span");
+  priceCurrent.className = "product-item__price-curent";
+  priceCurrent.textContent = formatNumberToCurrency(
+    Math.round((product.price * (100 - product.saleOff)) / 100)
+  );
+  priceContainer.appendChild(priceCurrent);
+
+  const priceOld = document.createElement("span");
+  priceOld.className = "product-item__price-old";
+  priceOld.textContent = formatNumberToCurrency(product.price);
+  priceContainer.appendChild(priceOld);
+
+  link.appendChild(priceContainer);
+
+  const actionContainer = document.createElement("div");
+  actionContainer.className = "product-item__action";
+
+  const rating = document.createElement("div");
+  rating.className = "product-item__rating";
+  for (let i = 0; i < product.star; i++) {
+    const starGold = document.createElement("i");
+    starGold.className = "product-item__start--gold fa-solid fa-star";
+    rating.appendChild(starGold);
+  }
+
+  for (let i = 0; i < 5 - product.star; i++) {
+    const star = document.createElement("i");
+    star.className = "product-item__start fa-solid fa-star";
+    rating.appendChild(star);
+  }
+
+  actionContainer.appendChild(rating);
+
+  const sold = document.createElement("span");
+  sold.className = "product-item__sold";
+  sold.textContent = `${product.saled} Đã bán`;
+  actionContainer.appendChild(sold);
+
+  link.appendChild(actionContainer);
+
+  if (product.like) {
+    const likeItem = document.createElement("div");
+    likeItem.className = "product-item__favourite";
+
+    const checkIcon = document.createElement("i");
+    checkIcon.className = "fa-solid fa-check";
+    likeItem.appendChild(checkIcon);
+
+    const span = document.createElement("span");
+    span.textContent = "Yêu thích";
+    likeItem.appendChild(span);
+
+    link.appendChild(likeItem);
+  }
+
+  if (product.saleOff > 0) {
+    const saleOffContainer = document.createElement("div");
+    saleOffContainer.className = "product-item__sale-off";
+
+    const saleOffPercent = document.createElement("span");
+    saleOffPercent.className = "product-item__sale-off-percent";
+    saleOffPercent.textContent = `${product.saleOff}%`;
+    saleOffContainer.appendChild(saleOffPercent);
+
+    const saleOffLabel = document.createElement("div");
+    saleOffLabel.className = "product-item__sale-off-lable";
+    saleOffLabel.textContent = "GIẢM";
+    saleOffContainer.appendChild(saleOffLabel);
+
+    link.appendChild(saleOffContainer);
+  }
+
+  itemProduct.appendChild(link);
+
+  return itemProduct;
+}
+
 function showProducts(products) {
-  productContainer.innerHTML = ``;
+  productContainer.innerHTML = "";
   products.forEach((product) => {
-    const itemProduct = document.createElement("div");
-    itemProduct.className = "col";
+    const itemProduct = createProductElement(product);
     productContainer.appendChild(itemProduct);
-
-    const likeItem = product.like
-      ? `<div class="product-item__favourite">
-          <i class="fa-solid fa-check"></i>
-          <span>Yêu thích</span>
-          </div>`
-      : ``;
-
-    const saleOff =
-      product.saleOff > 0
-        ? `<div class="product-item__sale-off">
-          <span class="product-item__sale-off-percent">${product.saleOff}%</span>
-          <div class="product-item__sale-off-lable">GIẢM</div>
-          </div>`
-        : ``;
-
-    let starts = "";
-    for (let i = 0; i < product.star; i++) {
-      starts += `<i
-              class="product-item__start--gold fa-solid fa-star"
-            ></i>`;
-    }
-
-    for (let i = 0; i < 5 - product.star; i++) {
-      starts += `</i>
-            <i class="product-item__start fa-solid fa-star"></i>`;
-    }
-
-    itemProduct.innerHTML = `
-                          <!-- Infor product -->
-                    
-                            <a href="iphone15-promax-512gb.html" class="product-itemm">
-                              <div
-                                class="product-item__img"
-                                style="
-                                  background-image: url(${product.urlImg});
-                                "
-                              ></div>
-                              <h4 class="product-item__name">${
-                                product.name
-                              }</h4>
-                              <div
-                                class="product-item__price ${
-                                  product.saleOff > 0
-                                    ? `product-item__price--sale-off`
-                                    : ``
-                                }"
-                              >
-                                <span class="product-item__price-curent"
-                                  >${formatNumberToCurrency(
-                                    Math.round(
-                                      (product.price *
-                                        (100 - product.saleOff)) /
-                                        100
-                                    )
-                                  )}</span
-                                >
-                                <span class="product-item__price-old">${formatNumberToCurrency(
-                                  product.price
-                                )}</span>
-                              </div>
-                              <div class="product-item__action">
-                                <div class="product-item__rating">
-                                  ${starts}
-                                </div>
-                                <span class="product-item__sold">${
-                                  product.saled
-                                } Đã bán</span>
-                              </div>
-                              ${likeItem}
-                              ${saleOff}
-                            </a>
-          `;
   });
 }
 
@@ -97,7 +123,7 @@ const title = document.getElementById("head-body__title");
 const category = document.getElementById("category__list");
 const sortOptions = document.getElementById("sort-option");
 
-let newProducts = structuredClone(products);
+let newProducts = [...products];
 
 category.addEventListener("click", function (e) {
   const categoryItem = e.target.closest("[data-value]");
@@ -116,7 +142,7 @@ category.addEventListener("click", function (e) {
   if (iphoneType != "all") {
     newProducts = products.filter((product) => product.type == iphoneType);
   } else {
-    newProducts = structuredClone(products);
+    newProducts = [...products];
   }
 
   showProducts(newProducts);
@@ -130,14 +156,12 @@ sortOptions.addEventListener("change", function (e) {
   switch (option) {
     case "inc":
       newProducts.sort((a, b) => a.price - b.price);
-
       break;
     case "dec":
       newProducts.sort((a, b) => b.price - a.price);
-
       break;
     default:
-      newProducts = structuredClone(products);
+      newProducts = [...products];
       break;
   }
   showProducts(newProducts);

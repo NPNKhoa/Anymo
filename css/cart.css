@@ -106,7 +106,15 @@
   
   .cart-order{
     margin-top: 10px ;
-    text-align: -internal-center;
+    align-items: center;
+  }
+
+  .cart-order button{
+    background-color: #1d7035;
+  }
+
+  .cart-order button:hover{
+    background-color: #d1e7dd;
   }
   
   /* end gio hang */

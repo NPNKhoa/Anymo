@@ -1,3 +1,10 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
 /* Begin Contact */
 
 .contact {
@@ -5,6 +12,10 @@
     background-color: #fff;
     padding: 50px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .contact .container {
@@ -19,28 +30,28 @@
     color: #333;
 }
 
-/* .container .contact-wrapper {
+.container .contact-wrapper {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 30px;
-} */
+}
 
-/* .contact-wrapper .contact-form {
+.contact-wrapper .contact-form {
     text-align: left;
-} */
+}
 
-/* .contact-wrapper .contact-form h3 {
+.contact-wrapper .contact-form h3 {
     font-size: 24px;
     margin-bottom: 20px;
     color: #333;
-} */
+}
 
-/* .contact-form .form-group {
+.contact-form .form-group {
     display: grid;
     grid-template-columns: 30% 70%;
     grid-gap: 10px;
     margin-bottom: 20px;
-} */
+}
 
 .contact-form .form-group label {
     font-weight: bold;
@@ -53,15 +64,16 @@
     margin-left: 4px;
 }
 
+.form-group button {
+    grid-column: 2;
+    text-align: left;
+}
+
 .form-group .textbox {
     width: 100%;
     padding: 12px;
     border-radius: 3px;
     border: #269547 solid 1px;
-}
-
-.form-group input {
-    width: 100%;
 }
 
 .textbox input:focus,
@@ -86,6 +98,7 @@
     border: #BEDAA9 solid 2px;
     cursor: pointer;
     transition: 0.3s ease;
+    margin-left: 125px;
 }
 
 .contact-form button:hover {
@@ -97,6 +110,7 @@
 }
 
 .contact-wrapper .contact-info {
+    margin-left: 87px;
     text-align: left;
 }
 
@@ -130,6 +144,7 @@
     }
 }
 
+
 /* End Contact */
 
 /* Begin Register */
@@ -148,8 +163,6 @@
     width: 100%;
     background: #fff;
     padding: 25px;
-    /* border-radius: 8px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 1); */
 }
 
 .register-container h3 {
@@ -334,7 +347,7 @@
 }
 
 .field input:focus {
-    border-bottom-width: 2px;
+    box-shadow: 0 1px 0 #afdf8a;
 }
 
 .fa-regular {
@@ -364,7 +377,7 @@
     margin-top: 10px;
 }
 
-.form-link span,
+
 .form-link a {
     font-size: 14px;
     font-weight: 400px;
@@ -442,8 +455,8 @@ a.google {
 
 a.google span {
     font-weight: 500;
-    opacity: 0.6;
-    color: #232323;
+    opacity: 0.8;
+    color: #000;
 }
 
 /* End Login */

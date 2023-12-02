@@ -6,12 +6,12 @@ function formatNumberToCurrency(number) {
     currency: "VND",
   }).format(number);
 }
-
+// cart item product
 const productContainer = document.getElementById("product-container");
 
 function createProductElement(product) {
   const itemProduct = document.createElement("div");
-  itemProduct.className = "col";
+  itemProduct.className = "col-6 col-sm-4 col-md-4 col-lg-3 col-xl-3";
 
   const link = document.createElement("a");
   link.href = product.url;
@@ -108,7 +108,7 @@ function createProductElement(product) {
 
   return itemProduct;
 }
-
+// **************************************************************
 function showProducts(products) {
   productContainer.innerHTML = "";
   products.forEach((product) => {
@@ -118,6 +118,7 @@ function showProducts(products) {
 }
 
 showProducts(products);
+// **************************************************************
 
 const title = document.getElementById("head-body__title");
 const category = document.getElementById("category__list");
@@ -147,7 +148,6 @@ category.addEventListener("click", function (e) {
 
   showProducts(newProducts);
 });
-
 sortOptions.addEventListener("change", function (e) {
   const option = e.target.value;
 
@@ -164,5 +164,33 @@ sortOptions.addEventListener("change", function (e) {
       newProducts = [...products];
       break;
   }
+  showProducts(newProducts);
+});
+
+// *******************************************************
+// section mobie tablet
+const MobieTabletCategory = document.getElementById(
+  "mobie-tablet-category__list"
+);
+MobieTabletCategory.addEventListener("click", function (e) {
+  const MobieTabletCategoryItem = e.target.closest("[data-value]");
+
+  if (!MobieTabletCategoryItem) return;
+
+  MobieTabletCategory.querySelector(
+    ".tablet-mobie-catgory__item--active"
+  )?.classList.remove("tablet-mobie-catgory__item--active");
+
+  MobieTabletCategoryItem.classList.add("tablet-mobie-catgory__item--active");
+
+  const iphoneType = MobieTabletCategoryItem.dataset.value;
+  title.innerHTML = `IPHONE ${iphoneType == "all" ? "" : iphoneType} SERIES`;
+
+  if (iphoneType != "all") {
+    newProducts = products.filter((product) => product.type == iphoneType);
+  } else {
+    newProducts = [...products];
+  }
+
   showProducts(newProducts);
 });

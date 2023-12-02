@@ -4,37 +4,29 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sản phẩm</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer" />
-
     <link rel="icon" type="image/png" href="/image/Anymo_icon.png" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/product.css" />
     <script
       src="https://kit.fontawesome.com/31f3088ab5.js"
-      crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+      crossorigin="anonymous"
+    ></script>
     <!--[if lt IE 9]>
       <script
         src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js"
         integrity="sha512-BWbLJlfp8hzXlxT6K5KLdxPVAj+4Zn2e4FVq5P7NSFH/mkAJ18UiZRQUD4anR3jyp0/WYkeZ0Zmq5EWWrDxneQ=="
         crossorigin="anonymous"
-        referrerpolicy="no-referrer"></script>
+        referrerpolicy="no-referrer"
+      ></script>
     <![endif]-->
   </head>
   <body>
     <!-- Begin Header Section -->
     <header class="container-fluid">
       <div
-        class="header-container container d-flex flex-row justify-content-between">
+        class="header-container container d-flex flex-row justify-content-between"
+      >
         <div class="header-start">
           <a href="#" class="header-logo">
             <img src="image/Anymo logo 80x80 (NB).png" alt="Anymo Logo" />
@@ -70,7 +62,8 @@
           <input
             type="text"
             placeholder="Tìm kiếm sản phẩm..."
-            class="search-input" />
+            class="search-input"
+          />
           <div class="search-button button-group">
             <i class="fa-solid fa-magnifying-glass"></i>
           </div>
@@ -91,11 +84,11 @@
             <!-- Category -->
             <nav class="category">
               <div class="category__title">Danh mục sản phẩm</div>
-              <h4 class="category__name-item">iphone</h4>
               <ul class="category__list" id="category__list">
                 <li
                   class="catgory__item catgory__item--active"
-                  data-value="all">
+                  data-value="all"
+                >
                   <span class="category__item-link">iphone Series</span>
                 </li>
                 <li class="catgory__item" data-value="15">
@@ -124,9 +117,9 @@
               <div class="head-sort">
                 <h5 class="arrange__title">Sắp xếp :</h5>
                 <select id="sort-option" class="sort-option">
-                  <option value="default">-- Chon ---</option>
-                  <option value="inc">Gia tang dan</option>
-                  <option value="dec">Gia giam dan</option>
+                  <option value="default">-- Đề xuất ---</option>
+                  <option value="inc">Gía tăng dần</option>
+                  <option value="dec">Gia giảm dàn</option>
                 </select>
               </div>
             </div>
@@ -134,7 +127,8 @@
             <div class="product">
               <div
                 id="product-container"
-                class="row row-cols-lg-4 row-cols-md-3 row-cols-sm-2">
+                class="row row-cols-lg-4 row-cols-md-3 row-cols-sm-2"
+              >
                 <!-- Infor product -->
               </div>
             </div>
@@ -146,7 +140,8 @@
     <!-- Begin Footer Section -->
     <footer class="container-fluid">
       <div
-        class="footer-container container d-flex flex-wrap align-content-center justify-content-arround">
+        class="footer-container container d-flex flex-wrap align-content-center justify-content-arround"
+      >
         <div class="col-lg-3 footer-first-col">
           <div class="footer-logo">
             <img src="image/Anymo logo 150x150 (NB).png" alt="Anymo Logo" />
@@ -197,7 +192,8 @@
               type="email"
               name="email"
               placeholder="Nhập Email của bạn..."
-              class="promotion-input" />
+              class="promotion-input"
+            />
             <button class="btn btn-primary submit-email-button">Gửi</button>
           </div>
         </div>

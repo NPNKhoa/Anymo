@@ -28,9 +28,8 @@
     margin-top: -25px;
   }
   
-  .cart-list {
-    margin: 0 355px;
-    border-radius: 3px;
+  .cart--list {
+    margin: 0 347px;
   }
   
   .cart-list-no-cart .cart-list-no-cart-img,
@@ -114,7 +113,7 @@
   }
 
   .cart-order button:hover{
-    background-color: #d1e7dd;
+    background-color: #58a370;
   }
   
   /* end gio hang */

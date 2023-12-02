@@ -1,0 +1,134 @@
+/* Begin Contact */
+
+.contact {
+    min-height: 100vh;
+    background-color: #fff;
+    padding: 50px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.contact .container h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.container .contact-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+}
+
+.contact-wrapper .contact-form {
+    text-align: left;
+}
+
+.contact-wrapper .contact-form h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.contact-form .form-group {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-gap: 10px;
+    margin-bottom: 20px;
+}
+
+.contact-form .form-group label {
+    font-weight: bold;
+    text-align: right;
+}
+
+.contact-form .form-group.required label::after {
+    content: "*";
+    color: #ff0000;
+    margin-left: 4px;
+}
+
+.form-group .textbox {
+    width: 100%;
+    padding: 12px;
+    border-radius: 3px;
+    border: #269547 solid 1px;
+}
+
+.textbox input:focus,
+.textbox textarea:focus {
+    outline: none;
+    box-shadow: 0 0 8px #BEDAA9;
+}
+
+.textbox textarea::-webkit-scrollbar {
+    width: 4px;
+}
+
+.textbox textarea::-webkit-scrollbar-thumb {
+    background-color: #1D7035;
+}
+
+.contact-form button {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #269547;
+    color: #fff;
+    border: #BEDAA9 solid 2px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #58a370;
+}
+
+.contact-info .contact-form {
+    margin-bottom: 20px;
+}
+
+.contact-wrapper .contact-info {
+    text-align: left;
+}
+
+.contact-wrapper .contact-info h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.contact-wrapper .contact-info p {
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.contact-wrapper .contact-info i {
+    color: #1D7035;
+    margin-right: 10px;
+}
+
+.contact-info .branch {
+    margin-left: 23px;
+}
+
+@media screen and (max-width: 768px) {
+    .contact .container {
+        max-width: 100%;
+        padding: 20px;
+    }
+    .container .contact-wrapper {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* End Contact */

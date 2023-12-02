@@ -64,11 +64,6 @@
     margin-left: 4px;
 }
 
-.form-group button {
-    grid-column: 2;
-    text-align: left;
-}
-
 .form-group .textbox {
     width: 100%;
     padding: 12px;
@@ -92,13 +87,14 @@
 
 .contact-form button {
     display: inline-block;
-    padding: 12px 24px;
+    padding: 8px 24px;
     background-color: #269547;
     color: #fff;
     border: #BEDAA9 solid 2px;
     cursor: pointer;
     transition: 0.3s ease;
     margin-left: 125px;
+    border-radius: 5px;
 }
 
 .contact-form button:hover {

@@ -5,10 +5,6 @@
     background-color: #fff;
     padding: 50px;
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
 }
 
 .contact .container {
@@ -23,28 +19,28 @@
     color: #333;
 }
 
-.container .contact-wrapper {
+/* .container .contact-wrapper {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 30px;
-}
+} */
 
-.contact-wrapper .contact-form {
+/* .contact-wrapper .contact-form {
     text-align: left;
-}
+} */
 
-.contact-wrapper .contact-form h3 {
+/* .contact-wrapper .contact-form h3 {
     font-size: 24px;
     margin-bottom: 20px;
     color: #333;
-}
+} */
 
-.contact-form .form-group {
+/* .contact-form .form-group {
     display: grid;
     grid-template-columns: 30% 70%;
     grid-gap: 10px;
     margin-bottom: 20px;
-}
+} */
 
 .contact-form .form-group label {
     font-weight: bold;
@@ -62,6 +58,10 @@
     padding: 12px;
     border-radius: 3px;
     border: #269547 solid 1px;
+}
+
+.form-group input {
+    width: 100%;
 }
 
 .textbox input:focus,

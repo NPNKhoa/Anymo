@@ -61,7 +61,6 @@
             <a href="cart.html">
               <i class="fa-solid fa-cart-shopping"></i>
             </a>
-            <span id="cart-count">0</span>
           </div>
         </div>
       </div>
@@ -88,73 +87,61 @@
         </div>
         <div id="cart-list">
           <h4 class="cart-list-heading">Sản phẩm đã chọn</h4>
-          <ul class="cart-list-item">
-            <!-- Cart-item -->
-            <div id="mycart">
+          <!-- Cart-item -->
+          <div>
+            <table class="cart-list-product">
+              <thead >
+                <tr class="cart-list-product-head">
+                  <th>Hình SP</th>
+                  <th>Tên SP</th>
+                  <th>Số lượng</th>
+                  <th>Giá</th>
+                  <th>Thành Tiền</th>
+                  <th></th>
+                </tr>
+              </thead>
   
-            </div>
-            
-          </ul>
+              <tbody>
+                <tr>
+                  <td><img src="image/iphone-11-64gb-650x650.webp" alt="" class="cart-list-product-img"></td>
+                  <td>Iphone 11 - 64GB - Trang</td>
+                  <td>1</td>
+                  <td>10.990.000</td>
+                  <td>
+                      <div>10.990.000</div>
+                  </td>
+              </tr>
+              <tr class="cart-list-product-total">
+                  <th colspan="5">Tổng đơn hàng</th>
+                  <th>
+                      <div>100</div>
+                  </th>
   
-          <div class="cart-list-infor">
-            <h4 class="cart-infor">Thông tin khách hàng:</h4>
-            <form action="" class="cart-infor-customer">
-              <div class="cart-infor-sex">
-                <span>
-                  <i class="cart-infor-choose"></i>
-                  Anh
-                </span>
-                <span>
-                  <i class="cart-infor-choose"></i>
-                  Chị
-                </span>
-              </div>
-              <div class="cart-infor-namephone">
-                <div class="cart-infor-name">
-                  <label for="cusName" class="cart-infor-name-label">Họ và Tên:</label>
-                  <input type="text" required="required" delaytime="200" maxlength="50" name="cusName" id="name">
-                </div>
-                <div class="cart-infor-phone">
-                  <label for="cusPhone" class="cart-infor-name-label">Số điện thoại:</label>
-                  <input type="tel" required="required" delaytime="200" maxlength="10" name="cusPhone" id="phone">
-                </div>
-              </div>
-            </form>
+              </tr>
+              </tbody>
+            </table>
           </div>
-  
-          <div class="cart-list-address">
-            <h4 class="cart-address">Địa chỉ nhận hàng:</h4>
-            <form action="" class="cart-address-information">
-              <div class="cart-address--">
-                <div class="cart-address--street">
-                  <label for="cusStreet" class="cart-infor-name-label">Số nhà, tên đường:</label>
-                  <input type="text" required="required" delaytime="200" maxlength="50" name="cusStreet" id="street">
-                </div>
-                <div class="cart-address--ward">
-                  <label for="cusWards" class="cart-infor-name-label">Phường, Xã:</label>
-                  <input type="text" required="required" delaytime="200" maxlength="50" name="cusWards" id="wards">
-                </div>
-                <div class="cart-address--district">
-                  <label for="cusDistrict" class="cart-infor-name-label">Quận, Huyện:</label>
-                  <input type="text" required="required" delaytime="200" maxlength="50" name="cusDistrict" id="district">
-                </div>
-                <div class="cart-address--province">
-                  <label for="cusProvince" class="cart-infor-name-label">Tỉnh, Thành phố:</label>
-                  <input type="text" required="required" delaytime="200" maxlength="50" name="cusProvince" id="province">
-                </div>
-              </div>
-  
-            </form>
+
+          <div>
+            <h4 class="cart-list-customer">Thong Tin Khach Hang</h4>
+            <table class="cart-list-customer-info">
+              <tr>
+                <td>Ho Va Ten</td>
+                <td class="customer-input"><input type="text" name="Name" id="customer-name"></td>
+              </tr>
+              <tr>
+                <td>Dien Thoai</td>
+                <td class="customer-input"><input type="tel" name="Phone" id="customer-phone"></td>
+              </tr>
+              <tr>
+                <td>Dia Chi</td>
+                <td class="customer-input"><input type="text" name="address" id="customer-address" ></td>
+              </tr>
+            </table>
           </div>
-  
-          <div class="cart-list-summary">
-            <div id="thanhtien">
-              
-            </div>
-            <button class="cart-summary-pay" onclick="dathang()"><a href="order.html">Đặt hàng</a></button>
-          </div>
+          <div class="cart-order">
+            <button class="dongy">ĐỒNG Ý ĐẶT HÀNG</button>
         </div>
-      </div> 
     </main>
 
     <!-- Begin Footer Section -->
@@ -163,9 +150,5 @@
 
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/script.js"></script>
-    <script>
-      ShowMycart();
-      thanhtien();
-    </script>
   </body>
 </html>

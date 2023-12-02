@@ -54,51 +54,28 @@ function ShowCount() {
   document.getElementById("cart-count").innerHTML = cart.length;
 }
 
-function ShowMycart() {
-  var gh = sessionStorage.getItem("cart");
-  var cart = JSON.parse(gh);
-  var ttgh = "";
-  for (let i = 0; i< cart.length; i++) {
-    ttgh += '<li class="cart-item">' +
-            '<img src="'+cart[i][0]+'" class="cart-img">' +
-            '<div class="cart-item-info">' +
-              '<div class="cart-item-head">' +
-                '<div id="cart-item-head">' +
-                  '<span class="cart-item-head-name" id="cart-item-head-name">'+cart[i][1]+'</span>' +
-                  '<span> - </span>' +
-                  '<span class="cart-item-head-capacity">'+cart[i][2]+'</span>' +
-                  '<span> - </span>' +
-                  '<span class="cart-item-head-color">'+cart[i][3]+'</span>' +
-                '</div>' +     
-                '<span class="cart-item-head-remove" onclick="XoaSP(this)">Xóa</span>' +
-              '</div>' +
-              '<div class="cart-item-body">' +
-                '<span class="cart-item-body-price">'+cart[i][4]+'</span>' +
-                '<div class="cart-item-wrap">' +
-                  '<span class="cart-item-wrap-name">Số lượng:</span>' +
-                  '<span class="cart-item-body-qnt">'+cart[i][5]+'</span>' +
-                '</div>' + 
-              '</div>' +
-            '</div>' +
-          '</li>';       
-  }
-  document.getElementById("mycart").innerHTML = ttgh;
-}
+// function ShowMycart() {
+//   var gh = sessionStorage.getItem("cart");
+//   var cart = JSON.parse(gh);
+//   document.getElementById("mycart").innerHTML = ttgh;
+// }
 
 function dathang() {
-  var hoten = document.getElementById("name").value;
-  var sdt = document.getElementById("phone").value;
-  var duong = document.getElementById("street").value;
-  var phuong = document.getElementById("wards").value;
-  var quan = document.getElementById("district").value;
-  var tinh = document.getElementById("province").value;
-  var ttdh = new Array(hoten, sdt, duong, phuong, quan, tinh);
+  var hoten = document.getElementById("customer-name").value;
+  var sdt = document.getElementById("customer-phone").value;
+  var diachi = document.getElementById("customer-address").value;
+  var ttdh = new Array(hoten, sdt, diachi);
 
   sessionStorage.setItem("ttdh", JSON.stringify(ttdh));
 
   console.log(ttdh);
-  alert("Đặt hàng thành công");
+  if( hoten == "" || sdt == "" || diachi == ""){
+    alert("Vui lòng điền đầy đủ thông tin đặt hàng");
+  }else{
+    alert("Đặt hàng thành công");
+  }
 }
+
 
 function ShowOrder() {
   var od = sessionStorage.getItem("ttdh");

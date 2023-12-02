@@ -318,21 +318,6 @@ main .main-flash-sale .flash-sale-container {
   width: 100%;
 }
 
-main .new-products {
-}
-
-.new-products .new-products-title {
-}
-
-.new-products .new-products-details {
-}
-
-.new-products .new-products-items {
-}
-
-.new-products .new-products-items .new-products-img {
-}
-
 main .main-features {
   background-color: var(--second-white-color);
   border: 1px solid #666;
@@ -345,7 +330,4 @@ main .main-features {
 
 .main-features .features-item {
   margin: auto 0;
-}
-
-.main-features .features-item .feature-icon {
 }

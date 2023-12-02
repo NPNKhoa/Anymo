@@ -543,12 +543,15 @@ h1 {
   background: #123e61;
 }
 .number-order-product {
-  margin-bottom: 16px;
+  margin-bottom: 10px;
+}
+.number-order-product label {
+  margin-bottom: 6px;
 }
 
 .btn-order-full{
   float: left;
-  width: 50%;
+  width: 200px;
   /* margin-right: 20px; */
   font-size: 16px;
   /* height: 42px; */
@@ -572,6 +575,7 @@ h1 {
 .number-order input {
   border-radius: 8px;
   text-align: center;
+  width: 200px;
 }
 .number-order input:focus {
   outline: none;
@@ -591,9 +595,10 @@ p img.small-img:hover {
 .product-bottom {
     /* margin-top: 20px; 
     padding: 20px;  */
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
-    background-color: var(--primary-color);
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px #666; 
+    background-color: #F1F1F1;
+    border: 1px solid #666;
     width: 450px;
     height: 180px;
 }
@@ -604,7 +609,7 @@ p img.small-img:hover {
   /* border: solid 1px #e9ecef;
   background-color: white; */
   margin-bottom: 16px;
-  color: var(--second-white-color);
+  color: black;
 }
 .detail-product ul {
   flex-direction: column;
@@ -643,6 +648,171 @@ p img.small-img:hover {
   line-height: 50px;
   border-radius: 90px;
   cursor: pointer;
+}
+
+
+/* CSS reponsive cho thiết bị di động */
+@media only screen and (max-width: 767px) {
+  /* Các điều chỉnh cụ thể cho thiết bị di động ở đây */
+
+  body {
+    font-size: 14px; /* Giảm kích thước chữ để phù hợp với màn hình nhỏ */
+  }
+
+  .header-container {
+    flex-direction: column; /* Chuyển định hình header thành kiểu dọc */
+  }
+
+  /* Các điều chỉnh khác cho header và các phần khác có thể được thêm vào đây */
+  
+  .product-container {
+    flex-direction: column; /* Chuyển định hình sản phẩm thành kiểu dọc */
+  }
+
+  .product-left,
+  .product-right {
+    width: 100%; /* Sử dụng toàn bộ chiều rộng cho phần left và right */
+    padding-left: 0; /* Loại bỏ padding bên trái */
+    padding-right: 0; /* Loại bỏ padding bên phải */
+    height: 550px;
+  }
+
+  .product-container-both {
+    flex-direction: column; /* Chuyển định hình sản phẩm thành kiểu dọc */
+  }
+
+  /* Các điều chỉnh khác cho phần sản phẩm và các phần khác có thể được thêm vào đây */
+
+  .footer-container {
+    flex-direction: column; /* Chuyển định hình footer thành kiểu dọc */
+    padding-bottom: 30px;  
+  }
+  .product-content-big-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 267px; */
+    scale: 0.9;
+    margin-bottom: 0px;
+  }  
+  .next-prev-buttons {
+    position: absolute;
+    top: 50%;
+    width: 150%;
+    display: flex;
+    justify-content: space-between;
+  }
+  /* Các điều chỉnh khác cho footer và các phần khác có thể được thêm vào đây */
+  .product-content-small-img {
+    /* overflow-x: scroll; */
+    white-space: nowrap;
+    text-align: center;
+    flex-flow: row wrap;
+    height: 20px;
+    scale: 1.0;
+  }
+  .product-container-both {
+    flex-direction: column;
+    /* padding: 0px; */
+  }
+  .btn-order-full {
+    float: left;
+    width: 100%;
+    /* margin-right: 20px; */
+    font-size: 16px;
+    /* height: 42px; */
+    cursor: pointer;
+    width: 390px;
+    height: 45px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    line-height: 7px;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 12px;
+    text-align: center;
+    padding: 18px 0;
+    background: var(--primary-color);
+    font-weight: 750;
+  }
+  .product-bottom {
+    height: 160px;
+  }
+  .detail-product ul li p {
+    margin-bottom: 0;
+  }
+}
+
+/*css reponsive cho tablet*/
+@media (min-width: 768px) and (max-width: 991px) {
+  .product-left {
+    width: 100%; /* Thay đổi chiều rộng cho tablet */
+  }
+  .product-right {
+    width: 100%; /* Thay đổi chiều rộng cho tablet */
+  }
+}
+
+/* TABLET */
+@media (min-width: 768px) and (max-width: 991px) {
+  .col-md-0 {
+    display: none;
+  }
+  .product-content-big-img {
+    scale: 1.1;
+    margin-bottom: 70px;
+  }
+  .product-content-small-img {
+    scale: 1.05;
+  }
+  .product-left {
+    padding-left: 0;
+  }
+  .product-bottom {
+    width: 389px;
+    height: 160px;
+  }
+  .detail-product {
+    padding: 8px 20px;
+  }
+  .detail-product ul li p {
+    margin-bottom: 10px;
+  }
+  .next-prev-buttons {
+    width: 110%;
+  }
+  /* Thêm các điều chỉnh khác cho tablet nếu cần */
+}
+
+/* MÁY TÍNH */
+@media (min-width: 992px) and (max-width: 1280px) {
+  .col-sm-0 {
+    display: none;
+  }
+  .product-content-big-img {
+    scale: 1.1;
+    margin-bottom: 70px;
+  }
+  .product-content-small-img {
+    scale: 1.05;
+  }
+  .product-left {
+    padding-left: 0;
+  }
+  .product-bottom {
+    width: 389px;
+    height: 160px;
+  }
+  .detail-product {
+    padding: 8px 20px;
+  }
+  .detail-product ul li p {
+    margin-bottom: 10px;
+  }
+  .next-prev-buttons {
+    width: 110%;
+  }
+  /* Thêm các điều chỉnh khác cho máy tính nếu cần */
 }
 
 /*End css ip11

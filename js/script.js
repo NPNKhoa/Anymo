@@ -48,7 +48,8 @@ function addToLocalStorage() {
 }
 
 function ShowCart() {
-
+  var gh = sessionStorage.getItem("cart");
+  var cart = JSON.parse(gh);
   document
     .getElementById("cart-list-product")
     .getElementsByTagName("tbody")[0].innerHTML = "";
@@ -67,8 +68,12 @@ function ShowCart() {
     tr.appendChild(td_name);
 
     let td_num = document.createElement("td");
-    td_num.innerText = orderNumber;
+    td_num.value = cart[i][5];
     tr.appendChild(td_num);
+
+    let td_price = document.createElement("td");
+    td_price.innerText = cart[i][4];
+    tr.appendChild(td_price);
   }
 }
 

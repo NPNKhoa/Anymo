@@ -28,19 +28,18 @@
     margin-top: -25px;
   }
   
-  .cart-list {
-    margin: 0 355px;
-    border-radius: 3px;
+  .cart--list {
+    margin: 0 347px;
   }
   
-  .cart-list-no-cart .cart-list-no-cart-img,
+  /* .cart-list-no-cart .cart-list-no-cart-img,
   .cart-list-no-cart .cart-list-no-cart-msg {
     display: block;
-  }
+  } */
   
   .cart-list-no-cart-img {
     display: none;
-    margin-left: 150px;
+    margin-left: 190px;
     margin-right: auto;
     width: 400px;
   }
@@ -86,6 +85,7 @@
   }
   
   .cart-list-customer{
+    text-align: center;
     font-weight: 500;
     padding: 5px;
   }
@@ -106,7 +106,8 @@
   
   .cart-order{
     margin-top: 10px ;
-    align-items: center;
+    margin-bottom: 10px;
+    justify-content: center;
   }
 
   .cart-order button{
@@ -114,7 +115,7 @@
   }
 
   .cart-order button:hover{
-    background-color: #d1e7dd;
+    background-color: #58a370;
   }
   
   /* end gio hang */

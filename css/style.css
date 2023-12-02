@@ -29,6 +29,10 @@
   color: #36da64;
 }
 
+.center-title {
+  text-align: center;
+}
+
 /* Start Header Section */
 header {
   background-color: var(--second-white-color);
@@ -54,8 +58,6 @@ header .header-container .nav-item:hover a {
   opacity: 0.7;
 }
 
-
-
 header .header-start .header-logo {
   text-decoration: none;
 }
@@ -67,8 +69,6 @@ header .header-start .header-menu {
 header .header-end {
   margin: auto 0;
 }
-
-
 
 header .header-end .search-button,
 header .header-end .cart-button {
@@ -100,10 +100,6 @@ header .header-end .search-input:focus {
   outline: none;
 }
 
-
-
-
-
 header .header-end .cart-button a {
   text-decoration: none;
   color: #000;
@@ -130,8 +126,6 @@ footer .footer-logo {
   margin-left: 38px;
 }
 
-
-
 footer .footer-social-media-link i {
   margin-left: 10px;
   padding: 10px;
@@ -153,10 +147,6 @@ footer .footer-social-media-link a:hover {
   opacity: 0.8;
 }
 
-
-
-
-
 footer .footer-info ul {
   padding: 0;
 }
@@ -174,8 +164,6 @@ footer .footer-info a {
   text-decoration: none;
   color: var(--primary-color);
 }
-
-
 
 footer .footer-get-promotion .promotion-input {
   border: 1px solid #ddd;
@@ -318,8 +306,6 @@ main .main-flash-sale .flash-sale-container {
   border-radius: 10px;
 }
 
-
-
 .flash-sale-body .flash-sale-item {
   display: inline-block;
 }
@@ -332,6 +318,16 @@ main .main-flash-sale .flash-sale-container {
   width: 100%;
 }
 
+main .main-features {
+  background-color: var(--second-white-color);
+  border: 1px solid #666;
+  border-radius: 8px;
+  box-shadow: 2px 2px 4px #666;
+  margin: 100px auto;
+  min-height: 150px;
+  max-width: 75%;
+}
 
-
-
+.main-features .features-item {
+  margin: auto 0;
+}

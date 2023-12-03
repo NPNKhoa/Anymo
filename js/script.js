@@ -16,68 +16,96 @@ $(() => {
 
 // Cai Dat Gio Hang
 
-var cart = new Array();
+var ItemList = {
+  IP11: {
+    photo: "image/iphone-11-64gb-650x650.webp",
+    name: "Iphone 11 - 64GB",
+    price: 10990000,
+  },
+};
 
-function addToLocalStorage() {
-  // Lấy tên sản phẩm từ thẻ HTML
-  var productName = document.getElementById("productName").innerText;
-  var img = document.getElementById("main-img").src;
-  var capacity = document.getElementById("capacity").innerText;
-  var color = document.getElementById("color-sp").innerText;
-  var price = document.getElementById("price").innerText;
-  var quantity = parseInt(document.getElementById("quantity").value);
-  var product = new Array(img, productName, capacity, color, price, quantity);
-  
-  var kiemtra = 0;
-  for (let i = 0; i < cart.length; i++) {
-    if (cart[i][1] == productName) {
-      kiemtra = 1;
-      quantity += parseInt(cart[i][5]);
-      cart[i][5] = quantity;
-      break;
-    }
+function addToLocalStorage(code) {
+  let number = parseInt(document.getElementById("quantity").value);
+  if (typeof localStorage[code] == "undefined") {
+    window.localStorage.setItem(code, number);
+  } else {
+    let total = number + parseInt(window.localStorage.getItem(code));
+    window.localStorage.setItem(code, total);
   }
-  if (kiemtra == 0) {
-    //them vao gio hang
-    cart.push(product);
-  }
-  console.log(cart);
-  ShowCount();
-
-  sessionStorage.setItem("cart", JSON.stringify(cart));
 }
 
+let cart_button = document.querySelector(".fa-solid.fa-cart-shopping");
+
+cart_button.addEventListener("click", function () {
+  window.location.href = "cart.html";
+});
+
+const VND = new Intl.NumberFormat("vi-VN", {
+  style: "currency",
+  currency: "VND",
+});
+
 function ShowCart() {
-  var gh = sessionStorage.getItem("cart");
-  var cart = JSON.parse(gh);
   document
     .getElementById("cart-list-product")
     .getElementsByTagName("tbody")[0].innerHTML = "";
-  
+
   let totalPrice = 0;
 
-  for (let i = 0; i < cart.length; i++) {
+  for (const key in window.localStorage) {
+    let name = ItemList[key].name;
+    let price = ItemList[key].price;
+    let photo = ItemList[key].photo;
+    let orderNumber = localStorage.getItem(key);
+
     let tr = document.createElement("tr");
+
     let td_img = document.createElement("td");
     td_img.innerHTML =
-      "<img src='"+ cart[i][0] +"' class='cart-list-product-img'>";
+      "<img src='"+ photo +"' class='cart-list-product-img'>";
     tr.appendChild(td_img);
 
     let td_name = document.createElement("td");
-    td_name.innerText = cart[i][1] + '-' + cart[i][2] + '-' + cart[i][3];
+    td_name.innerText = name;
     tr.appendChild(td_name);
 
     let td_num = document.createElement("td");
-    td_num.value = cart[i][5];
+    td_num.innerText = orderNumber;
     tr.appendChild(td_num);
 
     let td_price = document.createElement("td");
-    td_price.innerText = cart[i][4];
+    td_price.innerText = VND.format(price);
     tr.appendChild(td_price);
+
+    let td_total = document.createElement("td");
+    let total = parseInt(price) * parseInt(orderNumber);
+    total = VND.format(total);
+    td_total.innerText = total;
+    tr.appendChild(td_total);
+
+    let td_del = document.createElement("td");
+    let a = document.createElement("a");
+    a.setAttribute("href", "#");
+    a.setAttribute("data-code", key);
+    let i = document.createElement("i");
+    i.setAttribute("class", "fa fa-trash icon-pink");
+    td_del.setAttribute("class", "center-align");
+    a.appendChild(i);
+    td_del.appendChild(a);
+    tr.appendChild(td_del);
+    a.onclick = () => removeCart(key);
+
+    let tbody = document.querySelector("#cart-list-product tbody");
+    tbody.appendChild(tr);
+
+    totalPrice = totalPrice + price * orderNumber;
+    let l = document.querySelectorAll("#cart-list-product tfoot span");
+    l[0].textContent = VND.format(totalPrice);
+    kiemtra = 1;
   }
 }
 
-function dathang() {
+function Order() {
   var hoten = document.getElementById("customer-name").value;
   var sdt = document.getElementById("customer-phone").value;
   var diachi = document.getElementById("customer-address").value;
@@ -86,93 +114,35 @@ function dathang() {
   sessionStorage.setItem("ttdh", JSON.stringify(ttdh));
 
   console.log(ttdh);
-  if( hoten == "" || sdt == "" || diachi == ""){
-    alert("Vui lòng điền đầy đủ thông tin đặt hàng");
+  if (hoten == "") {
+    alert("Vui lòng nhập tên khách hàng.");
+  }else if(sdt == ""){
+      alert("Vui lòng nhập số điện thoại khách hàng.");
+  }else if(diachi == ""){
+    alert("Vui lòng nhập địa chỉ khách hàng");
   }else{
-    alert("Đặt hàng thành công");
+    alert("Đặt hàng thành công.");
   }
 }
 
-
-function ShowOrder() {
-  var od = sessionStorage.getItem("ttdh");
-  var ttdh = JSON.parse(od);
-  var ttkh =
-    '<form class="order-customer-detail">' +
-    '<div class="order-customer-namephone">' +
-    '<div class="order-customer-name">' +
-    '<label for="cusName" class="order-customer-name-label">Họ và Tên:</label>' +
-    "<span>" +
-    ttdh[0] +
-    "</span>" +
-    "</div>" +
-    '<div class="order-customer-phone">' +
-    '<label for="cusPhone" class="order-customer-name-label">Số điện thoại:</label>' +
-    "<span>" +
-    ttdh[1] +
-    "</span>" +
-    "</div>" +
-    "</div>" +
-    '<h5 class="order-address">Địa chỉ nhận hàng</h5>' +
-    '<div class="order-address--">' +
-    '<div class="order-address--street">' +
-    '<label for="cusStreet" class="order-customer-name-label">Số nhà, tên đường:</label>' +
-    "<span>" +
-    ttdh[2] +
-    "</span>" +
-    "</div>" +
-    '<div class="order-address--ward">' +
-    '<label for="cusWards" class="order-customer-name-label">Phường, Xã:</label>' +
-    "<span>" +
-    ttdh[3] +
-    "</span>" +
-    "</div>" +
-    '<div class="order-address--district">' +
-    '<label for="cusDistrict" class="order-customer-name-label">Quận, Huyện:</label>' +
-    "<span>" +
-    ttdh[4] +
-    "</span>" +
-    "</div>" +
-    '<div class="order-address--province">' +
-    '<label for="cusProvince" class="order-customer-name-label">Tỉnh, Thành phố:</label>' +
-    "<span>" +
-    ttdh[5] +
-    "</span>" +
-    "</div>" +
-    "</div>" +
-    "</form>";
-  document.getElementById("order-customer").innerHTML = ttkh;
-}
-
-function thanhtien() {
-  var gh = sessionStorage.getItem("cart");
-  var cart = JSON.parse(gh);
-  var tong = 0;
-  for (let i = 0; i < cart.length; i++) {
-    var tt = parseInt(cart[i][5]) * parseFloat(cart[i][4]);
-    tong += tt;
+function removeCart(code) {
+  if (window.localStorage[code]) {
+    window.localStorage.removeItem(code);
+    document
+      .getElementById("cart-list-product")
+      .getElementsByTagName("tbody")[0].innerHTML = "";
+    ShowCart();
   }
-
-  var thanhtien =
-    '<p class="cart-summary-total">Tổng cộng:</p>' +
-    '<span class="cart-summary-sum">' +
-    tong +
-    "</span>";
-  document.getElementById("thanhtien").innerHTML = thanhtien;
 }
+  // document.getElementById("cart-list-no-cart-img").style.display = "none";
+  // document.getElementById("cart-list-no-cart-msg").style.display = "none";
+  // document.getElementById("cart-list").style.display="block";
+  window.onload = () => ShowCart();
+  window.onstorage = function () {
+    ShowCart();
+  };
 
-function XoaSP(x) {
-  var li = x.parentElement;
-  li.remove();
-
-
-  // var name = document.getElementById("cart-item-head-name").innerText;
-  // for (let i = 0; i < cart.length; i++) {
-  //   if(cart[i][1] == name){
-  //     cart.splice(i, 1);
-  //   }
-  // }
-}
+//end cart
 
 // change button img
 

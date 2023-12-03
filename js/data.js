@@ -259,7 +259,7 @@ export const products = [
     urlImg: "./image/iphone-11-64gb-650x650.webp",
     url: "iphone11-64gb.html",
     name: "iphone11 64gb",
-    price: 19900000,
+    price: 10990000,
     star: 5,
     saled: 30,
   },

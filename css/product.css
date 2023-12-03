@@ -342,17 +342,14 @@
 }
 
 /* Css ip11 */
-main .container-fluid{
-  height: 1000px;
-  padding-right: 0px;
-  padding-left: 0px;
-}
+
 ul,ol {
   list-style: none;
 }
 .product-container {
   display: flex;
   padding: 100px 0;
+  padding-bottom: 200px;
   justify-content: space-around;
   max-width: 100%;
   background-color: var(--white-color);
@@ -373,7 +370,7 @@ ul,ol {
   justify-content: center;
   height: 580px;
   flex-wrap: wrap;
-  padding-left: 17%;
+  padding-left: 13%;
 }
 
 .product-content-left {
@@ -783,34 +780,32 @@ p img.small-img:hover {
 }
 
 /* MÁY TÍNH */
-@media (min-width: 992px) and (max-width: 1280px) {
-  .col-sm-0 {
-    display: none;
+@media (min-width: 992px) and (max-width: 1200px) {
+  .product-container {
+    padding: 80px 0;
   }
-  .product-content-big-img {
-    scale: 1.1;
-    margin-bottom: 70px;
-  }
-  .product-content-small-img {
-    scale: 1.05;
-  }
+
   .product-left {
-    padding-left: 0;
+    width: 60%;
+    /* padding-left: 10%; */
   }
-  .product-bottom {
-    width: 389px;
-    height: 160px;
+
+  .product-content-big-img,
+  .product-content-small-img {
+    margin-bottom: 50px;
   }
-  .detail-product {
-    padding: 8px 20px;
+
+  .product-right {
+    width: 40%;
   }
-  .detail-product ul li p {
-    margin-bottom: 10px;
+  .product-container-both {
+    padding-bottom: 14px;
   }
-  .next-prev-buttons {
-    width: 110%;
+}
+@media (min-width: 1201px) and (max-width: 1570px) {
+  .product-left {
+    padding-left: 13%;
   }
-  /* Thêm các điều chỉnh khác cho máy tính nếu cần */
 }
 
 /*End css ip11

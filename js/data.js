@@ -10,7 +10,7 @@ export const products = [
     name: "iPhone15 Pro Max 512GB",
     price: 40990000,
     star: 5,
-    saled: 300,
+    saled: 100,
   },
   {
     type: 15,
@@ -21,7 +21,7 @@ export const products = [
     name: "iPhone15 Pro Max 256GB",
     price: 34990000,
     star: 5,
-    saled: 20,
+    saled: 300,
   },
   {
     type: 15,
@@ -111,7 +111,7 @@ export const products = [
     name: "iPhone14 Pro Max 512GB",
     price: 38990000,
     star: 5,
-    saled: 250,
+    saled: 25,
   },
   {
     type: 14,
@@ -122,7 +122,7 @@ export const products = [
     name: "iPhone14 Pro Max 256GB",
     price: 32990000,
     star: 5,
-    saled: 22,
+    saled: 220,
   },
   {
     type: 14,

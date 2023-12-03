@@ -26,7 +26,7 @@
       <div
         class="header-container container d-flex flex-row justify-content-between">
         <div class="header-start">
-          <a href="#" class="header-logo">
+          <a href="index.html" class="header-logo">
             <img src="image/Anymo logo 80x80 (NB).png" alt="Anymo Logo" />
           </a>
 
@@ -77,51 +77,50 @@
     <!-- End Header Section -->
     <main>
       <section class="container-login forms">
-        <div action="" class="form-login login">
-            <div class="form-content">
-                <h3>Đăng Nhập</h3>
-                <div class="form-input">
-                    <form action="#">
-                        <div class="field input-field">
-                            <!-- <label for="">Số Điện Thoại</label> -->
-                            <input type="text" class="input-login" placeholder="Nhập số điện thoại">
-                        </div>
-  
-                        <div class="field input-field">
-                            <!-- <label for="">Mật khẩu</label> -->
-                            <input type="password" class="password-login" placeholder="Nhập mật khẩu">
-                            <i class="fa-regular fa-eye-slash"></i>
-                        </div>
-                        <div class="field button-field">
-                            <button>Đăng Nhập</button>
-                        </div>
-                        <div class="form-link">
-                          <a href="" class="forgot-pass">Quên mật khẩu?</a>
+          <div action="" class="form-login login">
+              <div class="form-content">
+                  <h3>Đăng Nhập</h3>
+                  <div class="form-input">
+                      <form action="#">
+                          <div class="field input-field">
+                              <input type="text" id="phoneInput" class="input-login" placeholder="Nhập số điện thoại">
+                          </div>
+
+                          <div class="field input-field">
+                              <input type="password" id="passwordInput" class="password-login" placeholder="Nhập mật khẩu">
+                              <i class="fa-regular fa-eye-slash" id="togglePassword"></i>
+                          </div>
+                          <div class="field button-field">
+                              <button onclick="login()">Đăng Nhập</button>
+                          </div>
+                          <div id="message"></div>
+                          <div class="form-link">
+                              <a href="" class="forgot-pass">Quên mật khẩu?</a>
+                          </div>
+                      </form>
+                      <div class="form-link">
+                          <span>Bạn chưa có tài khoản? <a href="register.html" class="singup-link">Đăng ký</a></span>
                       </div>
-                    </form>
-                    <div class="form-link">
-                        <span>Bạn chưa có tài khoản? <a href="register.html" class="singup-link">Đăng ký</a></span>
-                    </div>
-                </div>
-            </div>
-            <div class="line"></div>
-  
-            <div class="media-options">
-                <a href="#" class="field facebook">
-                    <i class="fa-brands fa-facebook-f"></i>
-                    <span>Đăng nhập với Facebook</span>
-                </a>
-            </div>
-  
-            <div class="media-options">
-                <a href="#" class="field google">
-                    <img src="https://cdn1.iconfinder.com/data/icons/google-s-logo/150/Google_Icons-09-512.png" alt="" class="google-img">
-                    <span>Đăng nhập với Google</span>
-                </a>
-            </div>
-        </div>
-    </section>
-    </main>
+                  </div>
+              </div>
+              <div class="line"></div>
+
+              <div class="media-options">
+                  <a href="#" class="field facebook">
+                      <i class="fa-brands fa-facebook-f"></i>
+                      <span>Đăng nhập với Facebook</span>
+                  </a>
+              </div>
+
+              <div class="media-options">
+                  <a href="#" class="field google">
+                      <img src="https://cdn1.iconfinder.com/data/icons/google-s-logo/150/Google_Icons-09-512.png" alt="" class="google-img">
+                      <span>Đăng nhập với Google</span>
+                  </a>
+              </div>
+          </div>
+      </section>
+  </main>
 
     <!-- Begin Footer Section -->
     <footer class="container-fluid">

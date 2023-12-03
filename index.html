@@ -11,6 +11,8 @@
       src="https://kit.fontawesome.com/31f3088ab5.js"
       crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="js/data.js"></script>
+    <script type="module" src="js/test.js"></script>
   </head>
   <body>
     <!-- Begin Header Section -->
@@ -18,7 +20,7 @@
       <div
         class="header-container container d-flex flex-row justify-content-between">
         <div class="header-start">
-          <a href="#" class="header-logo">
+          <a href="index.html" class="header-logo">
             <img src="image/Anymo logo 80x80 (NB).png" alt="Anymo Logo" />
           </a>
 
@@ -153,7 +155,7 @@
       </div>
 
       <!-- Flash Sale -->
-      <div class="main-flash-sale">
+      <div class="flash-sale section-space">
         <div class="flash-sale-container">
           <div class="flash-sale-header d-flex justify-content-between">
             <img
@@ -210,122 +212,71 @@
         </div>
       </div>
 
-      <!-- New Products -->
-      <div class="new-products">
-        <h1 class="new-products-title center-title my-4">SẢN PHẨM MỚI</h1>
-        <div class="new-products-details row d-flex justify-content-center">
-          <div class="news-products-items col-2">
-            <div class="card">
-              <img
-                src="image/iphone-15-pro-max-512gb-650x650.webp"
-                alt="iPhone 11 64GB"
-                class="card-img-top new-products-img" />
-              <div class="card-body">
-                <h4 class="card-title">iPhone 15 Pro Max 512GB</h4>
-                <p class="card-text">36.891.000đ</p>
-              </div>
-            </div>
-          </div>
-          <div class="news-products-items col-2">
-            <div class="card">
-              <img
-                src="image/iphone-15-pro-max-512gb-650x650.webp"
-                alt="iPhone 11 64GB"
-                class="card-img-top new-products-img" />
-              <div class="card-body">
-                <h4 class="card-title">iPhone 15 Pro Max 512GB</h4>
-                <p class="card-text">36.891.000đ</p>
-              </div>
-            </div>
-          </div>
-          <div class="news-products-items col-2">
-            <div class="card">
-              <img
-                src="image/iphone-15-pro-max-512gb-650x650.webp"
-                alt="iPhone 11 64GB"
-                class="card-img-top new-products-img" />
-              <div class="card-body">
-                <h4 class="card-title">iPhone 15 Pro Max 512GB</h4>
-                <p class="card-text">36.891.000đ</p>
-              </div>
-            </div>
-          </div>
-          <div class="news-products-items col-2">
-            <div class="card">
-              <img
-                src="image/iphone-15-pro-max-512gb-650x650.webp"
-                alt="iPhone 11 64GB"
-                class="card-img-top new-products-img" />
-              <div class="card-body">
-                <h4 class="card-title">iPhone 15 Pro Max 512GB</h4>
-                <p class="card-text">36.891.000đ</p>
-              </div>
-            </div>
-          </div>
-          <div class="news-products-items col-2">
-            <div class="card">
-              <img
-                src="image/iphone-15-pro-max-512gb-650x650.webp"
-                alt="iPhone 11 64GB"
-                class="card-img-top new-products-img" />
-              <div class="card-body">
-                <h4 class="card-title">iPhone 15 Pro Max 512GB</h4>
-                <p class="card-text">36.891.000đ</p>
-              </div>
-            </div>
-          </div>
+      <!-- Best Seller Section -->
+      <div class="best-seller section-space">
+        <h1 class="best-seller-header center-title my-4">Sản phẩm bán chạy</h1>
+        <div id="best-seller-container" class="d-flex justify-content-around">
+          <!--Best Seller Products-->
         </div>
       </div>
+      <!-- End best Seller Section -->
 
       <!-- News catagories -->
-      <div class="main-news-catagories row">
+      <div class="news-catagories section-space row">
         <h1 class="news-catagories-title center-title my-4">Tin Tức</h1>
         <div class="news-catagories-item col-4">
-          <div class="card">
+          <a href="news.html" class="card news-catagories-container">
             <img
-              src="https://cdn.tgdd.vn/News/Thumb/1556262/1-thumbs-1200x675.jpg"
+              src="image/news1.jpg"
               alt="iPhone 11 64GB"
-              class="card-img-top new-products-img" />
+              class="card-img-top news-catagories-img" />
             <div class="card-body">
               <h4 class="card-title">
-                Cách sử dụng Google Drive trên điện thoại, máy tính hiệu quả
-                nhất mà bạn không thể bỏ qua.
+                Microsoft tham gia hội đồng quản trị OpenAI.
               </h4>
             </div>
-          </div>
+            <div class="news-catagories-footer">
+              <p>3 giờ trước</p>
+            </div>
+          </a>
         </div>
         <div class="news-catagories-item col-4">
-          <div class="card">
+          <a href="news.html" class="card news-catagories-container">
             <img
-              src="https://cdn.tgdd.vn/News/Thumb/1556262/1-thumbs-1200x675.jpg"
+              src="image/news2.jpg"
               alt="iPhone 11 64GB"
-              class="card-img-top new-products-img" />
+              class="card-img-top news-catagories-img" />
             <div class="card-body">
               <h4 class="card-title">
-                Cách sử dụng Google Drive trên điện thoại, máy tính hiệu quả
-                nhất mà bạn không thể bỏ qua.
+                Youtube mạnh tay xử lý người dùng chặn quảng cáo.
               </h4>
             </div>
-          </div>
+            <div class="news-catagories-footer">
+              <p>4 giờ trước</p>
+            </div>
+          </a>
         </div>
         <div class="news-catagories-item col-4">
-          <div class="card">
+          <a href="news.html" class="card news-catagories-container">
             <img
-              src="https://cdn.tgdd.vn/News/Thumb/1556262/1-thumbs-1200x675.jpg"
+              src="image/news3.png"
               alt="iPhone 11 64GB"
-              class="card-img-top new-products-img" />
+              class="card-img-top news-catagories-img" />
             <div class="card-body">
               <h4 class="card-title">
-                Cách sử dụng Google Drive trên điện thoại, máy tính hiệu quả
-                nhất mà bạn không thể bỏ qua.
+                Apple có thể sẽ phát triển nhẫn thông minh trong tương lai.
               </h4>
             </div>
-          </div>
+            <div class="news-catagories-footer">
+              <p>5 giờ trước</p>
+            </div>
+          </a>
         </div>
       </div>
 
       <!-- Festures -->
-      <div class="main-features d-flex justify-content-center row">
+      <div
+        class="main-features section-space d-flex justify-content-center row">
         <div class="features-item d-flex col-4">
           <div class="feature-icon d-inline mx-3">
             <i class="fa fa-4x fa-truck"></i>

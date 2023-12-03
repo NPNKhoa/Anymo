@@ -214,3 +214,124 @@ var x = setInterval(function () {
   $("#minutes").text(minutes < 10 ? "0" + minutes : minutes);
   $("#seconds").text(seconds < 10 ? "0" + seconds : seconds);
 }, 1000);
+
+
+
+// Begin REGISTER, check pass and phone number 
+
+function send() {
+  // Grab the input values
+  const phoneNumber = document.getElementById('phone-signup').value;
+  const password = document.getElementById('password-signup').value;
+  const confirmPassword = document.getElementById('confirm-password').value;
+
+  // Check phone number format
+  const phoneRegex = /^\d{10}$/;
+  if (!phoneRegex.test(phoneNumber)) {
+      // Display error message for invalid phone number
+      showErrorModal('Số điện thoại nhập vào không hợp lệ.');
+      return;
+  }
+
+  // Check password length
+  if (password.length < 8) {
+      // Display error message for insufficient password length
+      showErrorModal('Mật khẩu phải có ít nhất 8 ký tự.');
+      return;
+  }
+
+  // Check if passwords match
+  if (password !== confirmPassword) {
+      // Display error message for mismatched passwords
+      showErrorModal('Mật khẩu và Nhập lại mật khẩu không trùng khớp.');
+      return;
+  }
+
+  // Success message
+  showSuccessModal('Đăng ký thành công!');
+
+  // Redirect to the homepage
+  window.setTimeout(() => {
+      window.location.href = 'login.html';
+  }, 500);
+}
+
+function showErrorModal(message) {
+  // Display the overlay and modal
+  document.getElementById('overlay').style.display = 'block';
+  document.getElementById('custom-modal').style.display = 'block';
+
+  // Set the error message and show the close button
+  document.getElementById('modal-message').innerText = message;
+  document.querySelector('.modal-close').style.display = 'block';
+}
+
+function showSuccessModal(message) {
+  // Display the overlay and modal
+  document.getElementById('overlay').style.display = 'block';
+  document.getElementById('custom-modal').style.display = 'block';
+
+  // Set the success message and hide the close button
+  document.getElementById('modal-message').innerText = message;
+  document.querySelector('.modal-close').style.display = 'none';
+}
+
+function closeModal() {
+  // Hide the overlay and modal
+  document.getElementById('overlay').style.display = 'none';
+  document.getElementById('custom-modal').style.display = 'none';
+}
+
+// End REGISTER
+
+// Begin LOGIN, check pass and phone number 
+
+function login() {
+  const phoneInput = document.getElementById('phoneInput').value;
+  const passwordInput = document.getElementById('passwordInput').value;
+
+  // Check if the phone number has 10 digits
+  const phoneRegex = /^\d{10}$/;
+  if (!phoneRegex.test(phoneInput)) {
+      showError('Số điện thoại hoặc mật khẩu sai.');
+      return;
+  }
+
+  // Check if the password is at least 8 characters long
+  if (passwordInput.length < 8) {
+      showError('Số điện thoại hoặc mật khẩu sai.');
+      return;
+  }
+
+  // Login successful
+  showSuccess('Đăng nhập thành công.');
+
+  // Redirect to the homepage after 2 seconds
+  setTimeout(() => {
+      window.location.href = 'index.html';
+  }, 300);
+}
+
+function showSuccess(message) {
+  const messageElement = document.getElementById('message');
+  messageElement.innerText = message;
+  messageElement.style.color = 'green';
+}
+
+function showError(message) {
+  const messageElement = document.getElementById('message');
+  messageElement.innerText = message;
+  messageElement.style.color = 'red';
+}
+
+// Toggle password visibility
+const togglePassword = document.getElementById('togglePassword');
+const passwordInput = document.getElementById('passwordInput');
+togglePassword.addEventListener('click', function () {
+  const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+  passwordInput.setAttribute('type', type);
+  this.classList.toggle('fa-eye');
+  this.classList.toggle('fa-eye-slash');
+});
+
+// End LOGIN

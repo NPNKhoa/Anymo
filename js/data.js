@@ -4,7 +4,7 @@ export const products = [
     // data serii 15
     type: 15,
     like: true,
-    saleOff: 10,
+    saleOff: 0,
     urlImg: "./image/iphone-15-pro-max-512gb-650x650.webp",
     url: "iphone11-64gb.html",
     name: "iPhone15 Pro Max 512GB",
@@ -15,7 +15,7 @@ export const products = [
   {
     type: 15,
     like: true,
-    saleOff: 10,
+    saleOff: 15,
     urlImg: "./image/iphone-15-pro-max-256gb-650x650.webp",
     url: "iphone11-64gb.html",
     name: "iPhone15 Pro Max 256GB",
@@ -48,7 +48,7 @@ export const products = [
   {
     type: 15,
     like: false,
-    saleOff: 10,
+    saleOff: 0,
     urlImg: "./image/iphone-15-pro-128gb-650x650.webp",
     url: "iphone11-64gb.html",
     name: "iPhone15 Pro 128GB",
@@ -92,7 +92,7 @@ export const products = [
   {
     type: 15,
     like: false,
-    saleOff: 20,
+    saleOff: 5,
     urlImg: "./image/iphone-15-plus-128gb-650x650.webp",
     url: "iphone11-64gb.html",
     name: "iPhone15 Plus 128GB",
@@ -105,7 +105,7 @@ export const products = [
   {
     type: 14,
     like: true,
-    saleOff: 10,
+    saleOff: 5,
     urlImg: "./image/iphone-14-pro-max-512gb-650x650.webp",
     url: "iphone11-64gb.html",
     name: "iPhone14 Pro Max 512GB",
@@ -116,7 +116,7 @@ export const products = [
   {
     type: 14,
     like: true,
-    saleOff: 10,
+    saleOff: 15,
     urlImg: "./image/iphone-14-pro-max-256gb-650x650.webp",
     url: "iphone11-64gb.html",
     name: "iPhone14 Pro Max 256GB",
@@ -160,7 +160,7 @@ export const products = [
   {
     type: 14,
     like: false,
-    saleOff: 20,
+    saleOff: 5,
     urlImg: "./image/iphone-14-plus-128gb-650x650.webp",
     url: "iphone11-64gb.html",
     name: "iPhone14 Plus 128GB",
@@ -171,7 +171,7 @@ export const products = [
   {
     type: 14,
     like: false,
-    saleOff: 20,
+    saleOff: 0,
     urlImg: "./image/iphone-14-256gb-650x650.webp",
     url: "iphone11-64gb.html",
     name: "iPhone14 256GB",
@@ -182,7 +182,7 @@ export const products = [
   {
     type: 14,
     like: false,
-    saleOff: 20,
+    saleOff: 0,
     urlImg: "./image/iphone-14-128gb-650x650.webp",
     url: "iphone11-64gb.html",
     name: "iPhone14 128GB",
@@ -195,7 +195,7 @@ export const products = [
   {
     type: 13,
     like: true,
-    saleOff: 15,
+    saleOff: 5,
     urlImg: "./image/iphone-13-256gb-650x650.webp",
     url: "iphone11-64gb.html",
     name: "iPhone13 256GB",
@@ -206,7 +206,7 @@ export const products = [
   {
     type: 13,
     like: true,
-    saleOff: 15,
+    saleOff: 5,
     urlImg: "./image/iphone-13-128gb-650x650.webp",
     url: "iphone11-64gb.html",
     name: "iPhone13 128GB",
@@ -219,7 +219,7 @@ export const products = [
   {
     type: 12,
     like: true,
-    saleOff: 20,
+    saleOff: 5,
     urlImg: "./image/iphone-12-128gb-650x650.webp",
     url: "iphone11-64gb.html",
     name: "iPhone12 128GB",
@@ -230,7 +230,7 @@ export const products = [
   {
     type: 12,
     like: true,
-    saleOff: 20,
+    saleOff: 0,
     urlImg: "./image/iphone-12-64gb-650x650.webp",
     url: "iphone11-64gb.html",
     name: "iPhone12 64GB",
@@ -244,7 +244,7 @@ export const products = [
   {
     type: 11,
     like: true,
-    saleOff: 15,
+    saleOff: 0,
     urlImg: "./image/iphone-11-128gb-650x650.webp",
     url: "iphone11-64gb.html",
     name: "iPhone11 128GB",
@@ -255,7 +255,7 @@ export const products = [
   {
     type: 11,
     like: true,
-    saleOff: 0,
+    saleOff: 10,
     urlImg: "./image/iphone-11-64gb-650x650.webp",
     url: "iphone11-64gb.html",
     name: "iPhone11 64GB",

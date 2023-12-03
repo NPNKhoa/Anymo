@@ -54,7 +54,7 @@
             </li>
 
             <li class="nav-item">
-              <a href="register.html" class="nav-link">Đăng Ký</a>
+              <a href="login.html" class="nav-link">Đăng Ký</a>
             </li>
           </ul>
 
@@ -75,10 +75,10 @@
     </header>
     <!-- End Header Section -->
     <!-- Body -->
-    <main class="container">
+    <main class="container-fluid">
       <div class="content">
         <div class="row">
-          <div class="col col-lg-3 col-md-0 col-sm-0">
+          <div class="col col-xl-3 col-md-0 col-sm-0">
             <!-- Category -->
             <nav class="category">
               <div class="category__title">Danh mục sản phẩm</div>
@@ -107,24 +107,80 @@
             </nav>
           </div>
 
-          <div class="col col-lg-9 col-md-12 col-sm-12">
+          <div class="col col-xl-9 col-md-12 col-sm-12">
             <!-- Heading -->
+            <!-- categoy  mobie and tablet -->
+            <nav class="mobie-category tablet-category">
+              <ul
+                class="mobie-category__list tablet-category__list"
+                id="mobie-tablet-category__list">
+                <li
+                  class="mobie-category__item tablet-category__item tablet-mobie-catgory__item--active"
+                  data-value="all">
+                  <span
+                    class="mobie-category__item-link tablet-category__item-link">
+                    full Series</span
+                  >
+                </li>
+                <li
+                  class="mobie-category__item tablet-category__item"
+                  data-value="15">
+                  <span
+                    class="mobie-category__item-link tablet-category__item-link"
+                    >Series 15</span
+                  >
+                </li>
+                <li
+                  class="mobie-category__item tablet-category__item"
+                  data-value="14">
+                  <span
+                    class="mobie-category__item-link tablet-category__item-link"
+                    >Series 14</span
+                  >
+                </li>
+                <li
+                  class="mobie-category__item tablet-category__item"
+                  data-value="13">
+                  <span
+                    class="mobie-category__item-link tablet-category__item-link"
+                    >Series 13</span
+                  >
+                </li>
+                <li
+                  class="mobie-category__item tablet-category__item"
+                  data-value="12">
+                  <span
+                    class="mobie-category__item-link tablet-category__item-link"
+                    >Series 12</span
+                  >
+                </li>
+                <li
+                  class="mobie-category__item tablet-category__item"
+                  data-value="11">
+                  <span
+                    class="mobie-category__item-link tablet-category__item-link"
+                    >Series 11</span
+                  >
+                </li>
+              </ul>
+            </nav>
+
             <div class="head">
+              <!-- section arrange -->
               <h4 class="head-tilte" id="head-body__title">iPhone Series</h4>
               <div class="head-sort">
                 <h5 class="arrange__title">Sắp xếp :</h5>
                 <select id="sort-option" class="sort-option">
-                  <option value="default">-- Đề xuất ---</option>
-                  <option value="inc">Gía tăng dần</option>
-                  <option value="dec">Gia giảm dàn</option>
+                  <option value="default">--- Đề xuất ---</option>
+                  <option value="inc">Giá tăng dần</option>
+                  <option value="dec">Giá giảm dần</option>
                 </select>
               </div>
             </div>
+
             <!-- Product -->
             <div class="product">
-              <div
-                id="product-container"
-                class="row row-cols-lg-4 row-cols-md-3 row-cols-sm-2">
+              <div id="product-container" class="row">
                 <!-- Infor product -->
               </div>
             </div>

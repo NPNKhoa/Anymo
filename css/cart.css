@@ -32,10 +32,10 @@
     margin: 0 347px;
   }
   
-  /* .cart-list-no-cart .cart-list-no-cart-img,
+  .cart-list-no-cart .cart-list-no-cart-img,
   .cart-list-no-cart .cart-list-no-cart-msg {
     display: block;
-  } */
+  }
   
   .cart-list-no-cart-img {
     display: none;
@@ -118,4 +118,5 @@
     background-color: #58a370;
   }
   
+
   /* end gio hang */

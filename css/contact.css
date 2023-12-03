@@ -1,9 +1,17 @@
 /* Begin Contact */
 
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Begin Contact */
+
 .contact {
     min-height: 100vh;
     background-color: #fff;
-    padding: 50px;
+    padding: 20px;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -12,7 +20,7 @@
 }
 
 .contact .container {
-    max-width: 1200px;
+    max-width: 100%; 
     margin: 0 auto;
     width: 100%;
 }
@@ -24,13 +32,12 @@
 }
 
 .container .contact-wrapper {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 30px;
+    display: flex; /* Use flexbox for smaller screens */
+    justify-content: space-between;
 }
 
 .contact-wrapper .contact-form {
-    text-align: left;
+    text-align: center;
 }
 
 .contact-wrapper .contact-form h3 {
@@ -38,6 +45,7 @@
     margin-bottom: 20px;
     color: #333;
 }
+
 
 .contact-form .form-group {
     display: flex;
@@ -56,6 +64,10 @@
     content: "*";
     color: #ff0000;
     margin-left: 4px;
+}
+
+.contact-form .form-group .textbox {
+    width: calc(100% - 24px); /* Adjusted width of input fields */
 }
 
 .form-group .textbox {
@@ -80,16 +92,17 @@
 }
 
 .contact-form button {
+    height: 55px;
     width: 100px;
-    text-align: center;
-    padding: 12px 24px;
-    background-color: #269547;
     color: #fff;
-    border: #BEDAA9 solid 2px;
+    font-size: 1rem;
+    border: none;
+    margin-top: 20px;
     cursor: pointer;
-    transition: 0.3s ease;
-    border-radius: 5px;
-    margin-top: 5px;
+    border-radius: 6px;
+    font-weight: 400px;
+    transition: all 0.2s ease;
+    background-color: #1D7035;
 }
 
 .contact-form button:hover {
@@ -101,18 +114,24 @@
 }
 
 .contact-wrapper .contact-info {
-    margin-left: 87px;
+    margin-left: 0;
     text-align: left;
 }
 
+.contact-wrapper .contact-form,
+.contact-wrapper .contact-info {
+    flex: 0 0 calc(48% - -90px); /* Set each column to 50% width with some spacing */
+}
+
+
 .contact-wrapper .contact-info h3 {
     font-size: 24px;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
     color: #333;
 }
 
 .contact-wrapper .contact-info p {
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     color: #555;
 }
 
@@ -122,13 +141,26 @@
 }
 
 .contact-info .branch {
-    margin-left: 23px;
+    margin-left: 0px;
 }
 
 @media screen and (max-width: 768px) {
-    .contact .container {
-        max-width: 100%;
-        padding: 20px;
+    .contact-wrapper {
+        flex-direction: column; /* Stack columns on smaller screens */
+        align-items: center;
+    }
+
+    .contact-wrapper .contact-form,
+    .contact-wrapper .contact-info {
+        flex: 1; /* Take full width on smaller screens */
+        margin-bottom: 16px; /* Add some spacing between stacked columns */
+    }
+    .contact-wrapper .contact-info {
+        margin-left: 0; /* Remove left margin on smaller screens */
+    }
+
+    .contact-form .form-group .textbox {
+        width: 100%; /* Full width for input fields on smaller screens */
     }
 }
 
@@ -315,6 +347,13 @@
 
 /* Begin Login */
 
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 .container-login {
     height: 100vh;
     width: 100%;
@@ -381,6 +420,11 @@
     padding: 5px;
 }
 
+.form-input .forgot-password {
+    text-align: right;
+
+}
+
 .field button {
     color: #fff;
     background-color: #1D7035;
@@ -396,7 +440,6 @@
     text-align: center;
     margin-top: 10px;
 }
-
 
 .form-link a {
     font-size: 14px;
@@ -438,10 +481,16 @@
     justify-content: center;
 }
 
+
 a.facebook {
     color: #fff;
-    background-color: #4267b2;
+    background-color: #3c65b5;
 }
+
+.facebook:hover {
+    background-color: #5877b7;
+}
+
 
 a.facebook .fa-facebook-f {
     height: 28px;
@@ -469,8 +518,16 @@ img.google-img {
     object-fit: cover;
 }
 
+.media-options .google {
+    background-color: #eeecec;
+}
+
 a.google {
-    border: 1px solid #CACACA;
+    border: 1px solid #a2a0a0;
+}
+
+.google:hover {
+    background-color: #f7f5f5;
 }
 
 a.google span {

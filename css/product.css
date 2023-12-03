@@ -711,11 +711,9 @@ h1 {
 }
 .number-order-product {
   margin-bottom: 10px;
-  display: flex;
 }
 .number-order-product label {
   margin-bottom: 6px;
-  margin-right: 5px;
 }
 
 .btn-order-full{
@@ -744,7 +742,7 @@ h1 {
 .number-order input {
   border-radius: 8px;
   text-align: center;
-  width: 123px;
+  width: 200px;
 }
 .number-order input:focus {
   outline: none;

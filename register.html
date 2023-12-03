@@ -73,39 +73,39 @@
     <main class="register">
       <div class="register-container">
           <h3 title="titlesingup">Đăng Ký</h3>
-          <form action="" class="form-singup">
-              <div class="singup-box">
-                  <label for="">Họ Tên</label>
-                  <input class="input-box" type="text" placeholder="Nhập họ tên" required>
+          <form action="" class="form-singup" onsubmit="send(); return false;">
+              <div class="singup-box required">
+                  <label for="">Họ và tên</label>
+                  <input id="name-signup" class="input-box" type="text" placeholder="Nhập đầy đủ họ tên" required>
               </div>
               <div class="singup-box">
                   <label for="">Email</label>
-                  <input class="input-box" type="text" placeholder="Nhập email">
+                  <input class="input-box" type="text" placeholder="Nhập địa chỉ email">
               </div>
 
-              <div class="column">
-                  <div class="singup-box">
-                      <label for="">Số Điện Thoại</label>
-                      <input class="input-box" type="text" placeholder="Nhập số điện thoại">
+              <div class="column ">
+                  <div class="singup-box required">
+                      <label for="">Số điện thoại</label>
+                      <input id="phone-signup" class="input-box" type="text" placeholder="Nhập số điện thoại" required>
                   </div>
                   <div class="singup-box">
-                      <label for="">Ngày Sinh</label>
+                      <label for="">Ngày sinh</label>
                       <input class="input-box" type="date">
                   </div>
               </div>
-              
+
               <div class="singup-box required">
-                <label for="">Mật khẩu</label>
-                <input class="input-box" type="password" placeholder="Nhập mật khẩu" required>
+                  <label for="">Mật khẩu</label>
+                  <input id="password-signup" class="input-box" type="password" placeholder="Nhập mật khẩu" required>
               </div>
 
               <div class="singup-box required">
-                <label for="">Nhập lại mật khẩu</label>
-                <input class="input-box" type="password" placeholder="Nhập lại mật khẩu" required>
+                  <label for="">Nhập lại mật khẩu</label>
+                  <input id="confirm-password" class="input-box" type="password" placeholder="Nhập lại mật khẩu" required>
               </div>
 
               <div class="gender-box">
-                  <h4>Gender</h4>
+                  <h4>Giới tính</h4>
                   <div class="gender-option">
                       <div class="gender">
                           <input type="radio" id="check-male" name="gender" checked>
@@ -123,36 +123,41 @@
               </div>
 
               <div class="singup-box address">
-                  <label for="">Địa Chỉ</label>
-                  <input class="input-box" type="text" placeholder="Nhập địa chỉ (xã/phường/thị trấn, quận/huyện/thị xã))">
+                  <label for="">Địa chỉ</label>
+                  <input id="address-signup" class="input-box" type="text" placeholder="Nhập địa chỉ (xã/phường/thị trấn, quận/huyện/thị xã))">
                   <div class="column">
                       <div class="select-box">
                           <select>
-                            <option value="" hidden>Tỉnh/Thành phố</option>
-                            <option value="">An Giang</option>
-                            <option value="">Bà Rịa Vũng Tàu</option>
-                            <option value="">Bạc Liêu</option>
-                            <option value="">Bến Tre</option>
-                            <option value="">Bình Dương</option>
-                            <option value="">Cà Mau</option>
-                            <option value="">Cần Thơ</option>
-                            <option value="">Đồng Nai</option>
-                            <option value="">Đồng Tháp</option>
-                            <option value="">Hậu Giang</option>
-                            <option value="">Kiên Giang</option>
-                            <option value="">Long An</option>
-                            <option value="">Sóc Trăng</option>
-                            <option value="">Tây Ninh</option>
-                            <option value="">Tiền Giang</option>
-                            <option value="">Trà Vinh</option>
-                            <option value="">Vĩnh Long</option>
+                              <option value="" hidden>Tỉnh/Thành phố</option>
+                              <option value="">An Giang</option>
+                              <option value="">Bà Rịa Vũng Tàu</option>
+                              <option value="">Bạc Liêu</option>
+                              <option value="">Bến Tre</option>
+                              <option value="">Bình Dương</option>
+                              <option value="">Cà Mau</option>
+                              <option value="">Cần Thơ</option>
+                              <option value="">Đồng Nai</option>
+                              <option value="">Đồng Tháp</option>
+                              <option value="">Hậu Giang</option>
+                              <option value="">Kiên Giang</option>
+                              <option value="">Long An</option>
+                              <option value="">Sóc Trăng</option>
+                              <option value="">Tây Ninh</option>
+                              <option value="">Tiền Giang</option>
+                              <option value="">Trà Vinh</option>
+                              <option value="">Vĩnh Long</option>
                           </select>
                       </div>
                   </div>
               </div>
-              <button>Đăng Ký</button>
+              <button type="submit">Đăng Ký</button>
           </form>
       </div>
+      <div id="custom-modal" class="modal-register">
+        <span class="modal-close" onclick="closeModal()">&times;</span>
+        <p id="modal-message"></p>
+    </div>
+    <div id="overlay" class="overlay"></div>
   </main>
 
     <!-- End Register -->

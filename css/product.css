@@ -17,6 +17,7 @@
 }
 /* section category */
 .category {
+  margin: auto;
   width: 88%;
   background-color: (--white-color);
   padding-bottom: 20px;
@@ -111,9 +112,10 @@
 
 .head-tilte {
   margin: 0;
-  padding: 0;       
+  padding: 0;
+   
 }
-.head-sort {
+.head-arrange {
   position: absolute;
   top: 0px;
   right: 0;
@@ -127,9 +129,7 @@
     color: #666;
     margin-right: 4px ;
 }
-.sort-option {
-    height: 34px;
-    width: 160px;
+.arrange-option {
     border-radius: 0;
     color: #666;
     font-size: 1rem;
@@ -142,11 +142,8 @@
     cursor: pointer;
 }
 
-
-
-
 /* Style for the options within the dropdown */
-.sort-option > option {
+.arrange-option > option {
     display: block;
     border: 1px solid #666;
     font-size: 1rem;
@@ -155,10 +152,12 @@
 }
 
 /* Style for the selected option */
-.sort-option option:hover {
+.arrange-option option:hover {
     background: var(--primary-color);
     color: #fff;
 }
+
+
 
 /* info item */
 .product-itemm {
@@ -657,8 +656,102 @@ p img.small-img:hover {
     font-size: 14px; /* Giảm kích thước chữ để phù hợp với màn hình nhỏ */
   }
 
-  .header-container {
-    flex-direction: column; /* Chuyển định hình header thành kiểu dọc */
+/* TABLET AND MOBILE */
+@media (max-width: 1199px) {
+    .content {
+      padding-top: 100px;
+    }
+    .head{
+        margin: 24px 0 0;
+    }
+    .head-body__title{
+        font-size: 2rem;
+        font-weight: 800;
+    }
+
+    .mobie-tablet-head {
+      margin: 24px 0;
+      padding: 0 6px ;
+
+    }
+
+    .mobie-tablet-head-tilte {
+    }
+
+    .mobie-tablet-head-arrange {
+
+    }
+
+    .mobie-tablet-arrange__title {
+    }
+
+    .mobie-tablet-arrange-option {
+
+    }
+    
+
+
+  }
+  /* TABLET */
+
+  @media (min-width: 768px) and (max-width: 1199px) {
+    .col-md-0 {
+      display: none;
+    }
+    .product-item__price-curent,
+    .product-item__price-old{
+        font-size: 1rem;
+    }
+    .tablet-category{
+        display: block;
+        margin: 0 ;
+    }
+
+    
+    .tablet-category{
+        display: flex;
+        margin: 0 ;
+    }
+    
+    .tablet-category__list {
+        display: flex;
+        list-style: none;
+        padding-left: 0;    
+        margin: auto;
+    }
+    
+    .tablet-category__item {
+        flex-shrink: 0;
+        left: 0;
+        right: 0;
+        border-left: 1px solid  #b7b3b3;  
+    }
+    .tablet-category__item:first-child{
+        border-left: 1px solid  #ffffff;
+    }
+
+    .tablet-category__item-link {
+        text-transform: uppercase;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        text-align: center;
+        text-decoration: none ;
+        color: #666; 
+        font-size: 1.2rem;
+        overflow: hidden;
+        padding: 8px 10px;
+
+        display: -webkit-box;
+        user-select: none;
+        -webkit-user-select: none;
+        -webkit-tap-highlight-color: transparent;
+    }
+    .tablet-mobie-catgory__item--active .tablet-category__item-link{
+        color: var(--primary-color);
+        font-weight:500;
+        border-bottom: 1px solid var(--primary-color) ;
+    }
   }
 
   /* Các điều chỉnh khác cho header và các phần khác có thể được thêm vào đây */
@@ -814,3 +907,108 @@ p img.small-img:hover {
 }
 
 /*End css ip11
+  /* MOBILE */
+  @media (max-width: 767px){
+        
+    .mobie-category{
+        display: none;
+        margin: 0 ;
+    }
+
+    .mobie-category__list {
+        display: flex;
+        list-style: none;
+        padding-left: 0;    
+        max-width: 100%;
+        overflow-x: auto;
+        margin-bottom: 12px;
+    }
+
+    .mobie-category__list::-webkit-scrollbar{
+        display: none;
+    }
+
+    .mobie-category__item {
+        flex-shrink: 0;
+        margin: 0 5px;
+    }
+
+    .mobie-category__item .mobie-category__item-link {
+        background-color: #fffdfd;
+    }
+
+    .mobie-category__item-link {
+        text-transform: uppercase;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        text-align: center;
+        text-decoration: none ;
+        color: #666; 
+        font-size: 0.8rem;
+        overflow: hidden;
+        padding: 8px 16px;
+        border-radius: 8px ;
+        border: 1px solid  #b7b3b3;
+
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 1;
+        user-select: none;
+        -webkit-user-select: none;
+        -webkit-tap-highlight-color: transparent;
+    }
+    .tablet-mobie-catgory__item--active .mobie-category__item-link{
+        color: var(--primary-color);
+        font-weight:500;
+        border-color: var(--primary-color);
+        background-color: rgba(28, 115, 53,0.02);
+    }
+    .mobie-tablet-head {
+          display: flex;
+          justify-content: space-between;
+          margin: 0 0 12px;
+          padding: 0 6px;
+
+    }
+    .mobie-tablet-head-tilte {
+      font-size: 1rem;
+      font-weight: 500;
+      position: relative;
+      transform: translateY(50% );
+    }
+    .mobie-tablet-arrange__title {
+      display: none;
+    }
+    
+    .mobie-tablet-arrange-option > option {
+      font-size: 0.8rem;
+    }
+  }
+
+
+  @media (min-width: 490px) and (max-width: 767px) {
+
+    .product-item__price-curent,
+    .product-item__price-old{
+        font-size: 1rem;
+    }
+    .mobie-category{
+        display: block;
+    }
+  }
+  @media (min-width: 576px) and (max-width: 678px) {
+    .product-item__price-curent,
+    .product-item__price-old{
+        font-size: 0.8rem;
+    }
+  }
+  @media (max-width: 489px) {   
+    .product-item__price-curent,
+    .product-item__price-old{
+        font-size: 0.7rem;
+    }
+    .mobie-category{
+        display: block;
+    }
+  }

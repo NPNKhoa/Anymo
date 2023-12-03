@@ -17,6 +17,7 @@
 }
 /* section category */
 .category {
+  margin: auto;
   width: 88%;
   background-color: (--white-color);
   padding-bottom: 20px;
@@ -111,9 +112,10 @@
 
 .head-tilte {
   margin: 0;
-  padding: 0;       
+  padding: 0;
+   
 }
-.head-sort {
+.head-arrange {
   position: absolute;
   top: 0px;
   right: 0;
@@ -127,9 +129,7 @@
     color: #666;
     margin-right: 4px ;
 }
-.sort-option {
-    height: 34px;
-    width: 160px;
+.arrange-option {
     border-radius: 0;
     color: #666;
     font-size: 1rem;
@@ -142,11 +142,8 @@
     cursor: pointer;
 }
 
-
-
-
 /* Style for the options within the dropdown */
-.sort-option > option {
+.arrange-option > option {
     display: block;
     border: 1px solid #666;
     font-size: 1rem;
@@ -155,10 +152,12 @@
 }
 
 /* Style for the selected option */
-.sort-option option:hover {
+.arrange-option option:hover {
     background: var(--primary-color);
     color: #fff;
 }
+
+
 
 /* info item */
 .product-itemm {
@@ -649,9 +648,6 @@ p img.small-img:hover {
     .content {
       padding-top: 100px;
     }
-    .head-sort{
-        display: none;
-    }
     .head{
         margin: 24px 0 0;
     }
@@ -660,6 +656,11 @@ p img.small-img:hover {
         font-weight: 800;
     }
 
+    .mobie-tablet-head {
+      margin: 24px 0;
+      padding: 0 6px ;
+
+    }
 
   }
   /* TABLET */
@@ -738,6 +739,7 @@ p img.small-img:hover {
         padding-left: 0;    
         max-width: 100%;
         overflow-x: auto;
+        margin-bottom: 12px;
     }
 
     .mobie-category__list::-webkit-scrollbar{
@@ -761,7 +763,7 @@ p img.small-img:hover {
         text-align: center;
         text-decoration: none ;
         color: #666; 
-        font-size: 1.2rem;
+        font-size: 0.8rem;
         overflow: hidden;
         padding: 8px 16px;
         border-radius: 8px ;
@@ -780,14 +782,31 @@ p img.small-img:hover {
         border-color: var(--primary-color);
         background-color: rgba(28, 115, 53,0.02);
     }
+    .mobie-tablet-head {
+          display: flex;
+          justify-content: space-between;
+          margin: 0 0 12px;
+          padding: 0 6px;
 
+    }
+    .mobie-tablet-head-tilte {
+      font-size: 1rem;
+      font-weight: 500;
+      position: relative;
+      transform: translateY(50% );
+    }
+    .mobie-tablet-arrange__title {
+      display: none;
+    }
+    
+    .mobie-tablet-arrange-option > option {
+      font-size: 0.8rem;
+    }
   }
 
 
   @media (min-width: 490px) and (max-width: 767px) {
-    .col-sm-0 {
-      display: none;
-    }
+
     .product-item__price-curent,
     .product-item__price-old{
         font-size: 1rem;
@@ -796,10 +815,13 @@ p img.small-img:hover {
         display: block;
     }
   }
-  @media (max-width: 489px) {   
-    .col-sm-0 {
-      display: none;
+  @media (min-width: 576px) and (max-width: 678px) {
+    .product-item__price-curent,
+    .product-item__price-old{
+        font-size: 0.8rem;
     }
+  }
+  @media (max-width: 489px) {   
     .product-item__price-curent,
     .product-item__price-old{
         font-size: 0.7rem;

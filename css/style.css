@@ -112,6 +112,7 @@ footer {
   padding: 0;
   min-height: 250px;
 }
+
 footer .footer-container {
   padding: 0;
 }
@@ -238,18 +239,6 @@ main .flash-sale {
   border-radius: 10px;
 }
 
-main .flash-sale .flash-sale-container {
-  padding: 18px 36px;
-}
-
-.flash-sale-container .flash-sale-header {
-  margin-bottom: 12px;
-}
-
-#flash-sale-img {
-  max-width: 270px;
-}
-
 .flash-sale-header .time-counter {
   margin: auto 0;
   margin-right: -16px;
@@ -257,23 +246,7 @@ main .flash-sale .flash-sale-container {
 
 .flash-sale-header .time-counter-label {
   display: inline-block;
-  margin-right: 8px;
-}
-
-.flash-sale-header .time-counter #hours::after {
-  content: ":";
-  position: relative;
-  right: -19px;
-  font-size: 16px;
-  font-weight: bold;
-}
-
-.flash-sale-header .time-counter #minutes::after {
-  content: ":";
-  position: relative;
-  right: -19px;
-  font-size: 16px;
-  font-weight: bold;
+  margin-right: 10px;
 }
 
 .flash-sale-header .time-counter .time-counter-element {
@@ -283,29 +256,74 @@ main .flash-sale .flash-sale-container {
   padding: 6px;
   background-color: var(--second-white-color);
   border-radius: 10px;
+  padding-right: 12px;
 }
 
-.flash-sale-body .flash-sale-item {
+.flash-sale-header .time-counter .time-counter-element::before {
+  content: ":";
+  position: relative;
+  left: -19px;
+  padding: 0 0 -2px 0;
+  font-weight: bold;
+}
+
+.flash-sale .flash-sale-header {
+  padding: 10px;
+  margin: 0 10px 10px;
+}
+
+.flash-sale #flash-sale-img {
+  max-width: 270px;
+}
+
+#flash-sale-body {
+  padding-bottom: 20px;
+}
+
+div.best-sale-items {
+  min-width: 300px;
+}
+
+div.best-sale-items .card {
+  text-decoration: none;
+}
+
+div.best-sale-items .card:hover {
+  box-shadow: 4px 4px 8px #777, -4px -4px 8px #aaa;
+  cursor: pointer;
+}
+
+div.card-body {
+  padding-bottom: 50px;
+}
+
+#flash-sale-body .current-price {
+  margin: 4px 50px 0 0;
   display: inline-block;
 }
 
-.flash-sale-body .flash-sale-item .card-body {
-  background-color: var(--second-white-color);
-}
-
-.flash-sale-body .flash-sale-item .card-img-top {
-  width: 100%;
+#flash-sale-body .old-price {
+  text-decoration: line-through;
+  font-weight: lighter;
+  color: #333;
+  line-height: 0.6;
+  display: inline-block;
 }
 /* End Flash Sale Section */
 
 /* Home Page | Best Selller Section */
-.best-seller {
+#best-seller-container .best-seller-items .card {
+  text-decoration: none;
 }
 
-#best-seller-container {
+#best-seller-container .best-seller-items .card:hover {
+  box-shadow: 4px 4px 8px #888, -4px -4px 8px #ddd;
+  cursor: pointer;
 }
 
-#best-seller-container .best-seller-item {
+.best-seller-cost {
+  font-size: 20px;
+  margin-bottom: 4px;
 }
 /* End Best Seller Section */
 
@@ -338,7 +356,6 @@ main .main-features {
   box-shadow: 2px 2px 4px #666;
   margin: 100px auto;
   min-height: 150px;
-  max-width: 80%;
 }
 
 .main-features .features-item {
@@ -352,11 +369,8 @@ main .main-features {
 @media (min-width: 1024px) {
 }
 
+/* Tablet */
 @media (min-width: 768px) and (max-width: 1023px) {
-  /* #navbarNav {
-    display: flex;
-  } */
-
   #login,
   #signup,
   #signup-btn {
@@ -383,5 +397,130 @@ main .main-features {
   }
 }
 
-@media (max-width: 575px) {
+/* Mobile */
+@media (max-width: 767px) {
+  * {
+    font-size: 12px;
+  }
+
+  #flash-sale-body .card,
+  #best-seller-container .card {
+    min-height: 290px;
+  }
+
+  #navbarNav .nav-item {
+    text-align: center;
+  }
+
+  #searchButton,
+  #signup-btn {
+    display: none;
+  }
+
+  .secondary-nav #cartButton {
+    border: none;
+    border-radius: 0;
+    width: 100%;
+    background-color: var(--second-white-color);
+    color: var(--primary-color);
+    margin: 0;
+  }
+
+  #cartButton::after {
+    content: "Giỏ hàng";
+  }
+
+  main .flash-sale {
+    min-width: 100%;
+    display: block;
+    margin: 10px auto;
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+  }
+
+  .flash-sale #flash-sale-img {
+    max-width: 200px;
+  }
+
+  div.best-sale-items {
+    display: inline-block;
+  }
+
+  div.best-sale-items {
+    min-width: 0;
+    max-width: 30%;
+  }
+
+  .flash-sale-header .time-counter .time-counter-element {
+    font-size: 10px;
+    padding: 2px 4px 2px 2px;
+    border-radius: 6px;
+    margin: 0;
+  }
+
+  .news-catagories-item .news-catagories-container {
+    min-height: 210px;
+  }
+
+  div.best-seller-items {
+    max-width: 30%;
+  }
+
+  div.card-body {
+    padding-bottom: 20px;
+  }
+
+  h4.card-title {
+    font-size: 12px;
+  }
+
+  .main-features {
+    flex-direction: column;
+    margin: 100px auto !important;
+  }
+
+  .features-item {
+    display: grid !important;
+    grid-template-columns: 100px 200px;
+    margin: 10px !important;
+  }
+
+  .features-item .features-icon {
+    font-size: 0.5;
+    line-height: 1.5;
+  }
+
+  footer .footer-info {
+    margin: 0 50px;
+  }
+
+  footer .footer-social-media-link {
+    display: none;
+  }
+
+  footer .footer-copyright-reserved div.row {
+    display: block !important;
+  }
+
+  footer .footer-copyright-reserved .copyright-text-container {
+    width: 100%;
+  }
+
+  div.hot-news-item {
+    flex-direction: column;
+    margin: auto;
+  }
+
+  div.hot-news-detail h5 {
+    margin: 10px 0;
+  }
+
+  .row .hot-news-img,
+  .row .hot-news-details {
+    width: 100% !important;
+  }
+
+  .hot-news-detail {
+    width: 100%;
+  }
 }

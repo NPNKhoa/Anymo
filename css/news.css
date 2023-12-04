@@ -1,5 +1,9 @@
 @import url("css/style.css");
 
+.news-title {
+  color: var(--primary-color);
+}
+
 main .banner img {
   width: 100%;
 }

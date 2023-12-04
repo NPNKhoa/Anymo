@@ -21,7 +21,7 @@
     <header class="container-fluid">
       <nav class="navbar navbar-expand-md">
         <div class="container-lg">
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand" href="index.html">
             <img src="image/Anymo logo 80x80 (NB).png" alt="Logo" />
           </a>
           <button
@@ -35,10 +35,12 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
+            <ul class="navbar-nav primary-nav">
               <!-- Left Menu -->
               <li class="nav-item">
-                <a class="nav-link" href="index.html">Trang chủ</a>
+                <a id="home-page" class="nav-link" href="index.html"
+                  >Trang chủ</a
+                >
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="product.html">Sản phẩm</a>
@@ -91,15 +93,15 @@
     <!-- End Header Section -->
 
     <main class="container-fluid">
-      <h1 class="center-title my-4">Tin Tức Công Nghệ</h1>
+      <h1 class="center-title my-4 py-3 news-title">Tin Tức Công Nghệ</h1>
 
       <div class="banner"><img src="image/Banner-iphone-15.webp" alt="" /></div>
 
       <div class="hot-news">
         <h4>TIN MỚI NHẤT</h4>
         <div class="hot-news-item row my-4">
-          <img src="image/news1.jpg" alt="" class="col-4 hot-news-img" />
-          <div class="col-8 hot-news-detail">
+          <img src="image/news1.jpg" alt="" class="col-lg-4 hot-news-img" />
+          <div class="col-lg-8 hot-news-detail">
             <h5>Microsoft tham gia hội đồng quản trị OpenAI</h5>
             <p>
               Sam Altman đã nhận lại vị trí CEO OpenAI trong khi hội đồng quản
@@ -110,8 +112,8 @@
         </div>
 
         <div class="hot-news-item row my-4">
-          <img src="image/news2.jpg" alt="" class="col-4 hot-news-img" />
-          <div class="col-8 hot-news-detail">
+          <img src="image/news2.jpg" alt="" class="col-lg-4 hot-news-img" />
+          <div class="col-lg-8 hot-news-detail">
             <h5 class="hot-news-item-title">
               Youtube mạnh tay xử lý người dùng chặn quảng cáo
             </h5>
@@ -123,8 +125,8 @@
         </div>
 
         <div class="hot-news-item row my-4">
-          <img src="image/news3.png" alt="" class="col-4 hot-news-img" />
-          <div class="col-8 hot-news-detail">
+          <img src="image/news3.png" alt="" class="col-lg-4 hot-news-img" />
+          <div class="col-lg-8 hot-news-detail">
             <h5 class="hot-news-item-title">
               Apple có thể sẽ phát triển nhẫn thông minh trong tương lai
             </h5>
@@ -137,8 +139,8 @@
         </div>
 
         <div class="hot-news-item row my-4">
-          <img src="image/news4.jpg" alt="" class="col-4 hot-news-img" />
-          <div class="col-8 hot-news-detail">
+          <img src="image/news4.jpg" alt="" class="col-lg-4 hot-news-img" />
+          <div class="col-lg-8 hot-news-detail">
             <h5 class="hot-news-item-title">Apple ngừng phát triển chip 5G</h5>
             <p>
               Nỗ lực phát triển modem mạng 5G riêng của Apple được cho là đã
@@ -148,8 +150,8 @@
         </div>
 
         <div class="hot-news-item row my-4">
-          <img src="image/news5.jpg" alt="" class="col-4 hot-news-img" />
-          <div class="col-8 hot-news-detail">
+          <img src="image/news5.jpg" alt="" class="col-lg-4 hot-news-img" />
+          <div class="col-lg-8 hot-news-detail">
             <h5 class="hot-news-item-title">
               Người dùng ngày càng chuộng iPhone bản đắt tiền
             </h5>
@@ -228,20 +230,14 @@
       </div>
 
       <div class="footer-copyright-reserved">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="copyright-text">
-                &copy Copyright
-                <!--start getdate tody-->
-                <script>
-                  document.write(new Date().getFullYear());
-                </script>
-                All rights reserved | Made by Anymo Group
-                <!--end getdate tody -->
-              </div>
-            </div>
-          </div>
+        <div class="copyright-text">
+          &copy Copyright
+          <!--start getdate tody-->
+          <script>
+            document.write(new Date().getFullYear());
+          </script>
+          All rights reserved | Made by Anymo Group
+          <!--end getdate tody -->
         </div>
       </div>
     </footer>

@@ -22,15 +22,32 @@ var ItemList = {
     name: "Iphone 11 - 64GB",
     price: 10990000,
   },
+
+  IP14: {
+    photo: "image/iphone-14-pro-max-256gb-650x650.webp",
+    name: "Iphone 14 Pro Max- 256GB",
+    price: 32990000,
+  },
+  IP15: {
+    photo: "image/iphone-15-pro-max-256gb-650x650.webp",
+    name: "Iphone 15 Pro Max - 256GB",
+    price: 34990000,
+  },
 };
 
 function addToLocalStorage(code) {
   let number = parseInt(document.getElementById("quantity").value);
   if (typeof localStorage[code] == "undefined") {
     window.localStorage.setItem(code, number);
+    alert("Thêm sản phẩm thành công.")
   } else {
     let total = number + parseInt(window.localStorage.getItem(code));
-    window.localStorage.setItem(code, total);
+    if (total > 100) {
+      window.localStorage.setItem(code, 100);
+      alert("Số lượng quá quy định!");
+    } else {
+      window.localStorage.setItem(code, total);
+    }
   }
 }
 

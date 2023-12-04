@@ -7,7 +7,7 @@
     <link rel="icon" type="image/png" href="/image/Anymo_icon.png" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/product.css">
+    <link rel="stylesheet" href="css/product.css" />
     <script
       src="https://kit.fontawesome.com/31f3088ab5.js"
       crossorigin="anonymous"></script>
@@ -16,188 +16,226 @@
   <body>
     <!-- Begin Header Section -->
     <header class="container-fluid">
-      <div
-        class="header-container container d-flex flex-row justify-content-between">
-        <div class="header-start">
-          <a href="#" class="header-logo">
-            <img src="image/Anymo logo 80x80 (NB).png" alt="Anymo Logo" />
+      <nav class="navbar navbar-expand-md">
+        <div class="container-lg">
+          <a class="navbar-brand" href="#">
+            <img src="image/Anymo logo 80x80 (NB).png" alt="Logo" />
           </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <!-- Left Menu -->
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Trang chủ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="product.html">Sản phẩm</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="news.html">Tin tức</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Liên hệ</a>
+              </li>
+            </ul>
 
-          <div class="header-menu">
-            <ul class="nav">
+            <!-- Right Menu -->
+            <ul class="navbar-nav ms-auto secondary-nav">
               <li class="nav-item">
-                <a href="index.html" class="nav-link">Trang Chủ</a>
+                <a id="login-btn" class="nav-link" href="login.html">
+                  <i class="fas fa-sign-in-alt"></i>
+                  <span id="login">Đăng nhập</span>
+                </a>
               </li>
               <li class="nav-item">
-                <a href="product.html" class="nav-link">Sản Phẩm</a>
+                <a id="signup-btn" class="nav-link" href="register.html">
+                  <i class="fa-solid fa-pen-to-square"></i>
+                  <span id="signup">Đăng ký</span>
+                </a>
+              </li>
+
+              <input
+                type="text"
+                placeholder="Tìm kiếm sản phẩm..."
+                class="search-input" />
+              <li class="nav-item">
+                <a class="btn btn-link nav-link" id="searchButton">
+                  <i class="fas fa-search"></i>
+                </a>
               </li>
               <li class="nav-item">
-                <a href="news.html" class="nav-link">Tin Tức</a>
-              </li>
-              <li class="nav-item">
-                <a href="contact.html" class="nav-link">Liên Hệ</a>
+                <a
+                  href="cart.html"
+                  class="btn btn-link nav-link"
+                  id="cartButton">
+                  <i class="fas fa-shopping-cart"></i>
+                </a>
               </li>
             </ul>
           </div>
         </div>
-
-        <div class="header-end d-flex">
-          <ul class="nav login-menu shift-left">
-            <li class="nav-item">
-              <a href="login.html" class="nav-link">Đăng Nhập</a>
-            </li>
-
-            <li class="nav-item">
-              <a href="login.html" class="nav-link">Đăng Ký</a>
-            </li>
-          </ul>
-
-          <input
-            type="text"
-            placeholder="Tìm kiếm sản phẩm..."
-            class="search-input" />
-          <div class="search-button button-group">
-            <i class="fa-solid fa-magnifying-glass"></i>
-          </div>
-          <div class="cart-button button-group">
-            <a href="cart.html">
-              <i class="fa-solid fa-cart-shopping"></i>
-            </a>
-          </div>
-        </div>
-      </div>
+      </nav>
     </header>
     <!-- End Header Section -->
 
     <!-- Begin Main Section -->
     <main class="container-fluid">
       <!-- ************************************************************* -->
-      
-              <div class="product-container">
-                <div class="product-container-both">
-                  <div class="product-left">
-                      <div class="product-content-big-img">
-                        <img src="image/iphone-11-64gb-650x650.webp" alt="" id="main-img">           
-                        <div class="next-prev-buttons">
-                          <button onclick="navigateImages(-1)">
-                            <i class="fa-solid fa-chevron-left"></i>
-                          </button>
-                          <button onclick="navigateImages(1)">
-                            <i class="fa-solid fa-chevron-right"></i>
-                          </button>
-                        </div>
-                      </div>
-                      <div class="product-content-small-img">
-                        <div class="product-small-img">
-                            <img class="small-img" src="image/iphone-11-64gb-650x650.webp" alt="" onclick="changeImages(this.src)">
-                            <img class="small-img" src="image/iphone-11-full-size-300x300.webp" alt="" onclick="changeImages(this.src)">
-                            <img class="small-img" src="image/iphone-11-camera-300x300.webp" alt="" onclick="changeImages(this.src)">
-                            <img class="small-img" src="image/iphone-11-box-300x300.webp" alt="" onclick="changeImages(this.src)">
-                        </div>
-                      </div>
-                  </div>
-        
-                  <div class="product-right">
-                    <div class="produc-content-right ">
-                        <div class="product-content">
-                            <div class="produc-content-text boxname">
-                                <h1 id="productName">iphone 11</h1>
-                            </div>
-                        </div>
-                        <div class="produc-location">
-                            <div class="product-location-text">
-                                <span>Giá bán tại: Cần Thơ</span>
-                                <span>10.990.000đ</span>
-                            </div>
-                        </div>
-                        <div class="produc-capacity">
-                          <div class="product-capacity-text">
-                            <span>Dung lượng</span>
-                            <ul class="capacity-btn-container">
-                              <li class="capacity-btn">
-                                <a href="#" onclick="clickbtn()">64GB</a>
-                              </li>
-                              <li class="capacity-btn">
-                                <a href="#" >128GB</a>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                        <div class="color-sp">
-                            <div class="color-sp-text boxcolor">
-                                <span id="color-sp">Màu: Trắng</span>
-                            
-                                <div class="color-sp-list">
-                                    <ul>
-                                        <li class="type-color-one">
-                                            <a href="#" style="background-color: #f9f6ef;"></a>
-                                        </li>
-                                        <li class="type-color-two">
-                                            <a href="#" style="background-color: #1f2020;"></a>
-                                        </li>
-                                        <li class="type-color-three">
-                                            <a href="#" style="background-color: #aee1cd;"></a>
-                                        </li>
-                                        <li class="type-color-four">
-                                            <a href="#" style="background-color: #d1cdda;"></a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- BTN Đặt hàng -->
-                        <div class="btn-oder-product">
-                          <div class="number-order-product">
-                              <label class="number-title-order" for="quantity">Số lượng:</label>
-                              <div class="number-order boxqnt">
-                                  <input type="number" id="quantity" value="1" min="1">
-                              </div>
-                          </div>
-                              <a href="#" class="btn-order-full" onclick="addToLocalStorage('IP11')">Thêm</a>
-                        </div>
-                    </div>
-                    <div class="product-bottom">
-                        <div class="detail-product">
-                          <ul>
-                            <li>
-                              <span>
-                                <i class="fa-solid fa-mobile-screen"></i>
-                              </span>
-                              <p>
-                                6.1 inch, IPS LCD, Liquid Retina HD, 828 x 1792 Pixels
-                              </p>
-                            </li>
-                            <li>
-                              <span>
-                                <i class="fa-solid fa-camera"></i>
-                              </span>
-                              <p>
-                                12.0 MP + 12.0 MP
-                              </p>
-                            </li>
-                            <li>
-                              <span>
-                                <i class="fa-solid fa-camera-rotate"></i>
-                              </span>
-                              <p>
-                                12.0 MP
-                              </p>
-                            </li>
-                            <li>
-                              <span>
-                                <i class="fa-solid fa-sd-card"></i>
-                              </span>
-                              <p>
-                                64 GB
-                              </p>
-                            </li>
-                          </ul>
-                        </div>
-                    </div>
+
+      <div class="product-container">
+        <div class="product-container-both">
+          <div class="product-left">
+            <div class="product-content-big-img">
+              <img
+                src="image/iphone-11-64gb-650x650.webp"
+                alt=""
+                id="main-img" />
+              <div class="next-prev-buttons">
+                <button onclick="navigateImages(-1)">
+                  <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <button onclick="navigateImages(1)">
+                  <i class="fa-solid fa-chevron-right"></i>
+                </button>
+              </div>
+            </div>
+            <div class="product-content-small-img">
+              <div class="product-small-img">
+                <img
+                  class="small-img"
+                  src="image/iphone-11-64gb-650x650.webp"
+                  alt=""
+                  onclick="changeImages(this.src)" />
+                <img
+                  class="small-img"
+                  src="image/iphone-11-full-size-300x300.webp"
+                  alt=""
+                  onclick="changeImages(this.src)" />
+                <img
+                  class="small-img"
+                  src="image/iphone-11-camera-300x300.webp"
+                  alt=""
+                  onclick="changeImages(this.src)" />
+                <img
+                  class="small-img"
+                  src="image/iphone-11-box-300x300.webp"
+                  alt=""
+                  onclick="changeImages(this.src)" />
+              </div>
+            </div>
+          </div>
+
+          <div class="product-right">
+            <div class="produc-content-right">
+              <div class="product-content">
+                <div class="produc-content-text boxname">
+                  <h1 id="productName">iphone 11</h1>
+                </div>
+              </div>
+              <div class="produc-location">
+                <div class="product-location-text">
+                  <span>Giá bán tại: Cần Thơ</span>
+                  <span>10.990.000đ</span>
+                </div>
+              </div>
+              <div class="produc-capacity">
+                <div class="product-capacity-text">
+                  <span>Dung lượng</span>
+                  <ul class="capacity-btn-container">
+                    <li class="capacity-btn">
+                      <a href="#" onclick="clickbtn()">64GB</a>
+                    </li>
+                    <li class="capacity-btn">
+                      <a href="#">128GB</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="color-sp">
+                <div class="color-sp-text boxcolor">
+                  <span id="color-sp">Màu: Trắng</span>
+
+                  <div class="color-sp-list">
+                    <ul>
+                      <li class="type-color-one">
+                        <a href="#" style="background-color: #f9f6ef"></a>
+                      </li>
+                      <li class="type-color-two">
+                        <a href="#" style="background-color: #1f2020"></a>
+                      </li>
+                      <li class="type-color-three">
+                        <a href="#" style="background-color: #aee1cd"></a>
+                      </li>
+                      <li class="type-color-four">
+                        <a href="#" style="background-color: #d1cdda"></a>
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>
-          </main>
+              <!-- BTN Đặt hàng -->
+              <div class="btn-oder-product">
+                <div class="number-order-product">
+                  <label class="number-title-order" for="quantity"
+                    >Số lượng:</label
+                  >
+                  <div class="number-order boxqnt">
+                    <input type="number" id="quantity" value="1" min="1" />
+                  </div>
+                </div>
+                <a
+                  href="#"
+                  class="btn-order-full"
+                  onclick="addToLocalStorage('IP11')"
+                  >Thêm</a
+                >
+              </div>
+            </div>
+            <div class="product-bottom">
+              <div class="detail-product">
+                <ul>
+                  <li>
+                    <span>
+                      <i class="fa-solid fa-mobile-screen"></i>
+                    </span>
+                    <p>
+                      6.1 inch, IPS LCD, Liquid Retina HD, 828 x 1792 Pixels
+                    </p>
+                  </li>
+                  <li>
+                    <span>
+                      <i class="fa-solid fa-camera"></i>
+                    </span>
+                    <p>12.0 MP + 12.0 MP</p>
+                  </li>
+                  <li>
+                    <span>
+                      <i class="fa-solid fa-camera-rotate"></i>
+                    </span>
+                    <p>12.0 MP</p>
+                  </li>
+                  <li>
+                    <span>
+                      <i class="fa-solid fa-sd-card"></i>
+                    </span>
+                    <p>64 GB</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
     <!-- End Main Section -->
 
     <!-- Begin Footer Section -->
@@ -285,6 +323,7 @@
     <!-- End Footer Section -->
 
     <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>

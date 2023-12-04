@@ -16,56 +16,74 @@
   <body>
     <!-- Begin Header Section -->
     <header class="container-fluid">
-      <div
-        class="header-container container d-flex flex-row justify-content-between">
-        <div class="header-start">
-          <a href="index.html" class="header-logo">
-            <img src="image/Anymo logo 80x80 (NB).png" alt="Anymo Logo" />
+      <nav class="navbar navbar-expand-md">
+        <div class="container-lg">
+          <a class="navbar-brand" href="#">
+            <img src="image/Anymo logo 80x80 (NB).png" alt="Logo" />
           </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <!-- Left Menu -->
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Trang chủ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="product.html">Sản phẩm</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="news.html">Tin tức</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Liên hệ</a>
+              </li>
+            </ul>
 
-          <div class="header-menu">
-            <ul class="nav">
+            <!-- Right Menu -->
+            <ul class="navbar-nav ms-auto secondary-nav">
               <li class="nav-item">
-                <a href="index.html" class="nav-link">Trang Chủ</a>
+                <a id="login-btn" class="nav-link" href="login.html">
+                  <i class="fas fa-sign-in-alt"></i>
+                  <span id="login">Đăng nhập</span>
+                </a>
               </li>
               <li class="nav-item">
-                <a href="product.html" class="nav-link">Sản Phẩm</a>
+                <a id="signup-btn" class="nav-link" href="register.html">
+                  <i class="fa-solid fa-pen-to-square"></i>
+                  <span id="signup">Đăng ký</span>
+                </a>
+              </li>
+
+              <input
+                type="text"
+                placeholder="Tìm kiếm sản phẩm..."
+                class="search-input" />
+              <li class="nav-item">
+                <a class="btn btn-link nav-link" id="searchButton">
+                  <i class="fas fa-search"></i>
+                </a>
               </li>
               <li class="nav-item">
-                <a href="news.html" class="nav-link">Tin Tức</a>
-              </li>
-              <li class="nav-item">
-                <a href="contact.html" class="nav-link">Liên Hệ</a>
+                <a
+                  href="cart.html"
+                  class="btn btn-link nav-link"
+                  id="cartButton">
+                  <i class="fas fa-shopping-cart"></i>
+                </a>
               </li>
             </ul>
           </div>
         </div>
-
-        <div class="header-end d-flex">
-          <ul class="nav login-menu shift-left">
-            <li class="nav-item">
-              <a href="login.html" class="nav-link">Đăng Nhập</a>
-            </li>
-
-            <li class="nav-item">
-              <a href="register.html" class="nav-link">Đăng Ký</a>
-            </li>
-          </ul>
-
-          <input
-            type="text"
-            placeholder="Tìm kiếm sản phẩm..."
-            class="search-input" />
-          <div class="search-button button-group">
-            <i class="fa-solid fa-magnifying-glass"></i>
-          </div>
-          <div class="cart-button button-group">
-            <a href="cart.html">
-              <i class="fa-solid fa-cart-shopping"></i>
-            </a>
-          </div>
-        </div>
-      </div>
+      </nav>
     </header>
     <!-- End Header Section -->
 
@@ -220,6 +238,7 @@
     <!-- End Footer Section -->
 
     <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>

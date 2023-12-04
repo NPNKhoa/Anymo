@@ -1,13 +1,5 @@
 /* Begin Contact */
 
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-/* Begin Contact */
-
 .contact {
     min-height: 100vh;
     background-color: #fff;
@@ -92,12 +84,13 @@
 }
 
 .contact-form button {
-    height: 55px;
-    width: 100px;
+    height: 45px;
+    width: 90px;
     color: #fff;
     font-size: 1rem;
     border: none;
-    margin-top: 20px;
+    padding: 0 8px;
+    margin: 10px;
     cursor: pointer;
     border-radius: 6px;
     font-weight: 400px;
@@ -141,7 +134,7 @@
 }
 
 .contact-info .branch {
-    margin-left: 0px;
+    margin-left: 20px;
 }
 
 @media screen and (max-width: 768px) {
@@ -162,6 +155,11 @@
     .contact-form .form-group .textbox {
         width: 100%; /* Full width for input fields on smaller screens */
     }
+
+    .contact-form textarea {
+        height: 100px;
+    }
+
 }
 
 /* End Contact */
@@ -191,26 +189,26 @@
     text-align: center;
 }
 
-.register-container .form-singup {
+.register-container .form-signup {
     margin-top: 30px;
 }
 
-.form-singup .singup-box {
+.form-signup .signup-box {
     width: 100%;
     margin-top: 16px;
 }
 
-.singup-box label {
+.signup-box label {
     color: #333;
 }
 
-.form-singup .singup-box.required label::after {
+.form-signup .signup-box.required label::after {
     content: "*";
     color: #ff0000;
     margin-left: 4px;
 }
 
-.form-singup :where(.singup-box input, .select-box) {
+.form-signup :where(.signup-box input, .select-box) {
     position: relative;
     height: 50px;
     width: 100%;
@@ -223,11 +221,11 @@
     padding: 0 15px;
 }
 
-.singup-box input:focus {
+.signup-box input:focus {
     box-shadow: 0 1px 0 #afdf8a;
 }
 
-.form-singup .column {
+.form-signup .column {
     display: flex;
     column-gap: 15px;
 }
@@ -244,14 +242,14 @@
     padding-top: 16px;
 }
 
-.form-singup :where(.gender-option, .gender) {
+.form-signup :where(.gender-option, .gender) {
     display: flex;
     align-items: center;
     column-gap: 50px;
     flex-wrap: wrap;
 }
 
-.form-singup .gender {
+.form-signup .gender {
     column-gap: 5px;
 }
 
@@ -259,7 +257,7 @@
     accent-color: #1D7035;
 }
 
-.form-singup :where(.gender input, .gender label) {
+.form-signup :where(.gender input, .gender label) {
     cursor: pointer;
 }
 
@@ -280,7 +278,7 @@
     font-size: 1rem;
 }
 
-.form-singup button {
+.form-signup button {
     height: 55px;
     width: 100%;
     color: #fff;
@@ -294,25 +292,28 @@
     background-color: #1D7035;
 }
 
-.form-singup button:hover {
+.form-signup button:hover {
     background-color: #2e7141;
 }
 
-/* Javascript */
 
-.register .modal-register {
+/* Show click Sign up*/
+
+.modal-sign {
     display: none;
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding: 20px;
-    background-color: #BEDAA9;
+    padding: 15px;
+    border-radius: 6px;
+    border: #1D7035 solid 2px;
+    background-color: #dfe0de;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     z-index: 1000;
 }
 
-.register .overlay {
+.overlay {
     display: none;
     position: fixed;
     top: 0;
@@ -323,36 +324,34 @@
     z-index: 999;
 }
 
-/* Style close button */
-.register .modal-close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    cursor: pointer;
+#modal-message {
+    margin: 0;
 }
 
-
+/* Style close button */
+.modal-close {
+    color: #111;
+    position: absolute;
+    top: 1px;
+    right: 5px;
+    cursor: pointer;
+}
 /* Responsive */
 
 @media screen and (max-width: 500px) {
-    .form-singup .column {
+    .form-signup .column {
         flex-wrap: wrap;
     }
-    .form-singup :where(.gender-option, .gender) {
+    .form-signup :where(.gender-option, .gender) {
         row-gap: 15px;
     }
 }
 
 /* End Register */
 
+
+
 /* Begin Login */
-
-
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
 
 .container-login {
     height: 100vh;
@@ -481,6 +480,10 @@
     justify-content: center;
 }
 
+#message {
+    margin-top: 10px;
+}
+
 
 a.facebook {
     color: #fff;
@@ -535,5 +538,6 @@ a.google span {
     opacity: 0.8;
     color: #000;
 }
+
 
 /* End Login */

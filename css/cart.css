@@ -1,122 +1,180 @@
 .cart-header {
-    border-bottom: 1px solid #e5e5e5;
-    color: #323232;
-    margin: auto;
-    max-width: 800px;
-    min-height: 30px;
-    padding: 10px;
-    position: relative;
-  }
-  .cart-back {
-    width: 800px;
-    height: 20px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
-  .cart-back-go-back {
-    width: 20px;
-    height: 17px;
-    margin-top: -10px;
-  }
-  
-  .cart-header-msg {
-    display: block;
-    font-size: 1.2rem;
-    color: black;
-    text-align: center;
-    margin-top: -25px;
-  }
-  
-  .cart--list {
-    margin: 0 347px;
-  }
-  
-  .cart-list-no-cart .cart-list-no-cart-img,
-  .cart-list-no-cart .cart-list-no-cart-msg {
-    display: block;
-  }
-  
-  .cart-list-no-cart-img {
-    display: none;
-    margin-left: 190px;
-    margin-right: auto;
-    width: 400px;
-  }
-  
-  .cart-list-no-cart-msg {
-    display: none;
-    font-size: 1.4rem;
-    text-align: center;
-    margin-top: 10px;
-    color: var(--text-color);
-  }
-  
-  .cart-list-heading {
-    font-weight: 400;
-    text-align: center;
-    font-size: 1.4rem;
-    margin: 10px;
-  }
-  /* start gio hang */
-  .cart-list-product{
-    width: 800px;
-    border: 1px black solid;
-  }
-  
-  .cart-list-product-head{
-    border: 1px black solid;
-  }
-  
-  .cart-list-product-total{
-    border: 1px black solid;
-    text-align: left;
-  }
-  .cart-list-product th, 
-  .cart-list-product td{
-    border: 1px black solid;
-    text-align: center;
-  }
-  
-  .cart-list-product-img{
-    width: 100px;
-    height: 100px;
-    padding: 5px;
-  }
-  
-  .cart-list-customer{
-    text-align: center;
-    font-weight: 500;
-    padding: 5px;
-  }
-  
-  .cart-list-customer-info{
-    width: 800px;
-  }
-  
-  .cart-list-customer-info tr td{
-    text-align: left;
-    padding: 10px;
-    border: 1px #000 solid;
-  }
-  
-  .cart-list-customer-info input{
-    width: 680px;
-  }
-  
-  .cart-order{
-    margin-top: 10px ;
-    margin-bottom: 10px;
-    justify-content: center;
-  }
+  border-bottom: 1px solid #e5e5e5;
+  color: #323232;
+  margin: auto;
+  max-width: 800px;
+  min-height: 30px;
+  padding: 10px;
+  position: relative;
+}
+.cart-back {
+  width: 800px;
+  height: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
-  .cart-order button{
-    background-color: #1d7035;
-  }
+.cart-back-go-back {
+  width: 20px;
+  height: 17px;
+  margin-top: -10px;
+}
 
-  .cart-order button:hover{
-    background-color: #58a370;
-  }
-  
+.cart-header-msg {
+  display: block;
+  font-size: 1.2rem;
+  color: black;
+  text-align: center;
+  margin-top: -25px;
+}
 
-  /* end gio hang */
+.cart--list {
+  margin: 0 347px;
+}
+
+.cart-list-no-cart .cart-list-no-cart-img,
+.cart-list-no-cart .cart-list-no-cart-msg {
+  display: block;
+}
+
+.cart-list-no-cart-img {
+  display: none;
+  margin-left: 190px;
+  margin-right: auto;
+  width: 400px;
+}
+
+.cart-list-no-cart-msg {
+  display: none;
+  font-size: 1.4rem;
+  text-align: center;
+  margin-top: 10px;
+  color: var(--text-color);
+}
+
+.cart-list-heading {
+  font-weight: bold;
+  text-align: center;
+  font-size: 1.4rem;
+  margin: 10px;
+}
+/* start gio hang */
+.cart-list-product{
+  width: 800px;
+  border: 1px black solid;
+}
+
+.cart-list-product-head{
+  border: 1px black solid;
+}
+
+.cart-list-product-total{
+  border: 1px black solid;
+  text-align: left;
+}
+.cart-list-product th, 
+.cart-list-product td{
+  font-weight: bold;
+  border: 1px black solid;
+  text-align: center;
+}
+
+.cart-list-product-img{
+  width: 100px;
+  height: 100px;
+  padding: 5px;
+}
+
+.cart-list-customer{
+  text-align: center;
+  font-weight: bold;
+  padding: 5px;
+}
+
+.cart-list-customer-info{
+  width: 800px;
+}
+
+.cart-list-customer-info tr td{
+  font-weight: bold;
+  text-align: left;
+  padding: 10px;
+  border: 1px #000 solid;
+}
+
+.cart-list-customer-info input{
+  width: 680px;
+}
+
+.cart-order{
+  margin-top: 10px ;
+  margin-bottom: 10px;
+  justify-content: center;
+}
+
+.cart-order button{
+  background-color: #1d7035;
+}
+
+.cart-order button:hover{
+  background-color: #58a370;
+}
+
+
+/* end gio hang */
+
+/* responsive */
+
+/* On screens that are 1024px or less, set the background color to blue */
+@media screen and (max-width: 1024px) {
+.cart--list {
+  margin: 0px 100px;
+}
+.cart-list-product {
+  width: 800px;
+  border: 1px black solid;
+}
+
+.cart-list-customer-info {
+  width: 800px;
+}
+
+.cart-list-customer-info input {
+  width: 680px;
+}
+}
+
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 600px) {
+.cart-header {
+  border-bottom: 1px solid #e5e5e5;
+  color: #323232;
+  margin-top: 160px;
+  width: 730px;
+  min-height: 30px;
+  padding: 10px;
+  position: relative;
+}
+
+.cart-back {
+  width: 730px;
+  height: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.cart--list {
+  margin: 0;
+  width: 730px;
+}
+
+.cart-list-product {
+  width: 730px;
+  border: 1px black solid;
+}
+.cart-list-customer-info {
+  width: 730px;
+}
+.cart-list-customer-info input {
+  width: 604px;
+}
+}

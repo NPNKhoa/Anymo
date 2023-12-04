@@ -72,34 +72,34 @@
     <!-- Begin Register -->
     <main class="register">
       <div class="register-container">
-          <h3 title="titlesingup">Đăng Ký</h3>
-          <form action="" class="form-singup" onsubmit="send(); return false;">
-              <div class="singup-box required">
+          <h3 title="titlesignup">Đăng Ký</h3>
+          <form action="" class="form-signup" onsubmit="send(); return false;">
+              <div class="signup-box required">
                   <label for="">Họ và tên</label>
                   <input id="name-signup" class="input-box" type="text" placeholder="Nhập đầy đủ họ tên" required>
               </div>
-              <div class="singup-box">
+              <div class="signup-box">
                   <label for="">Email</label>
                   <input class="input-box" type="text" placeholder="Nhập địa chỉ email">
               </div>
 
               <div class="column ">
-                  <div class="singup-box required">
+                  <div class="signup-box required">
                       <label for="">Số điện thoại</label>
                       <input id="phone-signup" class="input-box" type="text" placeholder="Nhập số điện thoại" required>
                   </div>
-                  <div class="singup-box required">
+                  <div class="signup-box">
                       <label for="">Ngày sinh</label>
                       <input class="input-box" type="date">
                   </div>
               </div>
 
-              <div class="singup-box required">
+              <div class="signup-box required">
                   <label for="">Mật khẩu</label>
                   <input id="password-signup" class="input-box" type="password" placeholder="Nhập mật khẩu" required>
               </div>
 
-              <div class="singup-box required">
+              <div class="signup-box required">
                   <label for="">Nhập lại mật khẩu</label>
                   <input id="confirm-password" class="input-box" type="password" placeholder="Nhập lại mật khẩu" required>
               </div>
@@ -122,7 +122,7 @@
                   </div>
               </div>
 
-              <div class="singup-box address">
+              <div class="signup-box address">
                   <label for="">Địa chỉ</label>
                   <input id="address-signup" class="input-box" type="text" placeholder="Nhập địa chỉ (xã/phường/thị trấn, quận/huyện/thị xã))">
                   <div class="column">
@@ -153,13 +153,14 @@
               <button type="submit">Đăng Ký</button>
           </form>
       </div>
-      <div id="custom-modal" class="modal">
+      <div id="custom-modal" class="modal-sign">
           <span class="modal-close" onclick="closeModal()">&times;</span>
           <p id="modal-message"></p>
       </div>
       <div id="overlay" class="overlay"></div>
   </main>
-    <!-- End Register -->
+
+  <!-- End Register -->
 
     <!-- Begin Footer Section -->
     <footer class="container-fluid">

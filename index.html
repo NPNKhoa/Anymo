@@ -7,85 +7,89 @@
     <link rel="icon" type="image/png" href="/image/Anymo_icon.png" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <script src="js/jquery-3.7.1.min.js"></script>
     <script
       src="https://kit.fontawesome.com/31f3088ab5.js"
       crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> -->
     <script src="js/data.js"></script>
     <script type="module" src="js/test.js"></script>
   </head>
   <body>
     <!-- Begin Header Section -->
     <header class="container-fluid">
-      <div
-        class="header-container container d-flex flex-row justify-content-between">
-        <a href="login.html" class="user-icon"
-          ><i class="fa-solid fa-user"></i
-        ></a>
-        <div id="mobile-menu" class="mobile-menu">
-          <ul class="nav">
-            <li class="nav-item">
-              <a href="index.html" class="nav-link">Trang Chủ</a>
-            </li>
-            <li class="nav-item">
-              <a href="product.html" class="nav-link">Sản Phẩm</a>
-            </li>
-            <li class="nav-item">
-              <a href="news.html" class="nav-link">Tin Tức</a>
-            </li>
-            <li class="nav-item">
-              <a href="contact.html" class="nav-link">Liên Hệ</a>
-            </li>
-          </ul>
-        </div>
-
-        <div class="header-start">
-          <a href="index.html" class="header-logo">
-            <img src="image/Anymo logo 80x80 (NB).png" alt="Anymo Logo" />
+      <nav class="navbar navbar-expand-md">
+        <div class="container-lg">
+          <a class="navbar-brand" href="index.html">
+            <img src="image/Anymo logo 80x80 (NB).png" alt="Logo" />
           </a>
-          <div class="header-menu">
-            <ul class="nav">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav primary-nav">
+              <!-- Left Menu -->
               <li class="nav-item">
-                <a href="index.html" class="nav-link">Trang Chủ</a>
+                <a id="home-page" class="nav-link" href="index.html"
+                  >Trang chủ</a
+                >
               </li>
               <li class="nav-item">
-                <a href="product.html" class="nav-link">Sản Phẩm</a>
+                <a class="nav-link" href="product.html">Sản phẩm</a>
               </li>
               <li class="nav-item">
-                <a href="news.html" class="nav-link">Tin Tức</a>
+                <a class="nav-link" href="news.html">Tin tức</a>
               </li>
               <li class="nav-item">
-                <a href="contact.html" class="nav-link">Liên Hệ</a>
+                <a class="nav-link" href="contact.html">Liên hệ</a>
+              </li>
+            </ul>
+
+            <!-- Right Menu -->
+            <ul class="navbar-nav ms-auto secondary-nav">
+              <li class="nav-item">
+                <a id="login-btn" class="nav-link" href="login.html">
+                  <i class="fas fa-sign-in-alt"></i>
+                  <span id="login">Đăng nhập</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a id="signup-btn" class="nav-link" href="register.html">
+                  <i class="fa-solid fa-pen-to-square"></i>
+                  <span id="signup">Đăng ký</span>
+                </a>
+              </li>
+
+              <input
+                type="text"
+                placeholder="Tìm kiếm sản phẩm..."
+                class="search-input" />
+              <li class="nav-item">
+                <a class="btn btn-link nav-link" id="searchButton">
+                  <i class="fas fa-search"></i>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  href="cart.html"
+                  class="btn btn-link nav-link"
+                  id="cartButton">
+                  <i class="fas fa-shopping-cart"></i>
+                </a>
               </li>
             </ul>
           </div>
         </div>
-
-        <div class="header-end d-flex">
-          <ul class="nav login-menu shift-left">
-            <li class="nav-item">
-              <a href="login.html" class="nav-link">Đăng Nhập</a>
-            </li>
-
-            <li class="nav-item">
-              <a href="register.html" class="nav-link">Đăng Ký</a>
-            </li>
-          </ul>
-
-          <input
-            type="text"
-            placeholder="Tìm kiếm sản phẩm..."
-            class="search-input" />
-          <div class="search-button button-group">
-            <i class="fa-solid fa-magnifying-glass"></i>
-          </div>
-          <div class="cart-button button-group">
-            <a href="cart.html">
-              <i class="fa-solid fa-cart-shopping"></i>
-            </a>
-          </div>
-        </div>
-      </div>
+      </nav>
     </header>
     <!-- End Header Section -->
 
@@ -93,7 +97,7 @@
     <main class="container-fluid">
       <!-- Carousel -->
       <div class="main-carousel">
-        <div id="demo" class="carousel slide" data-bs-ride="carousel">
+        <div id="demo" class="carousel slide">
           <!-- Indicators/dots -->
           <div class="carousel-indicators">
             <button
@@ -149,7 +153,7 @@
                 class="d-block w-100" />
 
               <div class="carousel-caption text-dark">
-                <h3>iPhone 15!</h3>
+                <h3>iPhone 15</h3>
                 <p>Giá chỉ từ 20.000.000đ | Hoàn tiền nếu ở đâu rẻ hơn!</p>
               </div>
             </div>
@@ -174,62 +178,28 @@
       </div>
 
       <!-- Flash Sale -->
-      <div class="flash-sale section-space">
-        <div class="flash-sale-container">
-          <div class="flash-sale-header d-flex justify-content-between">
-            <img
-              src="image/flash-sale.png"
-              alt="Flash Sale"
-              id="flash-sale-img" />
+      <div class="flash-sale">
+        <div class="flash-sale-header d-flex justify-content-between">
+          <img
+            src="image/flash-sale.png"
+            alt="Flash Sale"
+            id="flash-sale-img" />
 
-            <div class="time-counter">
-              <h4 class="time-counter-label">Kết Thúc Trong</h4>
-              <div id="hours" class="time-counter-element me-3">00</div>
-              <div id="minutes" class="time-counter-element me-3">00</div>
-              <div id="seconds" class="time-counter-element me-3">00</div>
-            </div>
-          </div>
-
-          <div class="flash-sale-body row">
-            <div class="flash-sale-item col-lg-4">
-              <div class="card">
-                <img
-                  src="image/iphone-11-64gb-650x650.webp"
-                  alt="iPhone 11 64GB"
-                  class="card-img-top" />
-                <div class="card-body">
-                  <h4 class="card-title">iPhone 11 64GB</h4>
-                  <p class="card-text">11.000.000đ</p>
-                </div>
-              </div>
-            </div>
-            <div class="flash-sale-item col-lg-4">
-              <div class="card">
-                <img
-                  src="image/iphone-11-64gb-650x650.webp"
-                  alt="iPhone 11 64GB"
-                  class="card-img-top" />
-                <div class="card-body">
-                  <h4 class="card-title">iPhone 11 64GB</h4>
-                  <p class="card-text">11.000.000đ</p>
-                </div>
-              </div>
-            </div>
-            <div class="flash-sale-item col-lg-4">
-              <div class="card">
-                <img
-                  src="image/iphone-11-64gb-650x650.webp"
-                  alt="iPhone 11 64GB"
-                  class="card-img-top" />
-                <div class="card-body">
-                  <h4 class="card-title">iPhone 11 64GB</h4>
-                  <p class="card-text">11.000.000đ</p>
-                </div>
-              </div>
-            </div>
+          <div class="time-counter">
+            <h4 class="time-counter-label">Kết Thúc Trong</h4>
+            <div id="hours" class="time-counter-element me-3">00</div>
+            <div id="minutes" class="time-counter-element me-3">00</div>
+            <div id="seconds" class="time-counter-element me-3">00</div>
           </div>
         </div>
+
+        <div
+          id="flash-sale-body"
+          class="flash-sale-body d-flex justify-content-around row">
+          <!-- Flash Sale Items -->
+        </div>
       </div>
+      <!-- End Flash Sale Section -->
 
       <!-- Best Seller Section -->
       <div class="best-seller section-space">
@@ -243,8 +213,8 @@
       <!-- End best Seller Section -->
 
       <!-- News catagories -->
+      <h1 class="news-catagories-title center-title my-4">Tin Tức</h1>
       <div class="news-catagories section-space row">
-        <h1 class="news-catagories-title center-title my-4">Tin Tức</h1>
         <div class="news-catagories-item col-lg-4">
           <a href="news.html" class="card news-catagories-container">
             <img
@@ -298,7 +268,7 @@
       <!-- Festures -->
       <div
         class="main-features section-space d-flex justify-content-center row">
-        <div class="features-item d-flex col-4">
+        <div class="features-item d-flex col-lg-4">
           <div class="feature-icon d-inline mx-3">
             <i class="fa fa-4x fa-truck"></i>
           </div>
@@ -307,7 +277,7 @@
           </h5>
         </div>
 
-        <div class="features-item d-flex col-4">
+        <div class="features-item d-flex col-lg-4">
           <div class="feature-icon d-inline mx-3">
             <i class="fa-solid fa-4x fa-clock"></i>
           </div>
@@ -316,7 +286,7 @@
           </h5>
         </div>
 
-        <div class="features-item d-flex col-4">
+        <div class="features-item d-flex col-lg-4">
           <div class="feature-icon d-inline mx-3">
             <i class="fa-solid fa-4x fa-credit-card"></i>
           </div>
@@ -391,26 +361,19 @@
       </div>
 
       <div class="footer-copyright-reserved">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="copyright-text">
-                &copy Copyright
-                <!--start getdate tody-->
-                <script>
-                  document.write(new Date().getFullYear());
-                </script>
-                All rights reserved | Made by Anymo Group
-                <!--end getdate tody -->
-              </div>
-            </div>
-          </div>
+        <div class="copyright-text">
+          &copy Copyright
+          <!--start getdate tody-->
+          <script>
+            document.write(new Date().getFullYear());
+          </script>
+          All rights reserved | Made by Anymo Group
+          <!--end getdate tody -->
         </div>
       </div>
     </footer>
     <!-- End Footer Section -->
 
-    <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>

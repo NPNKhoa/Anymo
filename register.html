@@ -8,159 +8,210 @@
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/contact.css" />
+    <script src="js/jquery-3.7.1.min.js"></script>
+
     <script
       src="https://kit.fontawesome.com/31f3088ab5.js"
       crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
   </head>
   <body>
     <!-- Begin Header Section -->
     <header class="container-fluid">
-      <div
-        class="header-container container d-flex flex-row justify-content-between">
-        <div class="header-start">
-          <a href="index.html" class="header-logo">
-            <img src="image/Anymo logo 80x80 (NB).png" alt="Anymo Logo" />
+      <nav class="navbar navbar-expand-md">
+        <div class="container-lg">
+          <a class="navbar-brand" href="index.html">
+            <img src="image/Anymo logo 80x80 (NB).png" alt="Logo" />
           </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav primary-nav">
+              <!-- Left Menu -->
+              <li class="nav-item">
+                <a id="home-page" class="nav-link" href="index.html"
+                  >Trang chủ</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="product.html">Sản phẩm</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="news.html">Tin tức</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Liên hệ</a>
+              </li>
+            </ul>
 
-          <div class="header-menu">
-            <ul class="nav">
+            <!-- Right Menu -->
+            <ul class="navbar-nav ms-auto secondary-nav">
               <li class="nav-item">
-                <a href="index.html" class="nav-link">Trang Chủ</a>
+                <a id="login-btn" class="nav-link" href="login.html">
+                  <i class="fas fa-sign-in-alt"></i>
+                  <span id="login">Đăng nhập</span>
+                </a>
               </li>
               <li class="nav-item">
-                <a href="product.html" class="nav-link">Sản Phẩm</a>
+                <a id="signup-btn" class="nav-link" href="register.html">
+                  <i class="fa-solid fa-pen-to-square"></i>
+                  <span id="signup">Đăng ký</span>
+                </a>
+              </li>
+
+              <input
+                type="text"
+                placeholder="Tìm kiếm sản phẩm..."
+                class="search-input" />
+              <li class="nav-item">
+                <a class="btn btn-link nav-link" id="searchButton">
+                  <i class="fas fa-search"></i>
+                </a>
               </li>
               <li class="nav-item">
-                <a href="news.html" class="nav-link">Tin Tức</a>
-              </li>
-              <li class="nav-item">
-                <a href="contact.html" class="nav-link">Liên Hệ</a>
+                <a
+                  href="cart.html"
+                  class="btn btn-link nav-link"
+                  id="cartButton">
+                  <i class="fas fa-shopping-cart"></i>
+                </a>
               </li>
             </ul>
           </div>
         </div>
-
-        <div class="header-end d-flex">
-          <ul class="nav login-menu shift-left">
-            <li class="nav-item">
-              <a href="login.html" class="nav-link">Đăng Nhập</a>
-            </li>
-
-            <li class="nav-item">
-              <a href="register.html" class="nav-link">Đăng Ký</a>
-            </li>
-          </ul>
-
-          <input
-            type="text"
-            placeholder="Tìm kiếm sản phẩm..."
-            class="search-input" />
-          <div class="search-button button-group">
-            <i class="fa-solid fa-magnifying-glass"></i>
-          </div>
-          <div class="cart-button button-group">
-            <a href="cart.html">
-              <i class="fa-solid fa-cart-shopping"></i>
-            </a>
-          </div>
-        </div>
-      </div>
+      </nav>
     </header>
     <!-- End Header Section -->
 
     <!-- Begin Register -->
     <main class="register">
       <div class="register-container">
-          <h3 title="titlesignup">Đăng Ký</h3>
-          <form action="" class="form-signup" onsubmit="send(); return false;">
-              <div class="signup-box required">
-                  <label for="">Họ và tên</label>
-                  <input id="name-signup" class="input-box" type="text" placeholder="Nhập đầy đủ họ tên" required>
-              </div>
-              <div class="signup-box">
-                  <label for="">Email</label>
-                  <input class="input-box" type="text" placeholder="Nhập địa chỉ email">
-              </div>
+        <h3 title="titlesignup">Đăng Ký</h3>
+        <form action="" class="form-signup" onsubmit="send(); return false;">
+          <div class="signup-box required">
+            <label for="">Họ và tên</label>
+            <input
+              id="name-signup"
+              class="input-box"
+              type="text"
+              placeholder="Nhập đầy đủ họ tên"
+              required />
+          </div>
+          <div class="signup-box">
+            <label for="">Email</label>
+            <input
+              class="input-box"
+              type="text"
+              placeholder="Nhập địa chỉ email" />
+          </div>
 
-              <div class="column ">
-                  <div class="signup-box required">
-                      <label for="">Số điện thoại</label>
-                      <input id="phone-signup" class="input-box" type="text" placeholder="Nhập số điện thoại" required>
-                  </div>
-                  <div class="signup-box">
-                      <label for="">Ngày sinh</label>
-                      <input class="input-box" type="date">
-                  </div>
-              </div>
+          <div class="column">
+            <div class="signup-box required">
+              <label for="">Số điện thoại</label>
+              <input
+                id="phone-signup"
+                class="input-box"
+                type="text"
+                placeholder="Nhập số điện thoại"
+                required />
+            </div>
+            <div class="signup-box">
+              <label for="">Ngày sinh</label>
+              <input class="input-box" type="date" />
+            </div>
+          </div>
 
-              <div class="signup-box required">
-                  <label for="">Mật khẩu</label>
-                  <input id="password-signup" class="input-box" type="password" placeholder="Nhập mật khẩu" required>
-              </div>
+          <div class="signup-box required">
+            <label for="">Mật khẩu</label>
+            <input
+              id="password-signup"
+              class="input-box"
+              type="password"
+              placeholder="Nhập mật khẩu"
+              required />
+          </div>
 
-              <div class="signup-box required">
-                  <label for="">Nhập lại mật khẩu</label>
-                  <input id="confirm-password" class="input-box" type="password" placeholder="Nhập lại mật khẩu" required>
-              </div>
+          <div class="signup-box required">
+            <label for="">Nhập lại mật khẩu</label>
+            <input
+              id="confirm-password"
+              class="input-box"
+              type="password"
+              placeholder="Nhập lại mật khẩu"
+              required />
+          </div>
 
-              <div class="gender-box">
-                  <h4>Giới tính</h4>
-                  <div class="gender-option">
-                      <div class="gender">
-                          <input type="radio" id="check-male" name="gender" checked>
-                          <label for="check-male">Nam</label>
-                      </div>
-                      <div class="gender">
-                          <input type="radio" id="check-female" name="gender">
-                          <label for="check-female">Nữ</label>
-                      </div>
-                      <div class="gender">
-                          <input type="radio" id="check-other" name="gender">
-                          <label for="check-other">Khác</label>
-                      </div>
-                  </div>
+          <div class="gender-box">
+            <h4>Giới tính</h4>
+            <div class="gender-option">
+              <div class="gender">
+                <input type="radio" id="check-male" name="gender" checked />
+                <label for="check-male">Nam</label>
               </div>
+              <div class="gender">
+                <input type="radio" id="check-female" name="gender" />
+                <label for="check-female">Nữ</label>
+              </div>
+              <div class="gender">
+                <input type="radio" id="check-other" name="gender" />
+                <label for="check-other">Khác</label>
+              </div>
+            </div>
+          </div>
 
-              <div class="signup-box address">
-                  <label for="">Địa chỉ</label>
-                  <input id="address-signup" class="input-box" type="text" placeholder="Nhập địa chỉ (xã/phường/thị trấn, quận/huyện/thị xã))">
-                  <div class="column">
-                      <div class="select-box">
-                          <select>
-                              <option value="" hidden>Tỉnh/Thành phố</option>
-                              <option value="">An Giang</option>
-                              <option value="">Bà Rịa Vũng Tàu</option>
-                              <option value="">Bạc Liêu</option>
-                              <option value="">Bến Tre</option>
-                              <option value="">Bình Dương</option>
-                              <option value="">Cà Mau</option>
-                              <option value="">Cần Thơ</option>
-                              <option value="">Đồng Nai</option>
-                              <option value="">Đồng Tháp</option>
-                              <option value="">Hậu Giang</option>
-                              <option value="">Kiên Giang</option>
-                              <option value="">Long An</option>
-                              <option value="">Sóc Trăng</option>
-                              <option value="">Tây Ninh</option>
-                              <option value="">Tiền Giang</option>
-                              <option value="">Trà Vinh</option>
-                              <option value="">Vĩnh Long</option>
-                          </select>
-                      </div>
-                  </div>
+          <div class="signup-box address">
+            <label for="">Địa chỉ</label>
+            <input
+              id="address-signup"
+              class="input-box"
+              type="text"
+              placeholder="Nhập địa chỉ (xã/phường/thị trấn, quận/huyện/thị xã))" />
+            <div class="column">
+              <div class="select-box">
+                <select>
+                  <option value="" hidden>Tỉnh/Thành phố</option>
+                  <option value="">An Giang</option>
+                  <option value="">Bà Rịa Vũng Tàu</option>
+                  <option value="">Bạc Liêu</option>
+                  <option value="">Bến Tre</option>
+                  <option value="">Bình Dương</option>
+                  <option value="">Cà Mau</option>
+                  <option value="">Cần Thơ</option>
+                  <option value="">Đồng Nai</option>
+                  <option value="">Đồng Tháp</option>
+                  <option value="">Hậu Giang</option>
+                  <option value="">Kiên Giang</option>
+                  <option value="">Long An</option>
+                  <option value="">Sóc Trăng</option>
+                  <option value="">Tây Ninh</option>
+                  <option value="">Tiền Giang</option>
+                  <option value="">Trà Vinh</option>
+                  <option value="">Vĩnh Long</option>
+                </select>
               </div>
-              <button type="submit">Đăng Ký</button>
-          </form>
+            </div>
+          </div>
+          <button type="submit">Đăng Ký</button>
+        </form>
       </div>
       <div id="custom-modal" class="modal-sign">
-          <span class="modal-close" onclick="closeModal()">&times;</span>
-          <p id="modal-message"></p>
+        <span class="modal-close" onclick="closeModal()">&times;</span>
+        <p id="modal-message"></p>
       </div>
       <div id="overlay" class="overlay"></div>
-  </main>
+    </main>
 
-  <!-- End Register -->
+    <!-- End Register -->
 
     <!-- Begin Footer Section -->
     <footer class="container-fluid">
@@ -227,26 +278,18 @@
       </div>
 
       <div class="footer-copyright-reserved">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="copyright-text">
-                &copy Copyright
-                <!--start getdate tody-->
-                <script>
-                  document.write(new Date().getFullYear());
-                </script>
-                All rights reserved | Made by Anymo Group
-                <!--end getdate tody -->
-              </div>
-            </div>
-          </div>
+        <div class="copyright-text">
+          &copy Copyright
+          <!--start getdate tody-->
+          <script>
+            document.write(new Date().getFullYear());
+          </script>
+          All rights reserved | Made by Anymo Group
+          <!--end getdate tody -->
         </div>
       </div>
     </footer>
     <!-- End Footer Section -->
-
-    <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>

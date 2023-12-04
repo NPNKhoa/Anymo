@@ -34,12 +34,6 @@ function addToLocalStorage(code) {
   }
 }
 
-let cart_button = document.querySelector(".fa-solid.fa-cart-shopping");
-
-cart_button.addEventListener("click", function () {
-  window.location.href = "cart.html";
-});
-
 const VND = new Intl.NumberFormat("vi-VN", {
   style: "currency",
   currency: "VND",
@@ -134,9 +128,7 @@ function removeCart(code) {
     ShowCart();
   }
 }
-// document.getElementById("cart-list-no-cart-img").style.display = "none";
-// document.getElementById("cart-list-no-cart-msg").style.display = "none";
-// document.getElementById("cart-list").style.display="block";
+
 window.onload = () => ShowCart();
 window.onstorage = function () {
   ShowCart();

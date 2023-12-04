@@ -219,8 +219,13 @@ main {
 }
 
 /* Home | Page Carousel Section */
+.carousel-item {
+  position: relative;
+}
+
 .carousel-caption {
-  bottom: 55% !important;
+  position: absolute;
+  top: -6%;
 }
 /* End Carousel Section */
 
@@ -347,7 +352,7 @@ main .main-features {
 @media (min-width: 1024px) {
 }
 
-@media (min-width: 576px) and (max-width: 768px) {
+@media (min-width: 768px) and (max-width: 1023px) {
   /* #navbarNav {
     display: flex;
   } */

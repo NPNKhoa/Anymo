@@ -49,6 +49,7 @@ header {
 }
 
 header .header-container {
+  position: relative;
   padding: 0 0;
 }
 
@@ -63,6 +64,10 @@ header .header-container .nav-item:hover a {
   opacity: 0.7;
 }
 
+a.user-icon {
+  display: none;
+}
+
 header .header-start .header-logo {
   text-decoration: none;
 }
@@ -73,6 +78,14 @@ header .header-start .header-menu {
 
 header .header-end {
   margin: auto 0;
+}
+
+#menu-btn {
+  display: none;
+}
+
+.mobile-menu {
+  display: none;
 }
 
 header .header-end .search-button,
@@ -219,30 +232,16 @@ footer .footer-copyright-reserved {
 }
 /* End Footer Section */
 
-/* Begin Home Page Main Section */
+/* Begin Main Section Home Page*/
 main {
   margin-top: 80px;
 }
 
-/* Carousel Section */
+/* Home | Page Carousel Section */
 .carousel-caption {
   bottom: 55% !important;
 }
-
-/* .carousel-inner {
-  background-color: #3e3e3f;
-}
-.carousel-item {
-  position: relative;
-  display: none;
-  float: left;
-  width: 100%;
-  margin-right: -100%;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  transform: translate3d(0px, 0px, 0px);
-  transition: all 0.25s ease 0s;
-} */
+/* End Carousel Section */
 
 /* Home Page | Flash Sale Section */
 main .flash-sale {
@@ -311,7 +310,6 @@ main .flash-sale .flash-sale-container {
 .flash-sale-body .flash-sale-item .card-img-top {
   width: 100%;
 }
-
 /* End Flash Sale Section */
 
 /* Home Page | Best Selller Section */
@@ -323,7 +321,6 @@ main .flash-sale .flash-sale-container {
 
 #best-seller-container .best-seller-item {
 }
-
 /* End Best Seller Section */
 
 /* Home Page | News Catagories */
@@ -345,9 +342,9 @@ main .flash-sale .flash-sale-container {
 .news-catagories-item .news-catagories-footer {
   margin-left: 16px;
 }
-
 /* End News Catagories Section */
 
+/* Home Page | Features Section */
 main .main-features {
   background-color: var(--second-white-color);
   border: 1px solid #666;
@@ -355,9 +352,95 @@ main .main-features {
   box-shadow: 2px 2px 4px #666;
   margin: 100px auto;
   min-height: 150px;
-  max-width: 75%;
+  max-width: 80%;
 }
 
 .main-features .features-item {
   margin: auto 0;
+}
+/* End Feautures Section */
+/* End Main Section Home Page */
+
+/* BREAK POINT */
+
+@media (min-width: 1024px) {
+}
+
+@media (min-width: 576px) and (max-width: 1023px) {
+}
+
+@media (max-width: 575px) {
+  .header-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  a.user-icon {
+    display: block;
+    text-decoration: none;
+    color: #000;
+    padding: 10px 10px 10px 16px;
+    background-color: var(--secondary-color);
+    border-radius: 100%;
+    height: 40px;
+    width: 40px;
+    line-height: 20px;
+  }
+
+  div.header-start {
+    margin: 0 auto;
+  }
+
+  .header-end {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .nav.login-menu {
+    margin: 0;
+    margin-top: 10px;
+  }
+
+  header .header-start .header-menu {
+    display: none;
+  }
+
+  .login-menu,
+  .search-input,
+  .search-button {
+    display: none;
+  }
+
+  .mobile-menu {
+    display: block;
+    position: absolute;
+    background-color: var(--second-white-color);
+    top: 80px;
+    left: -11px;
+    width: 100%;
+  }
+
+  .mobile-menu .nav {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  main {
+    margin-top: 120px;
+  }
+
+  #flash-sale-img {
+    max-width: 80px;
+    max-height: 40px;
+  }
+
+  #best-seller-container {
+    max-width: 60%;
+    margin: 0 auto;
+  }
+
+  * {
+    font-size: 0.8rem;
+  }
 }

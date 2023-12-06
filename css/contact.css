@@ -446,6 +446,10 @@
     color: #1D7035;
 }
 
+.forgot-link {
+    text-align: right;
+}
+
 .font-input a {
     text-decoration: none;
 }

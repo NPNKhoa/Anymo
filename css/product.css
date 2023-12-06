@@ -327,7 +327,7 @@
 /* TABLET AND MOBILE */
 @media (max-width: 1199px) {
     .content {
-      padding-top: 100px;
+      padding-top: 20px;
     }
     .head{
         margin: 24px 0 0;
